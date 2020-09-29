@@ -26,7 +26,7 @@
     <link href="{{ asset('assets/css/colors/default.css') }}" rel="stylesheet" id="color-opt">
 </head>
 
-<body>
+<body style="overflow: hidden !important;">
     <!-- Loader -->
     <div id="preloader">
         <div id="status">
@@ -43,20 +43,17 @@
     </div> --}}
 
     <!-- ERROR PAGE -->
-    <section class="bg-home d-flex align-items-center">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-12 text-center">
-                    <img src="{{ asset('assets/images/mantenimiento.png') }}" class="img-fluid" alt="">
-                </div><!--end col-->
-            </div><!--end row-->
 
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="title-heading text-center mt-4 mt-md-5 pt-md-5">
+    <!-- Hero Start -->
+    <section class="bg-half-170 d-table w-100 overflow-hidden" id="home">
+        <div class="container-fluid">
+            <div class="row align-items-center p-sm-5 p-0">
+
+                <div class="col-lg-7 col-md-12 col-sm-12">
+                    <div class="title-heading">
                         <h1 class="heading mb-3">Cootranshuila LTDA<span class="element text-primary"></span></h1>
-                        <p class="para-desc mx-auto text-muted h3">¡Comprá tu tiquete!</p>
-                        <form class="rounded p-4 mt-4 bg-white" action="https://cootranshuila.teletiquete.com/" method="POST">
+                        <p class="para-desc text-muted h3 mb-5">¡Comprá tu tiquete!</p>
+                        <form class="rounded mt-4 bg-white" action="https://cootranshuila.teletiquete.com/" method="POST">
                             <div class="row text-left">
 
                                 <div class="col-12">
@@ -103,9 +100,18 @@
                         <p class="text-muted mb-0 mt-4"><span class="text-dark"></span>Habilitada solo para compras online, pronto volveremos con toda la información</p>
                     </div>
                 </div><!--end col-->
+
+                <div class="col-lg-5 col-md-12 col-sm-12 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                    <div class="classic-saas-image position-relative">
+                        <div class="bg-saas-shape position-relative">
+                            <img src="{{ asset('assets/images/mantenimiento_01.png') }}" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+            </div><!--end row-->
         </div><!--end container-->
     </section><!--end section-->
-    <!-- ERROR PAGE -->
 
     <!-- javascript -->
     <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}"></script>
@@ -123,6 +129,12 @@
 
     <script>
         $(document).ready(function () {
+
+            $(window).on('load', function() {
+                $('body').delay(350).css({
+                    'overflow': 'hidden'
+                });
+            });
 
             // Peticion par listar las ciudades de Origen
             $.ajax({
