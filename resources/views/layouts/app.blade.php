@@ -31,6 +31,72 @@
     <a href="#" class="btn btn-icon btn-soft-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
     <!-- Back to top -->
 
+    {{-- Modal compra rapida --}}
+    <div class="modal fade" id="compra_rapida" tabindex="-1" role="dialog" aria-labelledby="ModalCompraRapida" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded shadow border-0">
+                <div class="modal-body">
+                    <div class="bg-white p-0 p-sm-3 rounded box-shadow">
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-4 h3">¡Compra ya tu tiquete!</h5>
+
+                            <form class="login-form" action="https://cootranshuila.teletiquete.com/" method="POST">
+                                <div class="row">
+                                    <div id="preloader" class="preloader position-absolute d-none">
+                                        <div id="status" class="text-center">
+                                            <div class="spinner spinner-border text-success">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group position-relative mb-0">
+                                            <label>Ciudad Origen</label>
+                                            <i data-feather="map-pin" class="fea icon-sm icons"></i>
+                                            <select class="form-control custom-select pl-5" name="optOrigen" id="optOrigen_fast" required>
+                                                <option selected="">Seleccione origen</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-center p-0 mt-1">
+                                        <h4 class="p-0 m-0" onclick="cambiar_ciudades()"><i class="uil uil-exchange"></i></h4>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group position-relative">
+                                            <label>Ciudad Destino</label>
+                                            <i data-feather="map-pin" class="fea icon-sm icons"></i>
+                                            <select class="form-control custom-select pl-5" name="optDestino" id="optDestino_fast" required>
+                                                <option selected="">Seleccione destino</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label> Fecha Ida: </label>
+                                            <input name="date" type="text" class="flatpickr flatpickr-input form-control" id="checkin-date-modal" name="txtFecSalida" required>
+                                        </div>
+                                    </div><!--end col-->
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label> Fecha Regreso: </label>
+                                            <input name="date" type="text" class="flatpickr flatpickr-input form-control" id="checkout-date" name="txtFecRegreso">
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-success w-100">Buscar</button>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <img src="{{ asset('assets/images/pagos.png') }}" alt="Metodos de Pago" class="img-fluid">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- javascript -->
     @include('layouts.scripts')
 </body>

@@ -21,6 +21,7 @@
 
 <!-- Main Js -->
 <script src="{{ asset('assets/js/app.js') }}"></script>
-<script src="{{ asset('assets/js/pages/index.js') }}"></script>
+<script src="{{ asset('assets/js/pages/full_page.js') }}"></script>
+
 
 @yield('MainScripts')

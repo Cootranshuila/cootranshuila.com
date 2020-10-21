@@ -2467,6 +2467,9 @@ p {
 }
 
 @media (min-width: 992px) {
+  .servicios_index {
+      min-height: 314px;
+  }
   #topnav .navigation-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3200,7 +3203,7 @@ p {
   -webkit-transform: rotate(33.75deg);
           transform: rotate(33.75deg);
   background: linear-gradient(45deg, transparent, rgba(47, 85, 212, 0.09));
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .features .ride-image {
