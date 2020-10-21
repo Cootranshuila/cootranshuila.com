@@ -2,19 +2,21 @@
 
 @section('title')Inicio @endsection
 
+@section('MainScripts') <script src="{{ asset('assets/js/pages/index.js') }}"></script> @endsection
+
 @section('content')
 <!-- Hero Start -->
 <section class="bg-half-170 d-table w-100" style="background: url('{{ asset('assets/images/dobleyo-index.jpg') }}') center center;background-size:cover;">
     <div class="bg-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-7 col-md-6">
+            <div class="col-lg-7 col-md-6 mt-5 mt-lg-0">
                 <div class="title-heading">
-                    <h4 class="text-white-50">We are creative</h4>
-                    <h4 class="heading text-white title-dark"> Best IT Solution <br> Company </h4>
-                    <p class="para-desc text-white-50">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
-                    <div class="mt-4 pt-2">
-                        <a href="javascript:void(0)" class="btn btn-light">Get Started</a>
+                    <h4 class="text-white-50 mb-0" style="margin-bottom: -10px !important;">Querido Viajero</h4>
+                    <h4 class="heading text-white title-dark mt-0"> <b>Innovamos para ti</b> </h4>
+                    <p class="para-desc text-white-50">¡Únete a nuestro nuevo club de clientes preferenciales! <br> Acompáñanos en esta nueva experiencia.</p>
+                    <div class="mt-4 mb-3 pt-2">
+                        <a href="javascript:void(0)" class="btn btn-light">Registrarse</a>
                     </div>
                 </div>
             </div>
@@ -26,6 +28,12 @@
 
                         <form class="login-form" action="https://cootranshuila.teletiquete.com/" method="POST">
                             <div class="row">
+                                <div id="preloader" class="preloader position-absolute d-none">
+                                    <div id="status" class="text-center">
+                                        <div class="spinner spinner-border text-success">
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-12">
                                     <div class="form-group position-relative">
                                         <label>Ciudad Origen</label>
@@ -90,115 +98,332 @@
 </div>
 <!--Shape End-->
 
-<!-- Partners start -->
-<section class="py-4 border-bottom">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4">
-                <img src="{{ asset('assets/images/client/amazon.svg') }}" class="avatar avatar-ex-sm" alt="">
-            </div><!--end col-->
+<!-- FEATURES START -->
+<section class="section bg-light pt-0 pb-2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 mt-4 pt-2">
+                <div id="six-slide" class="owl-carousel owl-theme">
+                    <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
+                        <div class="card-body p-0">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/neiva-bogota.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            </a>
+                            <div class="content bg-white p-3">
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4">
-                <img src="{{ asset('assets/images/client/google.svg') }}" class="avatar avatar-ex-sm" alt="">
-            </div><!--end col-->
+                    <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
+                        <div class="card-body p-0">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/pitalito-neiva.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            </a>
+                            <div class="content bg-white p-3">
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4">
-                <img src="{{ asset('assets/images/client/lenovo.svg') }}" class="avatar avatar-ex-sm" alt="">
-            </div><!--end col-->
+                    <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
+                        <div class="card-body p-0">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/la plata-bogota.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            </a>
+                            <div class="content bg-white p-3">
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4">
-                <img src="{{ asset('assets/images/client/paypal.svg') }}" class="avatar avatar-ex-sm" alt="">
-            </div><!--end col-->
+                    <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
+                        <div class="card-body p-0">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/florencia-neiva.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            </a>
+                            <div class="content bg-white p-3">
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4">
-                <img src="{{ asset('assets/images/client/shopify.svg') }}" class="avatar avatar-ex-sm" alt="">
-            </div><!--end col-->
+                    <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
+                        <div class="card-body p-0">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/bogota-florencia.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            </a>
+                            <div class="content bg-white p-3">
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-lg-2 col-md-2 col-6 text-center py-4">
-                <img src="{{ asset('assets/images/client/spotify.svg') }}" class="avatar avatar-ex-sm" alt="">
-            </div><!--end col-->
+                    {{-- <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
+                        <div class="card-body p-0">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/6.jpg') }}" class="img-fluid shadow rounded" alt="work-image">
+                            </a>
+                            <div class="content bg-white p-3">
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
+                        <div class="card-body p-0">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/7.jpg') }}" class="img-fluid shadow rounded" alt="work-image">
+                            </a>
+                            <div class="content bg-white p-3">
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                            </div>
+                        </div>
+                    </div> --}}
+                </div>
+            </div>
         </div><!--end row-->
     </div><!--end container-->
-</section><!--end section-->
-<!-- Partners End -->
+</section>
 
-<!-- Feature Start -->
-<section class="section">
+<!-- About START -->
+<section class="section border-top">
+    <div class="container">
+        <div class="card rounded shadow border-0 bg-light overflow-hidden">
+            <div class="row no-gutters align-items-center">
+                <div class="col-lg-6">
+                    <div id="single-owl" class="owl-carousel">
+                        <img src="{{ asset('assets/images/event/about.jpg') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/images/event/about.jpg') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/images/event/about.jpg') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/images/event/about.jpg') }}" class="img-fluid" alt="">
+                    </div>
+                </div><!--end col-->
+                <div class="col-lg-6">
+                    <div class="card-body section-title p-md-5">
+                        <h4 class="title mb-4">Noticias y Comunicados</h4>
+                        <p class="text-muted para-desc mb-0">Te invitamos a conocer de primera mano nuestras noticias y comunicados. Nos gusta tenerte informado</p>
+                        <div class="mt-4 pt-2">
+                            <a href="javascript:void(0)" class="btn btn-outline-primary">Ver mas <i class="mdi mdi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end card-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- About End -->
+
+{{-- SECTION SERVICIOS --}}
+<section class="section bg-light">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="section-title mb-4 pb-2">
-                    <h4 class="title mb-4">Beautiful & Creative Interfaces</h4>
-                    <p class="text-muted para-desc mb-0 mx-auto">Start working with <span class="text-primary font-weight-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                    <h6 class="text-primary">Servicios</h6>
+                    <h4 class="title mb-4">Conzca nuestros servicios</h4>
+                    {{-- <p class="text-muted para-desc mb-0 mx-auto">Este es el portafolio de servicios que <span class="text-primary font-weight-bold">Cootranshuila LTDA</span> ofrece a sus apreciados clientes.</p> --}}
                 </div>
             </div><!--end col-->
         </div><!--end row-->
 
-        <div class="row">
-            <div class="col-md-4 col-12 mt-5">
-                <div class="features text-center">
+        <div class="row justify-content-center">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                <div class="bg-white features explore-feature servicios_index p-4 pt-5 px-md-3 border-0 rounded-md shadow text-center">
                     <div class="image position-relative d-inline-block">
-                        <img src="{{ asset('assets/images/icon/pen.svg') }}" class="avatar avatar-small" alt="">
+                        <img src="{{ asset('assets/images/icon/medal.svg') }}" class="avatar avatar-small" alt="">
                     </div>
 
-                    <div class="content mt-4">
-                        <h4 class="title-2">Design & Development</h4>
-                        <p class="text-muted mb-0">Nisi aenean vulputate eleifend tellus vitae eleifend enim a eleifend Aliquam aenean elementum semper.</p>
+                    <div class="card-body p-0 content">
+                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Club Cliente Preferencial</a></h5>
+                        <p class="text-muted">Conoce y haz parte de nuestro nuevo club de clientes preferenciales</p>
+
+                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->
 
-            <div class="col-md-4 col-12 mt-5">
-                <div class="features text-center">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                <div class="bg-white features explore-feature servicios_index p-4 pt-5 px-md-3 border-0 rounded-md shadow text-center">
                     <div class="image position-relative d-inline-block">
-                        <img src="{{ asset('assets/images/icon/video.svg') }}" class="avatar avatar-small" alt="">
+                        <img src="{{ asset('assets/images/icon/bus.svg') }}" class="avatar avatar-small" alt="">
                     </div>
 
-                    <div class="content mt-4">
-                        <h4 class="title-2">Management & Marketing</h4>
-                        <p class="text-muted mb-0">Allegedly, a Latin scholar established the origin of the text established by compiling unusual word.</p>
+                    <div class="card-body p-0 content">
+                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Muestra Flota</a></h5>
+                        <p class="text-muted">Conoce aqui nuestros diferentes servicios de flota</p>
+
+                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->
 
-            <div class="col-md-4 col-12 mt-5">
-                <div class="features text-center">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                <div class="bg-white features explore-feature servicios_index p-4 pt-5 px-md-3 border-0 rounded-md shadow text-center">
                     <div class="image position-relative d-inline-block">
-                        <img src="{{ asset('assets/images/icon/intellectual.svg') }}" class="avatar avatar-small" alt="">
+                        <img src="{{ asset('assets/images/icon/delivery.svg') }}" class="avatar avatar-small" alt="">
                     </div>
 
-                    <div class="content mt-4">
-                        <h4 class="title-2">Stratagy & Research</h4>
-                        <p class="text-muted mb-0">It seems that only fragments of the original text remain in the Lorem the original Ipsum texts used today.</p>
+                    <div class="card-body p-0 content">
+                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Carga y Encomiendas</a></h5>
+                        <p class="text-muted">Conoce nuestro servicio de logistica carga y encomiendas</p>
+
+                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                <div class="bg-white features explore-feature servicios_index p-4 pt-5 px-md-3 border-0 rounded-md shadow text-center">
+                    <div class="image position-relative d-inline-block">
+                        <img src="{{ asset('assets/images/icon/location_01.svg') }}" class="avatar avatar-small" alt="">
+                    </div>
+
+                    <div class="card-body p-0 content">
+                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Servicio GPS</a></h5>
+                        <p class="text-muted">Conoce y haz parte de nuestro nuevo club de clientes preferenciales</p>
+
+                        <a href="javascript:void(0)" class="text-primary">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                <div class="bg-white features explore-feature servicios_index p-4 pt-5 px-md-3 border-0 rounded-md shadow text-center">
+                    <div class="image position-relative d-inline-block">
+                        <img src="{{ asset('assets/images/icon/pet-insurance.svg') }}" class="avatar avatar-small" alt="">
+                    </div>
+
+                    <div class="card-body p-0 content">
+                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Viaja con tu Mascota</a></h5>
+                        <p class="text-muted">Ahora en Cootranshuila podras viajar con tu mascota, conoce aqui los terminos y condiciones</p>
+
+                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                <div class="bg-white features explore-feature servicios_index p-4 pt-5 px-md-3 border-0 rounded-md shadow text-center">
+                    <div class="image position-relative d-inline-block">
+                        <img src="{{ asset('assets/images/icon/bus_01.svg') }}" class="avatar avatar-small" alt="">
+                    </div>
+
+                    <div class="card-body p-0 content">
+                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Servicio Especial</a></h5>
+                        <p class="text-muted">Nuestro servicio Especial de pasajeros a nivel Nacional</p>
+
+                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                <div class="bg-white features explore-feature servicios_index p-4 pt-5 px-md-3 border-0 rounded-md shadow text-center">
+                    <div class="image position-relative d-inline-block">
+                        <img src="{{ asset('assets/images/icon/baggage.svg') }}" class="avatar avatar-small" alt="">
+                    </div>
+
+                    <div class="card-body p-0 content">
+                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Agencia de Viajes</a></h5>
+                        <p class="text-muted">Conoce los planes turisticos que tenemos para ti</p>
+
+                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                <div class="bg-white features explore-feature servicios_index p-4 pt-5 px-md-3 border-0 rounded-md shadow text-center">
+                    <div class="image position-relative d-inline-block">
+                        <img src="{{ asset('assets/images/icon/petrol-station.svg') }}" class="avatar avatar-small" alt="">
+                    </div>
+
+                    <div class="card-body p-0 content">
+                        <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Estacion de Servicios</a></h5>
+                        <p class="text-muted">Contamos con mas de 65 años de experiencia en el mercado</p>
+
+                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+
         </div><!--end row-->
     </div><!--end container-->
 
-    <div class="container mt-100 mt-60">
+</section><!--end section-->
+
+<!-- Start -->
+<section class="section bg-light pt-5 mt-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="video-solution-cta position-relative" style="z-index: 1;">
+                    <div class="position-relative">
+                        <img src="{{ asset('assets/images/protocolos.png') }}" class="img-fluid rounded-md shadow-lg" alt="">
+                        <div class="play-icon">
+                            <a href="javascript:;" id="video_protocolos" class="play-btn video-play-icon">
+                                <i class="mdi mdi-play text-primary rounded-circle bg-white shadow-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content mt-md-4 pt-md-2">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 text-center">
+                                <div class="row align-items-center">
+                                    <div class="col-12 mt-4 pt-2">
+                                        <div class="section-title">
+                                            {{-- <h6 class="text-white-50">Protocolos de Bioseguridad</h6> --}}
+                                            <h4 class="title text-white title-dark mb-0">Viaje tranquilo, Viaje seguro</h4>
+                                            <p class="text-white-50">Implementamos todos los protocolos de bioseguridad para garantizar tu seguridad y la nuestra</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end col-->
+        </div><!--end row -->
+        <div class="feature-posts-placeholder bg-primary"></div>
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End -->
+
+<!-- Feature Start -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 text-center">
+                <div class="section-title mb-4 pb-2">
+                    <h4 class="title mb-4">Nuestras Oficinas</h4>
+                    <p class="text-muted para-desc mb-0 mx-auto">Estas son nuestras sucursales a nivel nacional</p>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
         <div class="row align-items-center">
             <div class="col-lg-5 col-md-5">
                 <div class="position-relative">
-                    <img src="{{ asset('assets/images/company/about.jpg') }}" class="rounded img-fluid mx-auto d-block" alt="">
-                    <div class="play-icon">
-                        <a href="http://vimeo.com/287684225" class="play-btn video-play-icon">
-                            <i class="mdi mdi-play text-primary rounded-circle bg-white shadow"></i>
-                        </a>
-                    </div>
+                    <img src="{{ asset('assets/images/of_principal.png') }}" class="rounded img-fluid mx-auto d-block" alt="">
                 </div>
             </div><!--end col-->
 
             <div class="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
                 <div class="section-title ml-lg-4">
-                    <h4 class="title mb-4">Startup Business Solution</h4>
-                    <p class="text-muted">Start working with <span class="text-primary font-weight-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                    <h4 class="title mb-4">Oficina Principal</h4>
+                    <p class="text-muted">Se encuentra ubicada en la EDS Cootranshuila junto a la glorieta de la Cruz Roja en la ciudad de Neiva.</p>
                     <ul class="list-unstyled text-muted">
-                        <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Digital Marketing Solutions for Tomorrow</li>
+                        <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-clock"></i></span>Lunes a Viernes de 7am - 12pm y 2pm - 6pm</li>
                         <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Our Talented & Experienced Marketing Agency</li>
                         <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Create your own skin to match your brand</li>
                     </ul>
-                    <a href="javascript:void(0)" class="btn btn-primary mt-3">Buy Now <i class="mdi mdi-chevron-right"></i></a>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
@@ -207,7 +432,7 @@
     <div class="container mt-100 mt-60">
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media key-feature align-items-center p-3 rounded shadow">
+                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="monitor" class="fea icon-ex-md text-primary"></i>
                     </div>
@@ -218,7 +443,7 @@
             </div><!--end col-->
 
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media key-feature align-items-center p-3 rounded shadow">
+                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="heart" class="fea icon-ex-md text-primary"></i>
                     </div>
@@ -229,7 +454,7 @@
             </div><!--end col-->
 
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media key-feature align-items-center p-3 rounded shadow">
+                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="eye" class="fea icon-ex-md text-primary"></i>
                     </div>
@@ -240,7 +465,7 @@
             </div><!--end col-->
 
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media key-feature align-items-center p-3 rounded shadow">
+                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="bold" class="fea icon-ex-md text-primary"></i>
                     </div>
@@ -251,7 +476,7 @@
             </div><!--end col-->
 
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media key-feature align-items-center p-3 rounded shadow">
+                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="feather" class="fea icon-ex-md text-primary"></i>
                     </div>
@@ -262,7 +487,7 @@
             </div><!--end col-->
 
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media key-feature align-items-center p-3 rounded shadow">
+                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="code" class="fea icon-ex-md text-primary"></i>
                     </div>
@@ -273,7 +498,7 @@
             </div><!--end col-->
 
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media key-feature align-items-center p-3 rounded shadow">
+                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="user-check" class="fea icon-ex-md text-primary"></i>
                     </div>
@@ -284,7 +509,7 @@
             </div><!--end col-->
 
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media key-feature align-items-center p-3 rounded shadow">
+                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="git-merge" class="fea icon-ex-md text-primary"></i>
                     </div>
@@ -295,7 +520,7 @@
             </div><!--end col-->
 
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media key-feature align-items-center p-3 rounded shadow">
+                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="settings" class="fea icon-ex-md text-primary"></i>
                     </div>

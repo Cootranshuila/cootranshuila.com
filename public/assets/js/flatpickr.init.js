@@ -7,6 +7,10 @@ $("#checkin-date").flatpickr({
     defaultDate:today
 });
 
+$("#checkin-date-modal").flatpickr({
+    defaultDate:today
+});
+
 $("#checkout-date").flatpickr({
     // defaultDate:tomorrow
 });

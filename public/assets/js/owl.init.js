@@ -54,7 +54,7 @@ $('#owl-fade').owlCarousel({
 $('#single-owl').owlCarousel({
   loop:true,
   nav: false,
-  dots: true,
+  dots: false,
   autoplay:true,
   autoplayTimeout:5000,
   autoplayHoverPause:true,
@@ -70,7 +70,7 @@ $('#six-slide').owlCarousel({
   autoplayHoverPause:true,
   responsive:{
       0:{
-          items:1
+          items:2
       },
       600:{
           items:3
