@@ -420,9 +420,10 @@
                     <h4 class="title mb-4">Oficina Principal</h4>
                     <p class="text-muted">Se encuentra ubicada en la EDS Cootranshuila junto a la glorieta de la Cruz Roja en la ciudad de Neiva.</p>
                     <ul class="list-unstyled text-muted">
-                        <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-clock"></i></span>Lunes a Viernes de 7am - 12pm y 2pm - 6pm</li>
-                        <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Our Talented & Experienced Marketing Agency</li>
-                        <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Create your own skin to match your brand</li>
+                        <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-clock"></i></span>Horario de atención: Lunes a Viernes <br><span style="margin-left: 1.8rem!important"> 7:00 a.m. - 12:00 p.m.</span> <br><span style="margin-left: 1.8rem!important"> 2:00 p.m. - 6:00 p.m.</span></li>
+                        <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
+                        <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
+                        <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
                     </ul>
                 </div>
             </div><!--end col-->
@@ -434,10 +435,15 @@
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="monitor" class="fea icon-ex-md text-primary"></i>
+                        <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Fully Responsive</h4>
+                        <h4 class="title mb-0">Pitalito</h4>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-map-marker"></i></span><span style="font-size: .9rem;">Terminal de Transportes Pitalito</span></li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)836 0204</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-at"></i></span><span style="font-size: .8rem;">pasajes_pitalito@cootranshuila.com</span></li>
+                        </ul>
                     </div>
                 </div>
             </div><!--end col-->
@@ -445,10 +451,15 @@
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="heart" class="fea icon-ex-md text-primary"></i>
+                        <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Browser Compatibility</h4>
+                        <h4 class="title mb-0">Bogotá</h4>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
+                        </ul>
                     </div>
                 </div>
             </div><!--end col-->
@@ -456,10 +467,15 @@
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="eye" class="fea icon-ex-md text-primary"></i>
+                        <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Retina Ready</h4>
+                        <h4 class="title mb-0">Bogotá</h4>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
+                        </ul>
                     </div>
                 </div>
             </div><!--end col-->
@@ -467,10 +483,15 @@
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="bold" class="fea icon-ex-md text-primary"></i>
+                        <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Based On Bootstrap 4</h4>
+                        <h4 class="title mb-0">Bogotá</h4>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
+                        </ul>
                     </div>
                 </div>
             </div><!--end col-->
@@ -478,10 +499,15 @@
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="feather" class="fea icon-ex-md text-primary"></i>
+                        <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Feather Icons</h4>
+                        <h4 class="title mb-0">Bogotá</h4>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
+                        </ul>
                     </div>
                 </div>
             </div><!--end col-->
@@ -489,43 +515,15 @@
             <div class="col-lg-4 col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="code" class="fea icon-ex-md text-primary"></i>
+                        <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Built With SASS</h4>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
-                    <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="user-check" class="fea icon-ex-md text-primary"></i>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="title mb-0">W3c Valid Code</h4>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
-                    <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="git-merge" class="fea icon-ex-md text-primary"></i>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="title mb-0">Flaticon Icons</h4>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
-                    <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="settings" class="fea icon-ex-md text-primary"></i>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="title mb-0">Easy to customize</h4>
+                        <h4 class="title mb-0">Bogotá</h4>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
+                        </ul>
                     </div>
                 </div>
             </div><!--end col-->
