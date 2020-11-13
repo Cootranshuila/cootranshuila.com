@@ -432,7 +432,7 @@
 
     <div class="container mt-100 mt-60">
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
+            <div class="col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="home" class="fea icon-ex-md text-primary"></i>
@@ -440,96 +440,64 @@
                     <div class="media-body">
                         <h4 class="title mb-0">Pitalito</h4>
                         <ul class="list-unstyled text-muted">
-                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-map-marker"></i></span><span style="font-size: .9rem;">Terminal de Transportes Pitalito</span></li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)836 0204</li>
-                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-at"></i></span><span style="font-size: .8rem;">pasajes_pitalito@cootranshuila.com</span></li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-map-marker"></i></span>Terminal de Transportes Pitalito</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-phone-volume"></i></span>(8)836 0204</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-at"></i></span>pasajes_pitalito@cootranshuila.com</li>
                         </ul>
                     </div>
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
+            <div class="col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Bogotá</h4>
+                        <h4 class="title mb-0">Pitalito</h4>
                         <ul class="list-unstyled text-muted">
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-map-marker"></i></span>Terminal de Transportes Pitalito</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-phone-volume"></i></span>(8)836 0204</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-at"></i></span>pasajes_pitalito@cootranshuila.com</li>
                         </ul>
                     </div>
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
+            <div class="col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Bogotá</h4>
+                        <h4 class="title mb-0">Pitalito</h4>
                         <ul class="list-unstyled text-muted">
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-map-marker"></i></span>Terminal de Transportes Pitalito</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-phone-volume"></i></span>(8)836 0204</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-at"></i></span>pasajes_pitalito@cootranshuila.com</li>
                         </ul>
                     </div>
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
+            <div class="col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Bogotá</h4>
+                        <h4 class="title mb-0">Pitalito</h4>
                         <ul class="list-unstyled text-muted">
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
-                    <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="home" class="fea icon-ex-md text-primary"></i>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="title mb-0">Bogotá</h4>
-                        <ul class="list-unstyled text-muted">
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
-                    <div class="icon text-center rounded-circle mr-3">
-                        <i data-feather="home" class="fea icon-ex-md text-primary"></i>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="title mb-0">Bogotá</h4>
-                        <ul class="list-unstyled text-muted">
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-map-marker"></i></span>Av. 26 No. 4-82, Neiva - Huila</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-phone-volume"></i></span>(8)875 6365 | 8756368</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-at"></i></span>clientes@cootranshuila.com</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-map-marker"></i></span>Terminal de Transportes Pitalito</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-phone-volume"></i></span>(8)836 0204</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-at"></i></span>pasajes_pitalito@cootranshuila.com</li>
                         </ul>
                     </div>
                 </div>
             </div><!--end col-->
 
             <div class="col-12 text-center">
-                <a href="javascript:void(0)" class="btn btn-primary">See More <i class="mdi mdi-arrow-right"></i></a>
+                <a href="javascript:void(0)" class="btn btn-primary">Ver mas <i class="mdi mdi-arrow-right"></i></a>
             </div><!--end col-->
         </div><!--end row-->
     </div><!--end container-->
