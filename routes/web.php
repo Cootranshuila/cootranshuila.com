@@ -15,6 +15,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/historia',function(){
     return view('layouts.historia');
 });
+
+Route::get('/inicio', function(){
+    return view('welcome');
+});
+
+Route::get('/informacion-dian',function(){
+    return view('layouts.documentos');
+});
+
+Route::get('/nuestra_empresa',function(){
+    return view('layouts.mv');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });

@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <section class="bg-half bg-light d-table w-100" id="counter">
+    <section class="bg-half bg-light d-table w-100" id="counter" style="background: url('{{ asset('assets/images/dobleyo-index.jpg') }}') center center;background-size:cover;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
@@ -13,7 +13,7 @@
                             <nav aria-label="breadcrumb" class="d-inline-block">
                                 <ul class="breadcrumb bg-white rounded shadow mb-0">
                                     <li class="breadcrumb-item">
-                                        <a href="#">Inicio</a>
+                                        <a href="/inicio">Inicio</a>
                                     </li>
                                     <li class="breadcrumb-item">
                                         <a href="#">Nosotros</a>
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <section class="section" id="fechas" >
+    <section class="section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-9">
@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="card event event-description-right rounded shadow border-0 overflow-hidden float-left">
-                                        <img src="" class="img-fluid" alt>
+                                        <img src="assets/images/1937.jpg" class="img-fluid" alt>
                                         <div class="card-body text-justify">
                                             <!--<h5 class="mb-0 text-capitalize"></h5>-->
                                             <p class="mt-3 mb-0 text-muted">
@@ -113,16 +113,16 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2">
                                     <div class="card event event-description-left rounded shadow border-0 overflow-hidden float-left">
-                                        <img src="" class="img-fluid" alt>
+                                        <img src="assets/images/1945(1).jpg" class="img-fluid" alt>
                                         <div class="card-body text-muted">
                                             <li class="text-justify">En Bus Escalera, Costo por pasaje Neiva - San Mateo(hoy Rivera) 10 centavos. </li>
                                             <!--<a title="Mostrar menos" onclick="historia()" ><strong>°°°</strong></a>-->
                                             <div id="1942">
                                                 <li class="text-justify">Por Res. N° 287 (Min. Economía Nacional), nace COOTRANSHUILA LTDA con 22 socios con aporte a capital cada uno de $200 y cuota de admisión de $5. Asume como primer Gerente el Sr. Misael Dussan.</li>
                                                 <li class="text-justify">Entra el Servicio Mixto o Chiva a zonas rurales de Neiva y Municipios de Teruel, Iquira y La Plata.</li>
-                                                <li class="text-justify">Ampliación de Servicios a Campoalegre, Hobo, Gigante y Pitalito. <a type="button" id="menos" title="Mostrar menos" onclick="menoshistoria()" ><strong class="text-justify">...</strong></a></li>
+                                                <li class="text-justify">Ampliación de Servicios a Campoalegre, Hobo, Gigante y Pitalito. <a type="button" id="menos" title="Mostrar menos" onclick="menoshistoria42()" ><strong class="text-justify">...</strong></a></li>
                                             </div>
-                                            <a type="button" id="mas" title="Mostrar más" onclick="mashistoria()" ><strong class="text-justify">...</strong></a>
+                                            <a type="button" id="mas" title="Mostrar más" onclick="mashistoria42()" ><strong class="text-justify">...</strong></a>
                                         </div>
                                     </div>
                                 </div>
@@ -298,7 +298,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="card event event-description-right rounded shadow border-0 overflow-hidden float-left">
-                                        <img src="" class="img-fluid" alt>
+                                        <img src="assets/images/1988(2).jpg" class="img-fluid" alt>
                                         <div class="card-body text-justify">
                                             <!--<h5 class="mb-0 text-capitalize"></h5>-->
                                             <p class="mt-3 mb-0 text-muted">
@@ -315,10 +315,11 @@
                                     <div class="card event event-description-left rounded shadow border-0 overflow-hidden float-left">
                                         <img src="" class="img-fluid" alt>
                                         <div class="card-body text-muted">
-                                            
-                                                <li class="text-justify">Presentación de Servicio Especial en Buses, Busetas y Colectivos contratados por Empresas Petroleras radicadas en el Huila.</li>
-                                                <li class="text-justify">Inauguración de nueva Sede Administrativa y remodelación total de la Estación de Servicio (Costo de $250.000.000), para ofrecer a clientes y asociados una moderna sede para las ventas de combutible y lubricantes (convenio con Terpel del Sur S.A)</li>
-                                            
+                                            <li class="text-justify">Presentación de Servicio Especial en Buses, Busetas y Colectivos contratados por Empresas Petroleras radicadas en el Huila.</li>
+                                            <div id="1990">
+                                                <li class="text-justify">Inauguración de nueva Sede Administrativa y remodelación total de la Estación de Servicio (Costo de $250.000.000), para ofrecer a clientes y asociados una moderna sede para las ventas de combutible y lubricantes (convenio con Terpel del Sur S.A)<a type="button" id="menos90" title="Mostrar menos" onclick="menoshistoria90()" ><strong class="text-justify">...</strong></a></li>
+                                            </div>
+                                            <a type="button" id="mas90" title="Mostrar más" onclick="mashistoria90()" ><strong class="text-justify">...</strong></a>
                                         </div>
                                     </div>
                                 </div>
@@ -473,7 +474,8 @@
                                         <img src="" class="img-fluid" alt>
                                         <div class="card-body text-justify">
                                             <p class="mt-3 mb-0 text-muted text-left">
-                                                COOTRANSHUILA LTDA, cumple 60 años en actividad transportadora cubriendo: Huila, Tolima, Caquetá, Cauca, Putumayo, Cundinamarca, Valle, Quindío, Risaralda y Caldas. (45 oficinas en los 10 Departamentos generando 218 empleos directos y 2.500 indirectos). Hacen parte de la empresa 420 asociados.
+                                                COOTRANSHUILA LTDA, cumple 60 años en actividad transportadora cubriendo: Huila, Tolima, Caquetá, Cauca, Putumayo, Cundinamarca, Valle, Quindío, Risaralda y Caldas. <div id="2002" class="mt-3 mb-0 text-muted text-left"> (45 oficinas en los 10 Departamentos generando 218 empleos directos y 2.500 indirectos). Hacen parte de la empresa 420 asociados <a type="button" id="menos02" title="Mostrar menos" onclick="menoshistoria02()" ><strong class="text-justify">...</strong></a></div>
+                                                <a type="button" id="mas02" title="Mostrar más" class="text-muted" onclick="mashistoria02()" ><strong class="text-justify">...</strong></a> 
                                             </p>
                                         </div>
                                     </div>
@@ -552,7 +554,10 @@
                                         <div class="card-body text-muted">
                                             
                                                 <li class="text-justify">En Febrero se inician las labores de construcción de la estación de servicio de INVERSIONES COOTRANSHUILA S.A, la cual se encuentra ubicada en el kilómetro 2 de la vía a Bogotá.</li>
-                                                <li class="text-justify">Durante el mes de Noviembre (01) se inaugura oficialmente la estación de servicio de INVERSIONES COOTRANSHUILA S.A</li>
+                                                <div id="2006">
+                                                    <li class="text-justify">Durante el mes de Noviembre (01) se inaugura oficialmente la estación de servicio de INVERSIONES COOTRANSHUILA S.A <a type="button" id="menos06" title="Mostrar menos" onclick="menoshistoria06()" ><strong class="text-justify">...</strong></a></li>
+                                                </div>
+                                                <a type="button" id="mas06" title="Mostrar más" class="text-muted" onclick="mashistoria06()" ><strong class="text-justify">...</strong></a>
                                             
                                         </div>
                                     </div>
@@ -576,11 +581,12 @@
                                         <img src="" class="img-fluid" alt>
                                         <div class="card-body text-muted">
                                             <!--<h5 class="mb-0 text-capitalize"></h5>-->
-                                            
                                                 <li class="text-justify">En Mayo se obtiene la recertificación en la norma BASC.</li>
-                                                <li class="text-justify">Se inicia en Agosto la construcción de los surtidores de gas vehicular. Octubre 02 se recibe la auditoría por parte del Icontec y somos nuevamente certificados en la ISO 9001 - 2000 por un año más.</li>
-                                                <li class="text-justify">En Diciembre se inagura la estación de gas vehicular y se da al servicio del público.</li>
-                                            
+                                                <div id="2007">
+                                                    <li class="text-justify">Se inicia en Agosto la construcción de los surtidores de gas vehicular. Octubre 02 se recibe la auditoría por parte del Icontec y somos nuevamente certificados en la ISO 9001 - 2000 por un año más. </li>
+                                                    <li class="text-justify">En Diciembre se inagura la estación de gas vehicular y se da al servicio del público <a type="button" id="menos07" title="Mostrar menos" onclick="menoshistoria07()" ><strong class="text-justify">...</strong></a></li>
+                                                </div>
+                                                <a type="button" id="mas07" title="Mostrar más" class="text-right" onclick="mashistoria07()" ><strong class="text-justify">...</strong></a>
                                         </div>
                                     </div>
                                 </div>
@@ -594,7 +600,10 @@
                                         <div class="card-body text-muted">
                                             
                                             <li class="text-justify">En Marzo 25 se inician los trabajos de remodelación del primer piso del área administrativa, el 27 se realizó la 74 asamblea general ordinaria informativa, en las instalaciones del club campestre Neiva.</li>
-                                            <li class="text-justify">En Junio 16 se trasladan a las nuevas instalaciones del primer piso. Julio 14 se inician los trabajos de remodelación del segundo piso, los cuales se terminaron al 04 de Noviembre, trasladándose el personal el 08 de Noviembre.</li>
+                                            <div id="2008">
+                                                <li class="text-justify">En Junio 16 se trasladan a las nuevas instalaciones del primer piso. Julio 14 se inician los trabajos de remodelación del segundo piso, los cuales se terminaron al 04 de Noviembre, trasladándose el personal el 08 de Noviembre <a type="button" id="menos08" title="Mostrar menos" onclick="menoshistoria08()" ><strong class="text-justify">...</strong></a></li>
+                                            </div>
+                                            <a type="button" id="mas08" title="Mostrar más" class="text-right" onclick="mashistoria08()" ><strong class="text-justify">...</strong></a>
                                             
                                         </div>
                                     </div>
@@ -659,7 +668,10 @@
                                             <!--<h5 class="mb-0 text-capitalize"></h5>-->
                                             
                                                 <li class="text-justify">Se realizó una remodelación total a la Sala VIP ubicada en el Terminal de Transporte de la ciudad de Bogotá.</li>
-                                                <li class="text-justify">La empresa fue certificada en OSHAS 18001 - 2008, otorgada por el instituto de normas técnicas Incontec; esta norma enmarca salud ocupacional, seguridad insdustrial y HSE.</li>
+                                                <div id="2011">
+                                                    <li class="text-justify">La empresa fue certificada en OSHAS 18001 - 2008, otorgada por el instituto de normas técnicas Incontec; esta norma enmarca salud ocupacional, seguridad insdustrial y HSE <a type="button" id="menos11" title="Mostrar menos" onclick="menoshistoria11()" ><strong class="text-justify">...</strong></a></li>
+                                                </div>
+                                                <a type="button" id="mas11" title="Mostrar más" class="text-right" onclick="mashistoria11()" ><strong class="text-justify">...</strong></a>
                                             </ul>
                                         </div>
                                     </div>
@@ -674,7 +686,10 @@
                                         <div class="card-body text-muted">
                                             
                                                 <li class="text-justify">En Octubre fue adjudicado el contrato de prestación de servicio de transporte de personas y cosas con la Electrificadora del Huila por tres años, adquiriendo la empresa 35 camionetas Chevrolet Dimax y tres camionetas Captiva Chevrolet, todos últimos modelos, para cumplir con el contrato.</li>
-                                                <li class="text-justify">Mediante convenio con seguros QBE la empresa empezó a ofrecer directamente en sus instalaciones la venta del seguro obligatorio SOAT.</li>
+                                                <div id="2012">
+                                                    <li class="text-justify">Mediante convenio con seguros QBE la empresa empezó a ofrecer directamente en sus instalaciones la venta del seguro obligatorio SOAT <a type="button" id="menos12" title="Mostrar menos" onclick="menoshistoria12()" ><strong class="text-justify">...</strong></a></li>
+                                                </div>
+                                                <a type="button" id="mas12" title="Mostrar más" class="text-right" onclick="mashistoria12()" ><strong class="text-justify">...</strong></a>
                                             
                                         </div>
                                     </div>
@@ -700,8 +715,11 @@
                                             <!--<h5 class="mb-0 text-capitalize"></h5>-->
                                             
                                                 <li class="text-justify">Se adquirió lote de terreno de 4.900 M², ubicados al frente del Terminal de Transporte de Neiva, para futuros proyectos de la empresa.</li>
-                                                <li class="text-justify">Fue adjudicado de nuevo el contrato de Servicio Especial de pasajeros con Ecopetrol por un término de tres años.</li>
-                                                <li class="text-justify">El primero de Octubre se inició el contrato con Emgesa Concesión el Quimbo del Servicio Especial Empresarial de pasajeros por el término de tres años, inicialmente con diez buses de Servicio Especial.</li>
+                                                <div id="2013">
+                                                    <li class="text-justify">Fue adjudicado de nuevo el contrato de Servicio Especial de pasajeros con Ecopetrol por un término de tres años.</li>
+                                                    <li class="text-justify">El primero de Octubre se inició el contrato con Emgesa Concesión el Quimbo del Servicio Especial Empresarial de pasajeros por el término de tres años, inicialmente con diez buses de Servicio Especial <a type="button" id="menos13" title="Mostrar menos" onclick="menoshistoria13()" ><strong class="text-justify">...</strong></a></li>
+                                                </div>
+                                                <a type="button" id="mas13" title="Mostrar más" class="text-right" onclick="mashistoria13()" ><strong class="text-justify">...</strong></a>
                                             
                                         </div>
                                     </div>
@@ -712,10 +730,10 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2">
                                     <div class="card event event-description-left rounded shadow border-0 overflow-hidden float-left">
-                                        <img src="" class="img-fluid" alt>
+                                        <img src="assets/images/2014.jpg" class="img-fluid" alt>
                                         <div class="card-body text-justify">
                                             <p class="mt-3 mb-0 text-muted text-left">
-                                                Inicio de obras de construcción en la denominada Inversiones Cootranshuila del Sur S.A.S, en la ciudad de Pitalito, en la cual se contará con un hotel cómodo, satisfaciendo las necesidades de los huéspedes con zonas ambientales, cafetería y habitaciones confortables.
+                                                Se adquieren buses de lujo (Doble Yo) brindando una doble experiencia a clientes.
                                             </p>
                                         </div>
                                     </div>
@@ -747,22 +765,99 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="timeline-item mt-4">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2">
+                                    <div class="card event event-description-left rounded shadow border-0 overflow-hidden float-left">
+                                        <img src="" class="img-fluid" alt>
+                                        <div class="card-body text-justify">
+                                            <p class="mt-3 mb-0 text-muted text-left">
+                                                Implementación de la modalidad línea Nevada Urbano.
+                                                Registro Nacional de Turismo.
+                                                Creación modalidad de lujo DOBLE YO, ingreso de cinco unidades.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
+                                    <div class="duration duration-right rounded border p-2 px-4 position-relative shadow text-left">
+                                        2016
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item mt-4">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="duration date-label-left border rounded p-2 px-4 position-relative shadow">
+                                        2018
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="card event event-description-right rounded shadow border-0 overflow-hidden float-left">
+                                        <img src="" class="img-fluid" alt>
+                                        <div class="card-body text-justify">
+                                            <p class="mt-3 mb-0 text-muted">
+                                                Ingreso del primer vehículo urbano para el transporte  de personas con movilidad reducida.
+                                                Se realiza compra de la EDS de La Toma.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item mt-4">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2">
+                                    <div class="card event event-description-left rounded shadow border-0 overflow-hidden float-left">
+                                        <img src="" class="img-fluid" alt>
+                                        <div class="card-body text-justify">
+                                            <p class="mt-3 mb-0 text-muted text-left">
+                                                Ingreso del primer vehículo bus pasajeros con transporte para personas con movilidad reducida.
+                                                Se realiza compra del carro tanque, compra de la EDS del Terminal y compra de la EDS de Ibagué.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
+                                    <div class="duration duration-right rounded border p-2 px-4 position-relative shadow text-left">
+                                        2019
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="section bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div>
-        
+        <div class="container mt-100">
+            <div class="rounded bg-primary p-lg-5 p-4" style="height:120px !important">
+                <div class="row align-items-end">
+                    <div class="col-md-8">
+                        <div class="section-title text-md-left text-center">
+                            <h5 class="title mb-1 text-white title-dark">Conozca más sobre nuestra empresa...</h5>
+                            <!--<p class="text-white mb-0">
+                                Haga click en "Ver más" para concocer más sobre nosotros...
+                            </p>-->
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <div class="row align-items-end">
+                    <div class="col-md-4 col-lg-12 mt-4 mt-sm-0 ">
+                        <div class="text-lg-right text-center ">
+                            <a href="nuestra_empresa" class="btn btn-light">Ver más</a>
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
+
+
+
     </section>
     
 
