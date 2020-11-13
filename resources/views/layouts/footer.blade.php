@@ -43,7 +43,7 @@
                 <ul class="list-unstyled footer-list mt-4">
                     <li><a href="/politica_datos" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Politica de datos</a></li>
                     <li><a href="/Siplat" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Siplat</a></li>
-                    <li><a href="/esal-2019" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Esal - 2019</a></li>
+                    <li><a href="/informacion-dian" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Esal - 2019</a></li>
                     <li><a href="/login" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Login</a></li>
                     <li><a href="/contacto" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Contactenos</a></li>
                 </ul>

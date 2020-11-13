@@ -2,7 +2,7 @@
     <div class="px-xl-5 px-lg-3 px-2">
         <!-- Logo container-->
         <div>
-            <a class="logo" href="index.html">
+            <a class="logo" href="/inicio">
                 <img src="{{ asset('assets/images/logo-dark.png') }}" class="l-dark" height="42" alt="">
                 <img src="{{ asset('assets/images/logo-light.png') }}" class="l-light" height="42" alt="">
             </a>
@@ -31,8 +31,8 @@
                         <li>
                             <ul>
                                 <li class="has-submenu"><a href="historia">Historia</a></li>
-                                <li><a href="index-classic-saas.html">Nuestra empresa</a></li>
-                                <li><a href="index-agency.html">Esal-2019</a></li>
+                                <li><a href="nuestra_empresa">Nuestra empresa</a></li>
+                                <!--<li><a href="index-agency.html">Esal-2019</a></li>-->
                             </ul>
                         </li>
                     </ul>
