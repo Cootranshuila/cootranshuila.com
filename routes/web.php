@@ -31,3 +31,5 @@ Route::get('/nuestra_empresa',function(){
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/GetHabilitadas', [App\Http\Controllers\IndexController::class, 'GetHabilitadasOrigen']);

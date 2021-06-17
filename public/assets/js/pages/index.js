@@ -1,23 +1,29 @@
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 $(document).ready(function () {
 
     // Peticion par listar las ciudades de Origen
-    $.ajax({
-        url: 'https://wscootranshuila.teletiquete.com/WebService/pag_web.php?get_ciudad',
-        type: 'GET',
-        headers: {},
-        success: function (data) {
-            ciudades = JSON.parse(data)
-            var content = '<option value="">Seleccione el origen</option>'
+    // $.ajax({
+    //     url: 'https://wscootranshuila.teletiquete.com/WebService/pag_web.php?get_ciudad',
+    //     type: 'GET',
+    //     headers: {},
+    //     success: function (data) {
+    //         ciudades = JSON.parse(data)
+    //         var content = '<option value="">Seleccione el origen</option>'
 
-            for (let item in ciudades) {
-                content += `
-                    <option value="${ciudades[item].cod_ciudad}">${ciudades[item].nom_ciudad}</option>
-                `;
-            }
-            $('#optOrigen').html(content);
-            $('.preloader').addClass('d-none').delay(350);
-        }
-    })
+    //         for (let item in ciudades) {
+    //             content += `
+    //                 <option value="${ciudades[item].cod_ciudad}">${ciudades[item].nom_ciudad}</option>
+    //             `;
+    //         }
+    //         $('#optOrigen').html(content);
+    //         $('.preloader').addClass('d-none').delay(350);
+    //     }
+    // });
 
     // Funcion para listar los destinos
     $('#optOrigen').on('change', function () {
@@ -44,5 +50,19 @@ $(document).ready(function () {
 
     $(window).on('load', function () {
        $('#video_protocolos').attr('href',"assets/videos/protocolos.mp4");
+    });
+
+
+    // Peticion par listar las ciudades de Origen
+    $.ajax({
+        url: '/GetHabilitadas',
+        type: 'POST',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            console.log(data.terminal[0]['@attributes']);
+        }, error(e) {
+            console.log(e);
+        }
     });
 });
