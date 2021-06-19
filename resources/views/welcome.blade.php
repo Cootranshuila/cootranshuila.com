@@ -26,7 +26,8 @@
                     <div class="card-body">
                         <h5 class="card-title text-center mb-4 h3">¡Compra ya tu tiquete!</h5>
 
-                        <form class="login-form" action="https://cootranshuila.teletiquete.com/" method="POST">
+                        <form class="login-form" action="/GetDisponiblesIda" method="POST">
+                            @csrf
                             <div class="row">
                                 <div id="preloader" class="preloader position-absolute d-none">
                                     <div id="status" class="text-center">
@@ -55,14 +56,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label> Fecha Ida: </label>
-                                        <input name="date" type="text" class="flatpickr flatpickr-input form-control" id="checkin-date" name="txtFecSalida" required>
+                                        <input type="text" class="flatpickr flatpickr-input form-control" id="checkin-date" name="txtFecSalida" required>
                                     </div>
                                 </div><!--end col-->
 
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label> Fecha Regreso: </label>
-                                        <input name="date" type="text" class="flatpickr flatpickr-input form-control" id="checkout-date" name="txtFecRegreso">
+                                        <input type="text" class="flatpickr flatpickr-input form-control" id="checkout-date" name="txtFecRegreso">
                                     </div>
                                 </div><!--end col-->
                                 <div class="col-md-12">

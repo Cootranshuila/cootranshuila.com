@@ -33,3 +33,5 @@ Route::get('/', function () {
 });
 
 Route::post('/GetHabilitadas', [App\Http\Controllers\IndexController::class, 'GetHabilitadasOrigen']);
+Route::post('/GetHabilitadasDestino', [App\Http\Controllers\IndexController::class, 'GetHabilitadasDestino']);
+Route::post('/GetDisponiblesIda', [App\Http\Controllers\IndexController::class, 'GetDisponiblesIda']);
