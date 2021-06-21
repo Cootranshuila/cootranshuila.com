@@ -118,4 +118,13 @@ class IndexController extends Controller
             ];
         }
     }
+
+    /*
+    ---------------------------------
+    |  seleccionar viajes disponibles
+    ---------------------------------
+    */
+    public function SelectViaje(){
+        return view('buscar_buses');
+    }
 }
