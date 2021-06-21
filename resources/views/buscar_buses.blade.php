@@ -92,10 +92,11 @@
                     </div>
                     <!-- buses -->
                     <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
-                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 15px;">
-                            <div class="row">
+                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
+                            <div class="row" style="align-items: center;">
                                 <div class=" col-sm-12 col-md-2">
-                                    <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="170">
+                                    {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="150"> --}}
+                                    <img src="{{asset('assets/images/servicios/doble_yo.png')}}" alt="" width="120">
                                 </div>
                                 <div class="col-md-2 text-center">10:30</div>
                                 <div class="col-md-2 text-center">Doble yo</div>
@@ -109,10 +110,11 @@
                         </div>
                     </div>
                     <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
-                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 15px;">
-                            <div class="row">
+                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
+                            <div class="row" style="align-items: center;">
                                 <div class=" col-sm-12 col-md-2">
-                                    <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="170">
+                                    <img src="{{asset('assets/images/servicios/vip.png')}}" alt="" width="120">
+                                    {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="120"> --}}
                                 </div>
                                 <div class="col-md-2 text-center">11:30</div>
                                 <div class="col-md-2 text-center">Preferencial Vip</div>
@@ -126,10 +128,11 @@
                         </div>
                     </div>
                     <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
-                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 15px;">
-                            <div class="row">
+                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
+                            <div class="row" style="align-items: center;">
                                 <div class=" col-sm-12 col-md-2">
-                                    <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="170">
+                                    {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="170"> --}}
+                                    <img src="{{asset('assets/images/servicios/platino_Expres.png')}}" alt="" width="120">
                                 </div>
                                 <div class="col-md-2 text-center">12:30</div>
                                 <div class="col-md-2 text-center">PLatino Expres</div>
@@ -143,10 +146,11 @@
                         </div>
                     </div>
                     <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
-                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 15px;">
-                            <div class="row">
+                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
+                            <div class="row" style="align-items: center;">
                                 <div class=" col-sm-12 col-md-2">
-                                    <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="170">
+                                    <img src="{{asset('assets/images/servicios/platino_jet.png')}}" alt="" width="120">
+                                    {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="120"> --}}
                                 </div>
                                 <div class="col-md-2 text-center">13:30</div>
                                 <div class="col-md-2 text-center">Platino Jet</div>

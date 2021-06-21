@@ -440,7 +440,7 @@
                         <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Pitalito</h4>
+                        <h4 class="title mb-0">Sucursal Pitalito</h4>
                         <ul class="list-unstyled text-muted">
                             <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-map-marker"></i></span>Terminal de Transportes Pitalito</li>
                             <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-phone-volume"></i></span>(8)836 0204</li>
@@ -456,11 +456,11 @@
                         <i data-feather="home" class="fea icon-ex-md text-primary"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="title mb-0">Pitalito</h4>
+                        <h4 class="title mb-0">Sucursal Bogotá</h4>
                         <ul class="list-unstyled text-muted">
-                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-map-marker"></i></span>Terminal de Transportes Pitalito</li>
-                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-phone-volume"></i></span>(8)836 0204</li>
-                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-at"></i></span>pasajes_pitalito@cootranshuila.com</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-map-marker"></i></span>Terminal de Transportes Bogotá Salitre</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-phone-volume"></i></span>3207646712 | 3175385181</li>
+                            <li class="mb-0"><span class="text-primary h6 mr-2"><i class="uil uil-at"></i></span>pasajes_bogota@cootranshuila.com</li>
                         </ul>
                     </div>
                 </div>
