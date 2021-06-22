@@ -1,0 +1,11 @@
+@media only screen and (max-width: 771px) {
+    #filtros{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section{
+        margin-top: 1.5rem;
+    }
+}

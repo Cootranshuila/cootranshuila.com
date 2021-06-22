@@ -86,8 +86,15 @@ class IndexController extends Controller
         // pasamos la clase a utilizar
         $client = $this->soap->config('Viaje.asmx');
 
-        $fecha = new \DateTime($request['txtFecSalida']);
-        $fecha = $fecha->format('d/m/Y H:i:s');
+        $fechaActual = new \DateTime();
+        if($request['txtFecSalida'] == $fechaActual->format('Y-m-d')) {
+            $fechaActual = $fechaActual->modify('+60 minute'); 
+            $fecha = $fechaActual->format('d/m/Y H:i:s');
+        } else {
+            $fecha = new \DateTime($request['txtFecSalida']);
+            $fecha = $fecha->format('d/m/Y H:i:s');
+        }
+
         // pasar parametros a ser enviados o requeridos
         $parameters = array(
             'Token' => $token,
@@ -107,10 +114,54 @@ class IndexController extends Controller
         // se realiza la solicitud
         try {
             $response = $client->GetDisponiblesIda($parameters);
-        
+            
             $viajes = new \SimpleXMLElement($response->GetDisponiblesIdaResult);
 
-            return json_encode($viajes);
+            return view('buscar_buses', ['viajes' => $viajes]); 
+            
+        } catch (\Exception $e) {
+            return [
+                'error' => 1,
+                'mensaje' => $e->getMessage()
+            ];
+        }
+    }
+
+    public function GetMapaButacas(Request $request){
+        // se obtine el token
+        $token = $this->soap->getToken();
+
+        // comprobar si el token da error
+        if (isset($token->error))
+            return $token->mensaje;
+
+        //obtener configuracion y cabeceras de solicitud
+        // pasamos la clase a utilizar
+        $client = $this->soap->config('Viaje.asmx');
+
+        // pasar parametros a ser enviados o requeridos
+        $parameters = array(
+            'Token' => $token,
+            'ViajeID' => $request['ViajeID'],
+            'TerminalOrigenID' =>  $request['TerminalOrigenID'],
+            'TerminalDestinoID' =>  $request['TerminalDestinoID'],
+            'Orientacion' => 1,
+            'Modo' => 1,
+            'InfoAdicional' => 1
+        );
+
+        // dd($parameters);
+
+        // se realiza la solicitud
+        try {
+            $response = $client->GetMapaButacas($parameters);
+
+            $butacas = new \SimpleXMLElement($response->GetMapaButacasResult);
+
+            return json_encode($butacas);
+
+            // return view('buscar_buses', ['viajes' => $viajes]); 
+            
         } catch (\Exception $e) {
             return [
                 'error' => 1,

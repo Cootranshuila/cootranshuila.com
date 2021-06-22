@@ -2,35 +2,53 @@
 
 @section('title')Compra tu pasaje @endsection
 
-@section('MainScripts') <script src="{{ asset('assets/js/pages/index.jss') }}"></script> 
+@section('MyStyles')
+    <link rel="stylesheet" href="{{asset('assets/css/mystyles/buscar_bus.css')}}">
+@endsection
+
+@section('MainScripts') <script src="{{ asset('assets/js/pages/index.js') }}"></script> 
     <script>
+        // agregar propiedad de header estatico
         $(".sticky").addClass("nav-sticky");
+
+        // modificar columnas segun tamaño
+        if($(window).width() < 771){
+            $('#show_buses').removeClass('col-md-10');
+            $('#show_buses').addClass('col-md-12');
+        }else{
+            $('#show_buses').removeClass('col-md-12');
+            $('#show_buses').addClass('col-md-10');
+        }
     </script>
 @endsection
 
 @section('content')
     <section class="section bg-light">
         <div class="container">
-            <div class="col-lg-12 event-schedule rounded border" style="margin-bottom: 15px;">
+            <div class="col-lg-12 card  rounded border" style="margin-bottom: 15px;">
                 <div class="row">
-                    <div class="col-lg-8 card">
+                    <div class="col-lg-8">
                         <div class="page-next-level">
-                            <h5>VIAJE DE SALIDA</h5>
-                            <h5>Terminal Neiva -> Bogotá -> jun-21-2021</h5>
+                            <h5 class="title text-dark">VIAJE DE SALIDA</h5>
+                            <h5>Terminal Neiva <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> Bogotá <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> jun-21-2021</h5>
                         </div>
                     </div>
-                    <div class="col-lg-4 card">
+                    <div class="col-lg-4">
                         <div class="col-md-12" style="padding-top: 15px;">
                             <button type="button" class="btn btn-primary" style="float: right;">Seleccionar Regreso</button>
                         </div> 
                     </div>
                 </div>          
             </div>
+            {{-- @php
+                
+                dd($viajes->ida->viaje[0]);
 
+            @endphp --}}
             <!-- buses disponibles -->
             <div class="row row-5">
                 <!-- filtros -->
-                <div class="col-md-2 hidden-sm hidden-xs card event-schedule rounded border pr-0 pl-0" style="height: 300px;">
+                <div class="col-md-2 hidden-xs hidden-sm card event-schedule rounded border pr-0 pl-0" id="filtros" style="height: 250px; margin-top:2.5rem;">
                     <div class="rounded bg-primary" style="padding: 8px !important;">
                         <h5 class="widget-title" style="vertical-align: inherit; margin-bottom: 0 !important; color: #fff;">Modalidad</h5>
                     </div>
@@ -73,10 +91,10 @@
                 <!-- filtros-end -->
 
                 <!-- horarios buses -->
-                <div class="col-md-10 col-sm-12 col-xs-12">
+                <div class="col-md-10 col-sm-12 col-xs-12" id="show_buses">
                     <div class="col-md-12">
                         <p>
-                            <b>17 buses</b> encontrados desde <b> Terminal Neiva</b> hacia <b> Bogotá</b>
+                            <b>{{count($viajes->ida->viaje)}} buses</b> encontrados desde <b> Terminal Neiva</b> a <b> Bogotá</b>
                         </p>
                     </div>
                     <!-- listado de buses -->
@@ -91,7 +109,42 @@
                         </div>
                     </div>
                     <!-- buses -->
-                    <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
+                    @foreach ($viajes->ida->viaje as $viaje)
+                        <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
+                            <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
+                                <div class="row" style="align-items: center;">
+                                    <div class=" col-sm-12 col-md-2 text-center">
+                                        {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="150"> --}}
+                                        @if ($viaje['CategoriaID'] == 7)
+                                            <img src="{{asset('assets/images/servicios/doble_yo.png')}}" alt="" width="120">
+                                        @else
+                                            @if ($viaje['CategoriaID'] == 4)
+                                                <img src="{{asset('assets/images/servicios/vip.png')}}" alt="" width="120">
+                                            @else
+                                                @if ($viaje['CategoriaID'] == 2)
+                                                    <img src="{{asset('assets/images/servicios/platino_Expres.png')}}" alt="" width="120">
+                                                @else
+                                                    @if ($viaje['CategoriaID'] == 3)
+                                                        <img src="{{asset('assets/images/servicios/platino_jet.png')}}" alt="" width="120">
+                                                    @endif
+                                                @endif
+                                            @endif
+                                        @endif
+                                        {{-- <img src="{{asset('assets/images/servicios/doble_yo.png')}}" alt="" width="120"> --}}
+                                    </div>
+                                    <div class="col-md-2 text-center">{{$viaje['FechaPartida']}}</div>
+                                    <div class="col-md-2 text-center">{{$viaje['CategoriaNombre']}}</div>
+                                    <div class="col-md-2 text-center">{{$viaje['TerminalOrigenNombre']}}</div>
+                                    <div class="col-md-2 text-center">{{$viaje['TerminalDestinoNombre']}}</div>
+                                    <div class="col-md-2 text-center">80.000</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="button" class="btn btn-primary" style="float: right" onclick="GetMapaButacas({{$viaje['Id']}}, {{$viaje['TerminalOrigenID']}}, {{$viaje['TerminalDestinoID']}})">Ver sillas</button>
+                                </div>         
+                            </div>
+                        </div>
+                    @endforeach
+                    <!--<div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
                         <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
                             <div class="row" style="align-items: center;">
                                 <div class=" col-sm-12 col-md-2 text-center">
@@ -108,8 +161,9 @@
                                 <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
                             </div>         
                         </div>
-                    </div>
-                    <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
+                    </div>-->
+
+                    <!--<div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
                         <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
                             <div class="row" style="align-items: center;">
                                 <div class=" col-sm-12 col-md-2 text-center">
@@ -162,7 +216,7 @@
                                 <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
                             </div>         
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <!-- horarios buses-end -->
                 

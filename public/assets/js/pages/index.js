@@ -129,4 +129,31 @@ $(document).ready(function () {
         });
 
     });
+    
+    // $.ajax({
+    //     url: '/GetDisponiblesIda',
+    //     type: 'POST',
+    //     data: {viajes:this.value},
+    //     dataType: "json",
+    //     success: function (data) {
+    //         console.log(data);
+            
+    //     }, error(e) {
+    //         console.log(e);
+    //     }
+    // });
 });
+
+function GetMapaButacas(ViajeID, TerminalOrigenID, TerminalDestinoID) {
+    $.ajax({
+        url: '/GetMapaButacas',
+        type: 'POST',
+        data: {ViajeID:ViajeID, TerminalOrigenID:TerminalOrigenID, TerminalDestinoID:TerminalDestinoID},
+        dataType: "json",
+        success: function (data) {
+            console.log(data);
+        }, error(e) {
+            console.log(e);
+        }
+    });
+}

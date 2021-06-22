@@ -29,6 +29,9 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" id="theme-opt" />
     <link href="{{ asset('assets/css/colors/default.css') }}" rel="stylesheet" id="color-opt">
 
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/df4fe78545.js" crossorigin="anonymous"></script>
+
     {{-- CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
