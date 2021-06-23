@@ -87,6 +87,8 @@ class IndexController extends Controller
         $client = $this->soap->config('Viaje.asmx');
 
         $fechaActual = new \DateTime();
+        $fechaViaje = new \DateTime($request['txtFecSalida']);
+        $fechaViaje = $fechaViaje->format('d/m/Y');
         if($request['txtFecSalida'] == $fechaActual->format('Y-m-d')) {
             $fechaActual = $fechaActual->modify('+60 minute'); 
             $fecha = $fechaActual->format('d/m/Y H:i:s');
@@ -117,7 +119,7 @@ class IndexController extends Controller
             
             $viajes = new \SimpleXMLElement($response->GetDisponiblesIdaResult);
 
-            return view('buscar_buses', ['viajes' => $viajes]); 
+            return view('buscar_buses', ['viajes' => $viajes, 'fechaViaje' => $fechaViaje]); 
             
         } catch (\Exception $e) {
             return [

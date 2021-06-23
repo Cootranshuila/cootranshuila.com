@@ -25,12 +25,13 @@
 @section('content')
     <section class="section bg-light">
         <div class="container">
-            <div class="col-lg-12 card  rounded border" style="margin-bottom: 15px;">
+            <div class="col-lg-12 card  rounded border" style="margin-bottom: 15px;" id="detalles_viaje">
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="page-next-level">
                             <h5 class="title text-dark">VIAJE DE SALIDA</h5>
-                            <h5>Terminal Neiva <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> Bogotá <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> jun-21-2021</h5>
+                            
+                            <h5>{{$viajes->ida->viaje['TerminalOrigenNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> {{$viajes->ida->viaje['TerminalDestinoNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> {{$fechaViaje}}</h5>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -42,7 +43,7 @@
             </div>
             {{-- @php
                 
-                dd($viajes->ida->viaje[0]);
+                dd($viajes->ida->viaje);
 
             @endphp --}}
             <!-- buses disponibles -->
@@ -94,7 +95,7 @@
                 <div class="col-md-10 col-sm-12 col-xs-12" id="show_buses">
                     <div class="col-md-12">
                         <p>
-                            <b>{{count($viajes->ida->viaje)}} buses</b> encontrados desde <b> Terminal Neiva</b> a <b> Bogotá</b>
+                            <b>{{count($viajes->ida->viaje)}} buses</b> encontrados.
                         </p>
                     </div>
                     <!-- listado de buses -->
@@ -110,8 +111,22 @@
                     </div>
                     <!-- buses -->
                     @foreach ($viajes->ida->viaje as $viaje)
+
+                        @php
+                            
+                            foreach($viaje->tarifa AS $tarifa) {
+                                if((int)$viaje['CategoriaID'] == (int)$tarifa['CategoriaID']) {
+                                    $CategoriaNombre = $tarifa['CategoriaNombre'];
+                                    $PrecioOneWay = $tarifa['PrecioOneWay'];
+                                    $precio = number_format((int)$PrecioOneWay);
+                                }
+                            }
+                            
+                            // dd($CategoriaNombre.' - '.$precio);
+                        @endphp
+
                         <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
-                            <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
+                            <div class="card event-schedule rounded border" id="viajes_disp">
                                 <div class="row" style="align-items: center;">
                                     <div class=" col-sm-12 col-md-2 text-center">
                                         {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="150"> --}}
@@ -133,10 +148,10 @@
                                         {{-- <img src="{{asset('assets/images/servicios/doble_yo.png')}}" alt="" width="120"> --}}
                                     </div>
                                     <div class="col-md-2 text-center">{{$viaje['FechaPartida']}}</div>
-                                    <div class="col-md-2 text-center">{{$viaje['CategoriaNombre']}}</div>
+                                    <div class="col-md-2 text-center">{{$CategoriaNombre}}</div>
                                     <div class="col-md-2 text-center">{{$viaje['TerminalOrigenNombre']}}</div>
                                     <div class="col-md-2 text-center">{{$viaje['TerminalDestinoNombre']}}</div>
-                                    <div class="col-md-2 text-center">80.000</div>
+                                    <div class="col-md-2 text-center">{{$precio}}</div>
                                 </div>
                                 <div class="col-md-12">
                                     <button type="button" class="btn btn-primary" style="float: right" onclick="GetMapaButacas({{$viaje['Id']}}, {{$viaje['TerminalOrigenID']}}, {{$viaje['TerminalDestinoID']}})">Ver sillas</button>
