@@ -19,6 +19,10 @@
             $('#show_buses').removeClass('col-md-12');
             $('#show_buses').addClass('col-md-10');
         }
+        
+        // obtener fecha seleccionada
+        var fecha = $('#Fecha').val();
+        $('#checkin-date').val(fecha);
     </script>
 @endsection
 
@@ -29,35 +33,48 @@
                 <div class="p-4 shadow row">
                     <div class="col-lg-8">
                         <div class="page-next-level">
+                            {{-- Informacion de Viaje --}}
+                            <input type="hidden" id="TerminalOrigen" value="{{$viajes->ida['TerminalOrigen']}}">
+                            <input type="hidden" id="TerminalDestino" value="{{$viajes->ida['TerminalDestino']}}">
+                            <input type="hidden" id="Fecha" value="{{$date}}">
+
+
                             <h5 class="title text-dark">VIAJE DE SALIDA</h5>
 
-                            <h5>{{$viajes->ida->viaje['TerminalOrigenNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> {{$viajes->ida->viaje['TerminalDestinoNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> {{$fechaViaje}}</h5>
+                            <h5 class="{{$viajes->ida->viaje ? '' : 'd-none'}}">{{$viajes->ida->viaje['TerminalOrigenNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039;"></i> {{$viajes->ida->viaje['TerminalDestinoNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> {{$fechaDeViaje}}</h5>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="col-md-12" style="padding-top: 15px;">
-                            <button type="button" class="btn btn-primary" style="float: right;">Seleccionar Regreso</button>
+                            <button type="button" class="btn btn-primary" id="btn_cambio" onclick="CanbiarDestino()" style="float: right;">Cambiar Destino</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             {{-- Cambiar fechas --}}
-            <div class="row justify-content-center mb-3 d-none">
+            <div class="row justify-content-center mb-3" id="cambiar_destino">
                 <div class="col-lg-12">
-                    <form class="p-4 shadow bg-white rounded">
+                    <form class="p-4 shadow bg-white rounded" action="/GetDisponiblesIda" method="POST">
+                        @csrf
                         <div class="row text-left">
                             <div class="col-lg-3 col-md-6">
-                                <div class="form-group">
-                                    <label> Check in : </label>
-                                    <input name="date" type="text" class="flatpickr flatpickr-input form-control" id="checkin-date">
+                                <div class="form-group position-relative">
+                                    <label> Ciudad Origen: </label>
+                                    <i data-feather="map-pin" class="fea icon-sm icons"></i>
+                                    <select class="form-control custom-select pl-5" name="optOrigen" id="optOrigen" required>
+                                        <option selected="">Seleccione origen</option>
+                                    </select>
                                 </div>
                             </div><!--end col-->
 
                             <div class="col-lg-3 col-md-6">
-                                <div class="form-group">
-                                    <label> Check out : </label>
-                                    <input name="date" type="text" class="flatpickr flatpickr-input form-control" id="checkout-date">
+                                <div class="form-group position-relative">
+                                    <label> Ciudad Destino: </label>
+                                    <i data-feather="map-pin" class="fea icon-sm icons"></i>
+                                    <select class="form-control custom-select pl-5" name="optDestino" id="optDestino" required>
+                                        <option selected="">Seleccione el destino</option>
+                                    </select>
                                 </div>
                             </div><!--end col-->
 
@@ -65,20 +82,20 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label>Adults : </label>
-                                            <input type="number" min="0" autocomplete="off" id="adult" required="" class="form-control" placeholder="Adults :">
+                                            <label>Fecha Ida: </label>
+                                            <input type="text" class="flatpickr flatpickr-input form-control" id="checkin-date" name="txtFecSalida" required>
                                         </div>
                                     </div><!--end col-->
 
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label>Children : </label>
-                                            <input type="number" min="0" autocomplete="off" id="children" class="form-control" placeholder="Children :">
+                                            <label>Fecha Regreso: </label>
+                                            <input type="text" class="flatpickr flatpickr-input form-control" id="checkout-date" name="txtFecRegreso">
                                         </div>
                                     </div><!--end col-->
 
                                     <div class="col-md-4 mt-2">
-                                        <input type="submit" id="search" name="search" class="searchbtn btn btn-primary btn-block p" value="Search">
+                                        <input type="submit" id="search" name="search" class="searchbtn btn btn-primary btn-block p" value="Buscar">
                                     </div><!--end col-->
                                 </div>
                             </div>
@@ -87,11 +104,11 @@
                 </div><!--end col-->
             </div><!--end row-->
 
-            {{-- @php
+            @php
 
-                dd($viajes->ida->viaje);
+                // dd($viajes);
 
-            @endphp --}}
+            @endphp
             <!-- buses disponibles -->
             <div class="row row-5">
                 <!-- filtros -->
