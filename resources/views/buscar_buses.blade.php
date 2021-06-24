@@ -95,8 +95,8 @@
             <!-- buses disponibles -->
             <div class="row row-5">
                 <!-- filtros -->
-                <div class="col-md-2 hidden-xs hidden-sm card event-schedule rounded border pr-0 pl-0" id="filtros" style="height: 250px; margin-top:2.5rem;">
-                    <div class="rounded bg-primary" style="padding: 8px !important;">
+                <div class="col-md-2 hidden-xs hidden-sm card rounded border pr-0 pl-0" id="filtros" style="height: 250px; margin-top:2.5rem;">
+                    <div class="rounded-top bg-primary" style="padding: 8px !important;">
                         <h5 class="widget-title" style="vertical-align: inherit; margin-bottom: 0 !important; color: #fff;">Modalidad</h5>
                     </div>
                     {{-- <h4 class="widget-title bg-primary">Filtros</h4> --}}
@@ -145,7 +145,7 @@
                         </p>
                     </div>
                     <!-- listado de buses -->
-                    <div class="col-md-12 bg-primary" style="padding-top: 15px; padding-bottom: 15px; color: #fff;">
+                    <div class="col-md-12 bg-primary rounded" style="padding-top: 15px; padding-bottom: 15px; color: #fff;">
                         <div class="row">
                             <div class="col-md-2 text-center">Servicio</div>
                             <div class="col-md-2 text-center">Hora Salida</div>
@@ -171,7 +171,7 @@
                             // dd($CategoriaNombre.' - '.$precio);
                         @endphp
 
-                        <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
+                        <div class="col-lg-12 my-3" style="padding-left: 0 !important; padding-right:0 !important;">
                             <div class="card event-schedule rounded border" id="viajes_disp">
                                 <div class="row" style="align-items: center;">
                                     <div class=" col-sm-12 col-md-2 text-center">
@@ -200,7 +200,66 @@
                                     <div class="col-md-2 text-center">{{$precio}}</div>
                                 </div>
 
+                                <div class="row py-5 px-3">
+                                    <div class="container">
+                                        <div class="row align-items-center px-3 px-sm-0">
+                                            <div class="col-lg-8 col-md-6 col-12">
+                                                <div class="section-title">
+                                                    <h4 class="display-4 h1 text-white title-dark mb-4">Resumen</h4>
+                                                    <p class="text-light title-dark para-desc">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                                                    <div class="mt-4">
+                                                        <a href="javascript:void(0)" class="btn btn-primary">Admission Now</a>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
 
+                                            <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                                                <div class="card login_page shadow rounded border-0">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Resumen reservación</h4>
+
+                                                        <form class="login-form">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group position-relative">
+                                                                        <label>Your Name :<span class="text-danger">*</span></label>
+                                                                        <i data-feather="user" class="fea icon-sm icons"></i>
+                                                                        <input name="name" id="name" type="text" class="form-control pl-5" placeholder="First Name :">
+                                                                    </div>
+                                                                </div><!--end col-->
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group position-relative">
+                                                                        <label>Your Email :<span class="text-danger">*</span></label>
+                                                                        <i data-feather="mail" class="fea icon-sm icons"></i>
+                                                                        <input name="email" id="email" type="email" class="form-control pl-5" placeholder="Your email :">
+                                                                    </div>
+                                                                </div><!--end col-->
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group position-relative">
+                                                                        <label>Your Phone no. :<span class="text-danger">*</span></label>
+                                                                        <i data-feather="phone" class="fea icon-sm icons"></i>
+                                                                        <input name="number" id="number" type="number" class="form-control pl-5" placeholder="Your phone no. :">
+                                                                    </div>
+                                                                </div><!--end col-->
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                                            <label class="custom-control-label" for="customCheck1">I Accept <a href="#" class="text-primary">Terms And Condition</a></label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <button class="btn btn-primary w-100">Reservar</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end row-->
+                                    </div><!--end container-->
+                                </div><!---end row-->
 
                                 <div class="col-md-12">
                                     <button type="button" class="btn btn-primary" style="float: right" onclick="GetMapaButacas({{$viaje['Id']}}, {{$viaje['TerminalOrigenID']}}, {{$viaje['TerminalDestinoID']}}, this)">Ver sillas</button>
