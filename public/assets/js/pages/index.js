@@ -9,7 +9,7 @@ $.ajaxSetup({
 // });
 
 $(document).ready(function () {
-    
+
     // Peticion par listar las ciudades de Origen
     // $.ajax({
     //     url: 'https://wscootranshuila.teletiquete.com/WebService/pag_web.php?get_ciudad',
@@ -29,7 +29,7 @@ $(document).ready(function () {
     //     }
     // });
 
-   
+
 
     // Funcion para listar los destinos
     // $('#optOrigen').on('change', function () {
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
             let sucursales = [];
             ciudades.forEach(terminalOrigen => {
-                sucursales.push([terminalOrigen['@attributes']['LocalidadNombre']+', '+terminalOrigen['@attributes'].Nombre, terminalOrigen['@attributes'].ID]); 
+                sucursales.push([terminalOrigen['@attributes']['LocalidadNombre']+', '+terminalOrigen['@attributes'].Nombre, terminalOrigen['@attributes'].ID]);
             });
             sucursales = sucursales.sort();
 
@@ -108,13 +108,13 @@ $(document).ready(function () {
                 ciudadesDestino = data.terminal;
                 // console.log(ciudades);
                 var content = '<option value="">Seleccione el destino</option>';
-    
+
                 let sucursales = [];
                 ciudadesDestino.forEach(terminalDestino => {
-                    sucursales.push([terminalDestino['@attributes']['LocalidadNombre']+', '+terminalDestino['@attributes'].Nombre, terminalDestino['@attributes'].ID]); 
+                    sucursales.push([terminalDestino['@attributes']['LocalidadNombre']+', '+terminalDestino['@attributes'].Nombre, terminalDestino['@attributes'].ID]);
                 });
                 sucursales = sucursales.sort();
-    
+
                 sucursales.forEach(ter => {
                     content += `
                        <option value="${ter[1]}">${ter[0]} </option>
@@ -129,7 +129,7 @@ $(document).ready(function () {
         });
 
     });
-    
+
     // $.ajax({
     //     url: '/GetDisponiblesIda',
     //     type: 'POST',
@@ -137,23 +137,32 @@ $(document).ready(function () {
     //     dataType: "json",
     //     success: function (data) {
     //         console.log(data);
-            
+
     //     }, error(e) {
     //         console.log(e);
     //     }
     // });
 });
 
-function GetMapaButacas(ViajeID, TerminalOrigenID, TerminalDestinoID) {
+function GetMapaButacas(ViajeID, TerminalOrigenID, TerminalDestinoID, el) {
+    $(el).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+
     $.ajax({
         url: '/GetMapaButacas',
         type: 'POST',
         data: {ViajeID:ViajeID, TerminalOrigenID:TerminalOrigenID, TerminalDestinoID:TerminalDestinoID},
         dataType: "json",
         success: function (data) {
+            $(el).attr("onclick", "ocultarMapa("+ViajeID+", "+TerminalOrigenID+", "+TerminalDestinoID+", this)");
+            $(el).text('Ocultar');
             console.log(data);
         }, error(e) {
             console.log(e);
         }
     });
+}
+
+function ocultarMapa(ViajeID, TerminalOrigenID, TerminalDestinoID, el) {
+    $(el).attr("onclick", "GetMapaButacas("+ViajeID+", "+TerminalOrigenID+", "+TerminalDestinoID+", this)");
+    $(el).text('Ver Sillas');
 }

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/mystyles/buscar_bus.css')}}">
 @endsection
 
-@section('MainScripts') <script src="{{ asset('assets/js/pages/index.js') }}"></script> 
+@section('MainScripts') <script src="{{ asset('assets/js/pages/index.js') }}"></script>
     <script>
         // agregar propiedad de header estatico
         $(".sticky").addClass("nav-sticky");
@@ -25,24 +25,70 @@
 @section('content')
     <section class="section bg-light">
         <div class="container">
-            <div class="col-lg-12 card  rounded border" style="margin-bottom: 15px;" id="detalles_viaje">
-                <div class="row">
+            <div class="col-lg-12 card mb-3 rounded border" id="detalles_viaje">
+                <div class="p-4 shadow row">
                     <div class="col-lg-8">
                         <div class="page-next-level">
                             <h5 class="title text-dark">VIAJE DE SALIDA</h5>
-                            
+
                             <h5>{{$viajes->ida->viaje['TerminalOrigenNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> {{$viajes->ida->viaje['TerminalDestinoNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> {{$fechaViaje}}</h5>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="col-md-12" style="padding-top: 15px;">
                             <button type="button" class="btn btn-primary" style="float: right;">Seleccionar Regreso</button>
-                        </div> 
+                        </div>
                     </div>
-                </div>          
+                </div>
             </div>
+
+            {{-- Cambiar fechas --}}
+            <div class="row justify-content-center mb-3 d-none">
+                <div class="col-lg-12">
+                    <form class="p-4 shadow bg-white rounded">
+                        <div class="row text-left">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="form-group">
+                                    <label> Check in : </label>
+                                    <input name="date" type="text" class="flatpickr flatpickr-input form-control" id="checkin-date">
+                                </div>
+                            </div><!--end col-->
+
+                            <div class="col-lg-3 col-md-6">
+                                <div class="form-group">
+                                    <label> Check out : </label>
+                                    <input name="date" type="text" class="flatpickr flatpickr-input form-control" id="checkout-date">
+                                </div>
+                            </div><!--end col-->
+
+                            <div class="col-lg-6">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Adults : </label>
+                                            <input type="number" min="0" autocomplete="off" id="adult" required="" class="form-control" placeholder="Adults :">
+                                        </div>
+                                    </div><!--end col-->
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Children : </label>
+                                            <input type="number" min="0" autocomplete="off" id="children" class="form-control" placeholder="Children :">
+                                        </div>
+                                    </div><!--end col-->
+
+                                    <div class="col-md-4 mt-2">
+                                        <input type="submit" id="search" name="search" class="searchbtn btn btn-primary btn-block p" value="Search">
+                                    </div><!--end col-->
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div><!--end col-->
+            </div><!--end row-->
+
             {{-- @php
-                
+
                 dd($viajes->ida->viaje);
 
             @endphp --}}
@@ -113,7 +159,7 @@
                     @foreach ($viajes->ida->viaje as $viaje)
 
                         @php
-                            
+
                             foreach($viaje->tarifa AS $tarifa) {
                                 if((int)$viaje['CategoriaID'] == (int)$tarifa['CategoriaID']) {
                                     $CategoriaNombre = $tarifa['CategoriaNombre'];
@@ -121,7 +167,7 @@
                                     $precio = number_format((int)$PrecioOneWay);
                                 }
                             }
-                            
+
                             // dd($CategoriaNombre.' - '.$precio);
                         @endphp
 
@@ -153,9 +199,12 @@
                                     <div class="col-md-2 text-center">{{$viaje['TerminalDestinoNombre']}}</div>
                                     <div class="col-md-2 text-center">{{$precio}}</div>
                                 </div>
+
+
+
                                 <div class="col-md-12">
-                                    <button type="button" class="btn btn-primary" style="float: right" onclick="GetMapaButacas({{$viaje['Id']}}, {{$viaje['TerminalOrigenID']}}, {{$viaje['TerminalDestinoID']}})">Ver sillas</button>
-                                </div>         
+                                    <button type="button" class="btn btn-primary" style="float: right" onclick="GetMapaButacas({{$viaje['Id']}}, {{$viaje['TerminalOrigenID']}}, {{$viaje['TerminalDestinoID']}}, this)">Ver sillas</button>
+                                </div>
                             </div>
                         </div>
                     @endforeach
@@ -174,7 +223,7 @@
                             </div>
                             <div class="col-md-12">
                                 <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
-                            </div>         
+                            </div>
                         </div>
                     </div>-->
 
@@ -193,7 +242,7 @@
                             </div>
                             <div class="col-md-12">
                                 <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
-                            </div>         
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
@@ -211,7 +260,7 @@
                             </div>
                             <div class="col-md-12">
                                 <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
-                            </div>         
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
@@ -229,14 +278,14 @@
                             </div>
                             <div class="col-md-12">
                                 <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
-                            </div>         
+                            </div>
                         </div>
                     </div>-->
                 </div>
                 <!-- horarios buses-end -->
-                
+
             </div>
         </div>
     </section>
-    
+
 @endsection
