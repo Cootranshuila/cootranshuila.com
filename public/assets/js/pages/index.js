@@ -1,3 +1,6 @@
+// Globales
+var destino = null;
+
 $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -84,6 +87,12 @@ $(document).ready(function () {
             });
             // console.log(data.terminal);
             $('#optOrigen').html(content);
+
+            let TerminalOrigen = $("#TerminalOrigen").val();
+
+            if(TerminalOrigen)
+                $("#optOrigen").val(TerminalOrigen).trigger('change');
+
             $('.preloader').addClass('d-none').delay(350);
         }, error(e) {
             console.log(e);
@@ -95,7 +104,7 @@ $(document).ready(function () {
 
         $('.preloader').removeClass('d-none').delay(350).css({
             'background-image': 'linear-gradient(45deg, #89939f73, #ffffff69)'
-        });
+        }); 
 
         $.ajax({
             url: '/GetHabilitadasDestino',
@@ -103,7 +112,6 @@ $(document).ready(function () {
             data: {id:this.value},
             dataType: "json",
             success: function (data) {
-                console.log(data);
                 // console.log(data.terminal[0]['@attributes']);
                 ciudadesDestino = data.terminal;
                 // console.log(ciudades);
@@ -122,6 +130,12 @@ $(document).ready(function () {
                 });
                 // console.log(data.terminal);
                 $('#optDestino').html(content);
+
+                let TerminalDestino = $("#TerminalDestino").val();
+
+                if(TerminalDestino)
+                    $("#optDestino").val(TerminalDestino).trigger('change');
+
                 $('.preloader').addClass('d-none').delay(350);
             }, error(e) {
                 console.log(e);
@@ -129,19 +143,7 @@ $(document).ready(function () {
         });
 
     });
-
-    // $.ajax({
-    //     url: '/GetDisponiblesIda',
-    //     type: 'POST',
-    //     data: {viajes:this.value},
-    //     dataType: "json",
-    //     success: function (data) {
-    //         console.log(data);
-
-    //     }, error(e) {
-    //         console.log(e);
-    //     }
-    // });
+    
 });
 
 function GetMapaButacas(ViajeID, TerminalOrigenID, TerminalDestinoID, el) {
@@ -165,4 +167,8 @@ function GetMapaButacas(ViajeID, TerminalOrigenID, TerminalDestinoID, el) {
 function ocultarMapa(ViajeID, TerminalOrigenID, TerminalDestinoID, el) {
     $(el).attr("onclick", "GetMapaButacas("+ViajeID+", "+TerminalOrigenID+", "+TerminalDestinoID+", this)");
     $(el).text('Ver Sillas');
+}
+
+function CanbiarDestino() {
+    $('#cambiar_destino').show(800);
 }

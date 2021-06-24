@@ -88,7 +88,8 @@ class IndexController extends Controller
 
         $fechaActual = new \DateTime();
         $fechaViaje = new \DateTime($request['txtFecSalida']);
-        $fechaViaje = $fechaViaje->format('d/m/Y');
+        $date = $fechaViaje->format('Y-m-d');
+        $fechaDeViaje = $fechaViaje->format('d/m/Y');
         if($request['txtFecSalida'] == $fechaActual->format('Y-m-d')) {
             $fechaActual = $fechaActual->modify('+60 minute'); 
             $fecha = $fechaActual->format('d/m/Y H:i:s');
@@ -119,7 +120,9 @@ class IndexController extends Controller
             
             $viajes = new \SimpleXMLElement($response->GetDisponiblesIdaResult);
 
-            return view('buscar_buses', ['viajes' => $viajes, 'fechaViaje' => $fechaViaje]); 
+            // dd($viajes->ida['TerminalOrigen']);
+
+            return view('buscar_buses', ['viajes' => $viajes, 'fechaDeViaje' => $fechaDeViaje, 'date' => $date]); 
             
         } catch (\Exception $e) {
             return [

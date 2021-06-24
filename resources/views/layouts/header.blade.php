@@ -2,7 +2,7 @@
     <div class="px-xl-5 px-lg-3 px-2">
         <!-- Logo container-->
         <div>
-            <a class="logo" href="/inicio">
+            <a class="logo" href="/">
                 <img src="{{ asset('assets/images/logo-dark.png') }}" class="l-dark" height="42" alt="">
                 <img src="{{ asset('assets/images/logo-light.png') }}" class="l-light" height="42" alt="">
             </a>
