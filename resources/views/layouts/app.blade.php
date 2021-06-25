@@ -51,20 +51,21 @@
                         <div class="card-body">
                             <h5 class="card-title text-center mb-4 h3">¡Compra ya tu tiquete!</h5>
 
-                            <form class="login-form" action="https://cootranshuila.teletiquete.com/" method="POST">
+                            <form class="login-form" action="/GetDisponiblesIda" method="POST">
+                                @csrf
                                 <div class="row">
-                                    <div id="preloader" class="preloader position-absolute d-none">
+                                    {{-- <div id="preloader" class="preloader position-absolute d-none">
                                         <div id="status" class="text-center">
                                             <div class="spinner spinner-border text-success">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-12">
                                         <div class="form-group position-relative mb-0">
                                             <label>Ciudad Origen</label>
                                             <i data-feather="map-pin" class="fea icon-sm icons"></i>
                                             <select class="form-control custom-select pl-5" name="optOrigen" id="optOrigen_fast" required>
-                                                <option selected="">Seleccione origen</option>
+                                                <option selected="" disabled>Seleccione origen</option>
                                             </select>
                                         </div>
                                     </div>
@@ -76,7 +77,7 @@
                                             <label>Ciudad Destino</label>
                                             <i data-feather="map-pin" class="fea icon-sm icons"></i>
                                             <select class="form-control custom-select pl-5" name="optDestino" id="optDestino_fast" required>
-                                                <option selected="">Seleccione destino</option>
+                                                <option selected="" disabled>Seleccione destino</option>
                                             </select>
                                         </div>
                                     </div>

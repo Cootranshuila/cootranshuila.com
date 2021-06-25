@@ -79,7 +79,7 @@ $(document).ready(function () {
                 sucursales.push([terminalOrigen['@attributes']['LocalidadNombre']+', '+terminalOrigen['@attributes'].Nombre, terminalOrigen['@attributes'].ID]);
             });
             sucursales = sucursales.sort();
-
+            console.log(sucursales);
             sucursales.forEach(ter => {
                 content += `
                    <option value="${ter[1]}">${ter[0]} </option>
