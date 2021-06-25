@@ -194,16 +194,20 @@
                                     <div class=" col-sm-12 col-md-2 text-center">
                                         {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="150"> --}}
                                         @if ($viaje['CategoriaID'] == 7)
-                                            <img src="{{asset('assets/images/servicios/doble_yo.png')}}" alt="" width="120">
+                                            {{-- <img src="{{asset('assets/images/servicios/doble_yo.png')}}" alt="" width="120"> --}}
+                                            <img src="{{asset('assets/images/servicios/doble_yo.jpeg')}}" alt="" width="120" class="rounded">
                                         @else
                                             @if ($viaje['CategoriaID'] == 4)
-                                                <img src="{{asset('assets/images/servicios/vip.png')}}" alt="" width="120">
+                                                {{-- <img src="{{asset('assets/images/servicios/vip.png')}}" alt="" width="120"> --}}
+                                                <img src="{{asset('assets/images/servicios/vip.jpeg')}}" alt="" width="120" class="rounded">
                                             @else
                                                 @if ($viaje['CategoriaID'] == 2)
-                                                    <img src="{{asset('assets/images/servicios/platino_Expres.png')}}" alt="" width="120">
+                                                    {{-- <img src="{{asset('assets/images/servicios/platino_Expres.png')}}" alt="" width="120"> --}}
+                                                    <img src="{{asset('assets/images/servicios/platino_Expres.jpeg')}}" alt="" width="120" class="rounded">
                                                 @else
                                                     @if ($viaje['CategoriaID'] == 3)
-                                                        <img src="{{asset('assets/images/servicios/platino_jet.png')}}" alt="" width="120">
+                                                        {{-- <img src="{{asset('assets/images/servicios/platino_jet.png')}}" alt="" width="120"> --}}
+                                                        <img src="{{asset('assets/images/servicios/platino_jet.jpeg')}}" alt="" width="120" class="rounded">
                                                     @endif
                                                 @endif
                                             @endif
