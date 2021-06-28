@@ -99,15 +99,26 @@
 </div>
 <!--Shape End-->
 
-<!-- FEATURES START -->
+<!-- DESTINOS DESTACADOS -->
 <section class="section bg-light pt-0 pb-2">
+    @php
+        $neiva = [8, 'NEIVA, TERMINAL NEIVA'];
+        $pitalito = [11, 'PITALITO, TERMINAL PITALITO'];
+        $bogota = [9, 'BOGOTÁ, BOGOTÁ'];
+        $florencia = [29, 'FLORENCIA, TERMINAL FLORENCIA'];
+        $la_plata = [24, 'LA PLATA, TERMINAL LA PLATA'];
+
+        $codOrigen = [8, 9, 11, 24, 29];
+
+        $codDestino = [8, 9, 11, 24, 29];
+    @endphp
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mt-4 pt-2">
                 <div id="six-slide" class="owl-carousel owl-theme">
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[0]}}, {{$codDestino[1]}})" title="">
                                 <img src="{{ asset('assets/images/rutas_fast/BOGOTÁ NEIVA.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
@@ -119,7 +130,7 @@
 
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[0]}}, {{$codDestino[2]}})" title="">
                                 <img src="{{ asset('assets/images/rutas_fast/NEIVA - PITALITO.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
@@ -131,7 +142,7 @@
 
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[3]}}, {{$codDestino[1]}})" title="">
                                 <img src="{{ asset('assets/images/rutas_fast/LA PLATA BOGOTÁ.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
@@ -143,7 +154,7 @@
 
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[0]}}, {{$codDestino[4]}})" title="">
                                 <img src="{{ asset('assets/images/rutas_fast/NEIVA - FLORENCIA.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
@@ -155,7 +166,7 @@
 
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[1]}}, {{$codDestino[4]}})" title="">
                                 <img src="{{ asset('assets/images/rutas_fast/BOGOTÁ FLORENCIA.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
@@ -194,8 +205,8 @@
     </div><!--end container-->
 </section>
 
-<!-- About START -->
-<section class="section border-top">
+<!-- Noticias y comunicados START -->
+{{-- <section class="section border-top">
     <div class="container">
         <div class="card rounded shadow border-0 bg-light overflow-hidden">
             <div class="row no-gutters align-items-center">
@@ -219,8 +230,8 @@
             </div><!--end row-->
         </div><!--end card-->
     </div><!--end container-->
-</section><!--end section-->
-<!-- About End -->
+</section><!--end section--> --}}
+<!-- Noticias y comunicados End -->
 
 {{-- SECTION SERVICIOS --}}
 <section class="section bg-light">
