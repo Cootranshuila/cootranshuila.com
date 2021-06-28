@@ -99,19 +99,30 @@
 </div>
 <!--Shape End-->
 
-<!-- FEATURES START -->
+<!-- DESTINOS DESTACADOS -->
 <section class="section bg-light pt-0 pb-2">
+    @php
+        $neiva = [8, 'NEIVA, TERMINAL NEIVA'];
+        $pitalito = [11, 'PITALITO, TERMINAL PITALITO'];
+        $bogota = [9, 'BOGOTÁ, BOGOTÁ'];
+        $florencia = [29, 'FLORENCIA, TERMINAL FLORENCIA'];
+        $la_plata = [24, 'LA PLATA, TERMINAL LA PLATA'];
+
+        $codOrigen = [8, 9, 11, 24, 29];
+
+        $codDestino = [8, 9, 11, 24, 29];
+    @endphp
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 mt-4 pt-2">
                 <div id="six-slide" class="owl-carousel owl-theme">
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
-                                <img src="{{ asset('assets/images/rutas_fast/neiva-bogota.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[0]}}, {{$codDestino[1]}})" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/BOGOTÁ NEIVA.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
-                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Neiva - Bogotá</a></h5>
                                 <h6 class="text-muted tag mb-0">$ 16</h6>
                             </div>
                         </div>
@@ -119,11 +130,11 @@
 
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
-                                <img src="{{ asset('assets/images/rutas_fast/pitalito-neiva.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[0]}}, {{$codDestino[2]}})" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/NEIVA - PITALITO.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
-                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Neiva - Pitalito</a></h5>
                                 <h6 class="text-muted tag mb-0">$ 16</h6>
                             </div>
                         </div>
@@ -131,11 +142,11 @@
 
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
-                                <img src="{{ asset('assets/images/rutas_fast/la plata-bogota.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[3]}}, {{$codDestino[1]}})" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/LA PLATA BOGOTÁ.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
-                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">La plata - Bogotá</a></h5>
                                 <h6 class="text-muted tag mb-0">$ 16</h6>
                             </div>
                         </div>
@@ -143,11 +154,11 @@
 
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
-                                <img src="{{ asset('assets/images/rutas_fast/florencia-neiva.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[0]}}, {{$codDestino[4]}})" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/NEIVA - FLORENCIA.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
-                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Neiva - Florencia</a></h5>
                                 <h6 class="text-muted tag mb-0">$ 16</h6>
                             </div>
                         </div>
@@ -155,11 +166,11 @@
 
                     <div class="card border-0 work-container work-grid position-relative d-block overflow-hidden mx-3">
                         <div class="card-body p-0">
-                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida()" title="">
-                                <img src="{{ asset('assets/images/rutas_fast/bogota-florencia.png') }}" class="img-fluid shadow rounded" alt="work-image">
+                            <a class="mfp-image d-inline-block" href="javascript:compra_rapida({{$codOrigen[1]}}, {{$codDestino[4]}})" title="">
+                                <img src="{{ asset('assets/images/rutas_fast/BOGOTÁ FLORENCIA.png') }}" class="img-fluid shadow rounded" alt="work-image">
                             </a>
                             <div class="content bg-white p-3">
-                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Iphone mockup</a></h5>
+                                <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Bogotá - Florencia</a></h5>
                                 <h6 class="text-muted tag mb-0">$ 16</h6>
                             </div>
                         </div>
@@ -194,8 +205,8 @@
     </div><!--end container-->
 </section>
 
-<!-- About START -->
-<section class="section border-top">
+<!-- Noticias y comunicados START -->
+{{-- <section class="section border-top">
     <div class="container">
         <div class="card rounded shadow border-0 bg-light overflow-hidden">
             <div class="row no-gutters align-items-center">
@@ -219,8 +230,8 @@
             </div><!--end row-->
         </div><!--end card-->
     </div><!--end container-->
-</section><!--end section-->
-<!-- About End -->
+</section><!--end section--> --}}
+<!-- Noticias y comunicados End -->
 
 {{-- SECTION SERVICIOS --}}
 <section class="section bg-light">
@@ -399,7 +410,7 @@
 <!-- End -->
 
 <!-- Feature Start -->
-<section class="section bg-white">
+<section class="section bg-white scrollspy" id="oficinas" data-spy="scroll">
     <div class="container">
         <div class="row justify-content-center mb-3">
             <div class="col-12 text-center">
@@ -466,7 +477,7 @@
                 </div>
             </div><!--end col-->
 
-            <div class="col-md-6 mb-4 pb-2">
+            {{-- <div class="col-md-6 mb-4 pb-2">
                 <div class="media bg-light key-feature align-items-center p-3 rounded shadow">
                     <div class="icon text-center rounded-circle mr-3">
                         <i data-feather="home" class="fea icon-ex-md text-primary"></i>
@@ -496,15 +507,15 @@
                         </ul>
                     </div>
                 </div>
-            </div><!--end col-->
+            </div><!--end col--> --}}
 
             <div class="col-12 text-center">
-                <a href="javascript:void(0)" class="btn btn-primary">Ver mas <i class="mdi mdi-arrow-right"></i></a>
+                <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#ver_oficinas">Ver mas <i class="mdi mdi-arrow-right"></i></a>
             </div><!--end col-->
         </div><!--end row-->
     </div><!--end container-->
 
-    <div class="container mt-100 mt-60">
+    {{-- <div class="container mt-100 mt-60">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <div class="section-title mb-4 pb-2">
@@ -547,12 +558,12 @@
                 </div><!--end counter box-->
             </div>
         </div><!--end row-->
-    </div><!--end container-->
+    </div><!--end container--> --}}
 </section><!--end section-->
 <!-- About End -->
 
 <!-- CTA Start -->
-<section class="section bg-cta" style="background: url('{{ asset('assets/images/2.jpg') }}') center center;" id="cta">
+{{-- <section class="section bg-cta" style="background: url('{{ asset('assets/images/2.jpg') }}') center center;" id="cta">
     <div class="bg-overlay"></div>
     <div class="container">
         <div class="row justify-content-center">
@@ -567,11 +578,11 @@
             </div><!--end col-->
         </div><!--end row-->
     </div><!--end container-->
-</section><!--end section-->
+</section><!--end section--> --}}
 <!-- CTA End -->
 
 <!-- Price Start -->
-<section class="section">
+{{-- <section class="section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
@@ -782,6 +793,6 @@
             </div><!--end col-->
         </div><!--end row-->
     </div><!--end container-->
-</section><!--end section-->
+</section><!--end section--> --}}
 <!--end Price-->
 @endsection

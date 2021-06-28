@@ -9,7 +9,7 @@
 <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('assets/js/owl.init.js') }}"></script>
 <!-- Counter -->
-<script src="{{ asset('assets/js/counter.init.js') }}"></script>
+{{-- <script src="{{ asset('assets/js/counter.init.js') }}"></script> --}}
 <!-- Datepicker -->
 <script src="{{ asset('assets/js/flatpickr.min.js') }}"></script>
 <script src="{{ asset('assets/js/flatpickr.init.js') }}"></script>

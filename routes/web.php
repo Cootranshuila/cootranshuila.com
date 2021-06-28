@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\SocialController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,3 +45,6 @@ Route::post('/GetMapaButacas', [IndexController::class, 'GetMapaButacas']);
 */
 Route::get('/buscar-bus', [IndexController::class, 'SelectViaje']);
 
+// Rutas para login con Google
+Route::get('/auth/redirect/{provider}', [SocialController::class, 'redirect'])->name('google');
+Route::get('/callback/{provider}', [SocialController::class, 'callback']);
