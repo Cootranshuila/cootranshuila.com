@@ -19,7 +19,7 @@
             $('#show_buses').removeClass('col-md-12');
             $('#show_buses').addClass('col-md-10');
         }
-        
+
         // obtener fecha seleccionada
         var fecha = $('#Fecha').val();
         $('#checkin-date').val(fecha);
@@ -112,8 +112,8 @@
             <!-- buses disponibles -->
             <div class="row row-5">
                 <!-- filtros -->
-                <div class="col-md-2 hidden-xs hidden-sm card rounded border pr-0 pl-0" id="filtros" style="height: 250px; margin-top:2.5rem;">
-                    <div class="rounded-top bg-primary" style="padding: 8px !important;">
+                <div class="col-md-2 hidden-xs hidden-sm card rounded border pr-0 pl-0 sidebar sticky-bar" id="filtros" style="height: 250px; margin-top:2.5rem;">
+                    <div class="rounded-top bg-primary" style="padding: 11px !important;">
                         <h5 class="widget-title" style="vertical-align: inherit; margin-bottom: 0 !important; color: #fff;">Modalidad</h5>
                     </div>
                     {{-- <h4 class="widget-title bg-primary">Filtros</h4> --}}
@@ -164,14 +164,18 @@
                     <!-- listado de buses -->
                     <div class="col-md-12 bg-primary rounded" style="padding-top: 15px; padding-bottom: 15px; color: #fff;">
                         <div class="row">
-                            <div class="col-md-2 text-center">Servicio</div>
-                            <div class="col-md-2 text-center">Hora Salida</div>
-                            <div class="col-md-2 text-center">Categoria</div>
-                            <div class="col-md-2 text-center">Salida</div>
-                            <div class="col-md-2 text-center">Destino</div>
-                            <div class="col-md-2 text-center">Precio</div>
+                            <div class="col-md-2 text-center font-weight-bold">Servicio</div>
+                            <div class="col-md-2 text-center font-weight-bold">Hora Salida</div>
+                            <div class="col-md-2 text-center font-weight-bold">Categoria</div>
+                            <div class="col-md-2 text-center font-weight-bold">Salida</div>
+                            <div class="col-md-2 text-center font-weight-bold">Destino</div>
+                            <div class="col-md-2 text-center font-weight-bold">Precio</div>
                         </div>
                     </div>
+
+                    @php
+                        // dd($viajes);
+                    @endphp
                     <!-- buses -->
                     @foreach ($viajes->ida->viaje as $viaje)
 
@@ -217,23 +221,39 @@
                                     <div class="col-md-2 text-center">{{$precio}}</div>
                                 </div>
 
-                                <div class="row py-5 px-3">
+                                <div class="row py-5 px-3 d-none" id="plane_{{$viaje['Id']}}">
                                     <div class="container">
                                         <div class="row align-items-center px-3 px-sm-0">
                                             <div class="col-lg-8 col-md-6 col-12">
                                                 <div class="section-title">
-                                                    <h4 class="display-4 h1 text-white title-dark mb-4">Resumen</h4>
-                                                    <p class="text-light title-dark para-desc">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                                                    <div class="mt-4">
-                                                        <a href="javascript:void(0)" class="btn btn-primary">Admission Now</a>
+
+                                                    <div class="plano_primer_piso">
+                                                        <div class="content_plane">
+                                                            <table class="table table-borderless">
+                                                                <tbody id="butacas_primer_piso_plano_{{$viaje['Id']}}">
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </div>
+
+                                                    @if ($viaje['CategoriaNombre'] == "DBY")
+                                                        <div class="plano_segundo_piso">
+                                                            <div class="content_plane">
+                                                                <table class="table m-5 w-100 table-borderless">
+                                                                    <tbody id="butacas_segundo_piso_plano_{{$viaje['Id']}}">
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    @endif
+
                                                 </div>
                                             </div><!--end col-->
 
                                             <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2 mt-sm-0 pt-sm-0">
                                                 <div class="card login_page shadow rounded border-0">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Resumen reservación</h4>
+                                                        <h5 class="card-title">Resumen reservación</h5>
 
                                                         <form class="login-form">
                                                             <div class="row">
@@ -284,79 +304,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <!--<div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
-                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
-                            <div class="row" style="align-items: center;">
-                                <div class=" col-sm-12 col-md-2 text-center">
-                                    {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="150"> --}}
-                                    <img src="{{asset('assets/images/servicios/doble_yo.png')}}" alt="" width="120">
-                                </div>
-                                <div class="col-md-2 text-center">10:30</div>
-                                <div class="col-md-2 text-center">Doble yo</div>
-                                <div class="col-md-2 text-center">Terminal Neiva</div>
-                                <div class="col-md-2 text-center">Bogotá</div>
-                                <div class="col-md-2 text-center">80.000</div>
-                            </div>
-                            <div class="col-md-12">
-                                <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
-                            </div>
-                        </div>
-                    </div>-->
 
-                    <!--<div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
-                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
-                            <div class="row" style="align-items: center;">
-                                <div class=" col-sm-12 col-md-2 text-center">
-                                    <img src="{{asset('assets/images/servicios/vip.png')}}" alt="" width="120">
-                                    {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="120"> --}}
-                                </div>
-                                <div class="col-md-2 text-center">11:30</div>
-                                <div class="col-md-2 text-center">Preferencial Vip</div>
-                                <div class="col-md-2 text-center">Terminal Neiva</div>
-                                <div class="col-md-2 text-center">Bogotá</div>
-                                <div class="col-md-2 text-center">80.000</div>
-                            </div>
-                            <div class="col-md-12">
-                                <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
-                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
-                            <div class="row" style="align-items: center;">
-                                <div class=" col-sm-12 col-md-2 text-center">
-                                    {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="170"> --}}
-                                    <img src="{{asset('assets/images/servicios/platino_Expres.png')}}" alt="" width="120">
-                                </div>
-                                <div class="col-md-2 text-center">12:30</div>
-                                <div class="col-md-2 text-center">PLatino Expres</div>
-                                <div class="col-md-2 text-center">Terminal Neiva</div>
-                                <div class="col-md-2 text-center">Bogotá</div>
-                                <div class="col-md-2 text-center">80.000</div>
-                            </div>
-                            <div class="col-md-12">
-                                <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mt-4 pt-4" style="padding-left: 0 !important; padding-right:0 !important;">
-                        <div class="card event-schedule rounded border" style="padding-top: 15px; padding-bottom: 5px;">
-                            <div class="row" style="align-items: center;">
-                                <div class=" col-sm-12 col-md-2 text-center">
-                                    <img src="{{asset('assets/images/servicios/platino_jet.png')}}" alt="" width="120">
-                                    {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="120"> --}}
-                                </div>
-                                <div class="col-md-2 text-center">13:30</div>
-                                <div class="col-md-2 text-center">Platino Jet</div>
-                                <div class="col-md-2 text-center">Terminal Neiva</div>
-                                <div class="col-md-2 text-center">Bogotá</div>
-                                <div class="col-md-2 text-center">80.000</div>
-                            </div>
-                            <div class="col-md-12">
-                                <button type="button" class="btn btn-primary" style="float: right">Ver sillas</button>
-                            </div>
-                        </div>
-                    </div>-->
                 </div>
                 <!-- horarios buses-end -->
 
