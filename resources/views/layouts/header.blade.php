@@ -78,6 +78,7 @@
                     </ul>
                 </li>
                 <li><a href="index.html">Contáctenos</a></li>
+                <li><a href="{{route('login')}}" data-toggle="tooltip" title="Ingresar"><i class="far fa-user-circle" style="font-size: 1.5rem"></i></a></li>
             </ul><!--end navigation menu-->
         </div><!--end navigation-->
     </div><!--end container-->

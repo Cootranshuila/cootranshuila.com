@@ -123,7 +123,7 @@
                             </a>
                             <div class="content bg-white p-3">
                                 <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Neiva - Bogotá</a></h5>
-                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                                {{-- <h6 class="text-muted tag mb-0">$ 16</h6> --}}
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                             </a>
                             <div class="content bg-white p-3">
                                 <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Neiva - Pitalito</a></h5>
-                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                                {{-- <h6 class="text-muted tag mb-0">$ 16</h6> --}}
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                             </a>
                             <div class="content bg-white p-3">
                                 <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">La plata - Bogotá</a></h5>
-                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                                {{-- <h6 class="text-muted tag mb-0">$ 16</h6> --}}
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                             </a>
                             <div class="content bg-white p-3">
                                 <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Neiva - Florencia</a></h5>
-                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                                {{-- <h6 class="text-muted tag mb-0">$ 16</h6> --}}
                             </div>
                         </div>
                     </div>
@@ -171,7 +171,7 @@
                             </a>
                             <div class="content bg-white p-3">
                                 <h5 class="mb-0"><a href="javascript:void(0)" class="text-dark title">Bogotá - Florencia</a></h5>
-                                <h6 class="text-muted tag mb-0">$ 16</h6>
+                                {{-- <h6 class="text-muted tag mb-0">$ 16</h6> --}}
                             </div>
                         </div>
                     </div>

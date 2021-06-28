@@ -11,6 +11,16 @@
         // agregar propiedad de header estatico
         $(".sticky").addClass("nav-sticky");
 
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            $(".sticky").addClass("nav-sticky");
+
+
+            if (scroll >= 50) {
+                $(".sticky").addClass("nav-sticky");
+            } 
+        });
+
         // modificar columnas segun tamaño
         if($(window).width() < 771){
             $('#show_buses').removeClass('col-md-10');

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\SocialController;
+use App\Http\Controllers\Usuarios\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,3 +50,6 @@ Route::get('/buscar-bus', [IndexController::class, 'SelectViaje']);
 // Rutas para login con Google
 Route::get('/auth/redirect/{provider}', [SocialController::class, 'redirect'])->name('google');
 Route::get('/callback/{provider}', [SocialController::class, 'callback']);
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
