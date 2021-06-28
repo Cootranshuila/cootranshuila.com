@@ -109,6 +109,25 @@
         </div>
     </div>
 
+    <!-- modal sucursales -->
+    <div class="modal fade" id="ver_oficinas">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+        
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    {{-- <h4 class="modal-title">Modal Heading</h4> --}}
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="{{asset('assets/images/sucursales.png')}}" alt="" width="766">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- javascript -->
     @include('layouts.scripts')
 </body>
