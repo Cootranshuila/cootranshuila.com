@@ -4871,3 +4871,60 @@ p {
   border-top: 1px solid #00a039;
 }
 /*# sourceMappingURL=style.css.map */
+
+.plano_primer_piso {
+    background-image: url(../icons/plano_primer_piso.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.plano_segundo_piso {
+    background-image: url(../icons/plano_segundo_piso.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.content_plane {
+    width: 100%;
+    min-height: 220px;
+}
+
+.content_plane .butaca {
+    background-repeat: no-repeat;
+    background-size: 25px;
+    cursor: pointer;
+}
+
+.content_plane .libre {
+    background-image: url(../icons/butaca_disponible.svg);
+}
+
+.content_plane .seleccionada {
+    background-image: url(../icons/butaca_seleccionada.svg);
+}
+
+.content_plane .wc {
+    background-image: url(../icons/wc_plane.svg);
+    cursor: not-allowed;
+    cursor: -moz-not-allowed;
+    cursor: -webkit-not-allowed;
+}
+
+.content_plane .ocupada {
+    background-image: url(../icons/butaca_vendida.svg);
+    opacity: 0.5;
+    cursor: not-allowed;
+    cursor: -moz-not-allowed;
+    cursor: -webkit-not-allowed;
+}
+
+.content_plane td {
+    margin: 20px;
+}
+
+.content_plane table {
+    max-width: 420px;
+    margin-left: 150px;
+    margin-bottom: 0;
+    min-height: 190px;
+}
