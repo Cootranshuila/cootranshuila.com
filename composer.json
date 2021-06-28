@@ -13,14 +13,9 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
-<<<<<<< HEAD
         "laravel/tinker": "^2.0",
-        "mercadopago/dx-php": "2.0"
-=======
-        "laravel/passport": "^10.1",
-        "laravel/socialite": "^5.2",
-        "laravel/tinker": "^2.0"
->>>>>>> 16dc7b20f403f376ed8933659fb8cbda121ff458
+        "mercadopago/dx-php": "2.0",
+        "laravel/socialite": "^5.2"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
