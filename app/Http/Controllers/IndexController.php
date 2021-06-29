@@ -90,6 +90,7 @@ class IndexController extends Controller
         $fechaViaje = new \DateTime($request['txtFecSalida']);
         $date = $fechaViaje->format('Y-m-d');
         $fechaDeViaje = $fechaViaje->format('d/m/Y');
+        
         if($request['txtFecSalida'] == $fechaActual->format('Y-m-d')) {
             $fechaActual = $fechaActual->modify('+60 minute'); 
             $fecha = $fechaActual->format('d/m/Y H:i:s');

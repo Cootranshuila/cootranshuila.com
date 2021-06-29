@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\Usuarios\HomeController;
@@ -50,6 +51,7 @@ Route::get('/buscar-bus', [IndexController::class, 'SelectViaje']);
 // Rutas para login con Google
 Route::get('/auth/redirect/{provider}', [SocialController::class, 'redirect'])->name('google');
 Route::get('/callback/{provider}', [SocialController::class, 'callback']);
+
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('home');

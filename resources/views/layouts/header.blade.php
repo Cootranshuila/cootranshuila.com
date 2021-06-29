@@ -78,7 +78,40 @@
                     </ul>
                 </li>
                 <li><a href="index.html">Contáctenos</a></li>
-                <li><a href="{{route('login')}}" data-toggle="tooltip" title="Ingresar"><i class="far fa-user-circle" style="font-size: 1.5rem"></i></a></li>
+                <li class="has-submenu">
+                    <a href="{{route('login')}}">
+                        <i class="far fa-user-circle" style="font-size: 1.5rem"></i>
+                    </a>
+                    <ul class="submenu megamenu" style="padding: 2rem;">
+                        <li>
+                            <ul>
+                                {{-- <li>Bienvenido</li>
+                                <li><a href="index-classic-saas.html">Classic Saas</a></li>
+                                <li><a href="index-agency.html">Agency</a></li> --}}
+                                <li class="text-center">
+                                    <img src="{{asset('assets/images/user/usuario.svg')}}" alt="" width="50">
+                                </li>
+                                <li>
+                                    <div>Bienvenido, {{auth()->user() ? auth()->user->name : 'Inicia sesión'}}</div>
+                                </li>
+                                <li class="text-center">
+                                    <div>
+                                        {{-- @auth --}}
+                                        <a href="{{route('home')}}" >Ir a mi perfil</a>
+                                        <a href="{{ route('logout') }}" class="btn bg-danger btn-sm" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                        {{-- @endauth --}}
+                                        @guest
+                                            <a href="" class="btn btn-primary btn-sm">Inicie Sesión</a>
+                                        @endguest
+                                    </div>
+                                </li>                          
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ul><!--end navigation menu-->
         </div><!--end navigation-->
     </div><!--end container-->

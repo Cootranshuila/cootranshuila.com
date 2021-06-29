@@ -37,7 +37,8 @@
                         <div class="card-body">
                             <h4 class="card-title text-center">Bienvenido</h4>  
                             <form class="login-form mt-4" action="{{ route('login') }}" method="POST">
-                                <div class="row">
+                                @csrf
+                                <div class="row">                                
                                     <div class="col-lg-12">
                                         <div class="form-group position-relative">
                                             <label>Correo Electronico <span class="text-danger">*</span></label>
@@ -76,7 +77,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12 mb-0">
-                                        <button class="btn btn-primary btn-block">Iniciar Sesión</button>
+                                        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
                                     </div>
                                     <div class="col-lg-12 mt-4 text-center">
                                         <h6>Puedes iniciar con</h6>
