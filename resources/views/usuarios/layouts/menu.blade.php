@@ -74,7 +74,7 @@
                 </div><!--end col-->
 
                 <div class="col-6 mt-4 pt-2">
-                    <a href="auth-login-three.html" class="accounts rounded d-block shadow text-center py-3">
+                    <a href="{{route('logout')}}" class="accounts rounded d-block shadow text-center py-3">
                         <span class="pro-icons h3 text-muted"><i class="uil uil-sign-out-alt"></i></span>
                         <h6 class="title text-dark h6 my-0">Salir</h6>
                     </a>

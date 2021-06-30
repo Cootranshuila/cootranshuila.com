@@ -22,12 +22,12 @@
                                 <div class="col-lg-10 col-md-9">
                                     <div class="row align-items-end">
                                         <div class="col-md-7 text-md-left text-center mt-4 mt-sm-0">
-                                            <h3 class="title mb-0">Krista Joseph</h3>
-                                            <small class="text-muted h6 mr-2">Web Developer</small>
-                                            <ul class="list-inline mb-0 mt-3">
+                                            <h3 class="title mb-0">{{auth()->user()->name }} {{auth()->user()->apellido}}</h3>
+                                            {{-- <small class="text-muted h6 mr-2">Web Developer</small> --}}
+                                            {{-- <ul class="list-inline mb-0 mt-3">
                                                 <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-muted" title="Instagram"><i data-feather="instagram" class="fea icon-sm mr-2"></i>krista_joseph</a></li>
                                                 <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted" title="Linkedin"><i data-feather="linkedin" class="fea icon-sm mr-2"></i>Krista Joseph</a></li>
-                                            </ul>
+                                            </ul> --}}
                                         </div><!--end col-->
                                         <div class="col-md-5 text-md-right text-center">
                                             <ul class="list-unstyled social-icon social mb-0 mt-4">
@@ -56,31 +56,45 @@
                @include('usuarios.layouts.menu')
 
                 <div class="col-lg-8 col-12">
-                    <div class="border-bottom pb-4">
+                    {{-- <div class="border-bottom pb-4">
                         <h5>Krista Joseph</h5>
                         <p class="text-muted mb-0">I have started my career as a trainee and prove my self and achieve all the milestone with good guidance and reach up to the project manager. In this journey, I understand all the procedure which make me a good developer, team leader, and a project manager.</p>
-                    </div>
+                    </div> --}}
                     
                     <div class="border-bottom pb-4">
                         <div class="row">
                             <div class="col-md-6 mt-4">
-                                <h5>Personal Details :</h5>
+                                <h5>Datos Personales :</h5>
                                 <div class="mt-4">
                                     <div class="media align-items-center">
                                         <i data-feather="info" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
                                             <h6 class="text-primary mb-0">Identificación :</h6>
-                                            <a href="javascript:void(0)" class="text-muted">123456789</a>
+                                            <a href="javascript:void(0)" class="text-muted">{{auth()->user()->identificacion }}</a>
+                                        </div>
+                                    </div>
+                                    <div class="media align-items-center">
+                                        <i data-feather="user" class="fea icon-ex-md text-muted mr-3"></i>
+                                        <div class="media-body">
+                                            <h6 class="text-primary mb-0">Nombre :</h6>
+                                            <a href="javascript:void(0)" class="text-muted">{{auth()->user()->name }}</a>
+                                        </div>
+                                    </div>
+                                    <div class="media align-items-center">
+                                        <i data-feather="user-plus" class="fea icon-ex-md text-muted mr-3"></i>
+                                        <div class="media-body">
+                                            <h6 class="text-primary mb-0">Apellido :</h6>
+                                            <a href="javascript:void(0)" class="text-muted">{{auth()->user()->apellido }}</a>
                                         </div>
                                     </div>
                                     <div class="media align-items-center">
                                         <i data-feather="mail" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
                                             <h6 class="text-primary mb-0">Correo :</h6>
-                                            <a href="javascript:void(0)" class="text-muted">kristajoseph0203@mail.com</a>
+                                            <a href="javascript:void(0)" class="text-muted">{{auth()->user()->email }}</a>
                                         </div>
                                     </div>
-                                    <div class="media align-items-center mt-3">
+                                    {{-- <div class="media align-items-center mt-3">
                                         <i data-feather="bookmark" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
                                             <h6 class="text-primary mb-0">Skills :</h6>
@@ -107,26 +121,26 @@
                                             <h6 class="text-primary mb-0">Birthday :</h6>
                                             <p class="text-muted mb-0">2nd March, 1996</p>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="media align-items-center mt-3">
                                         <i data-feather="map-pin" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
-                                            <h6 class="text-primary mb-0">Location :</h6>
+                                            <h6 class="text-primary mb-0">Dirección :</h6>
                                             <a href="javascript:void(0)" class="text-muted">Beijing, China</a>
                                         </div>
                                     </div>
                                     <div class="media align-items-center mt-3">
                                         <i data-feather="phone" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
-                                            <h6 class="text-primary mb-0">Cell No :</h6>
-                                            <a href="javascript:void(0)" class="text-muted">(+12) 1254-56-4896</a>
+                                            <h6 class="text-primary mb-0">Telefono :</h6>
+                                            <a href="javascript:void(0)" class="text-muted">{{auth()->user()->telefono }}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div><!--end col-->
 
                             <div class="col-md-6 mt-4 pt-2 pt-sm-0">
-                                <h5>Experience :</h5>
+                                <h5>Ultimos Viajes :</h5>
 
                                 <div class="media key-feature align-items-center p-3 rounded shadow mt-4">
                                     <img src="images/job/Circleci.svg" class="avatar avatar-ex-sm" alt="">

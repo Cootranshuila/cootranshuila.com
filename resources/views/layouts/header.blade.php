@@ -92,19 +92,19 @@
                                     <img src="{{asset('assets/images/user/usuario.svg')}}" alt="" width="50">
                                 </li>
                                 <li>
-                                    <div>Bienvenido, {{auth()->user() ? auth()->user->name : 'Inicia sesión'}}</div>
+                                    <div>Bienvenido, {{auth()->user() ? auth()->user()->name : 'Inicia sesión'}}</div>
                                 </li>
                                 <li class="text-center">
                                     <div>
-                                        {{-- @auth --}}
-                                        <a href="{{route('home')}}" >Ir a mi perfil</a>
-                                        <a href="{{ route('logout') }}" class="btn bg-danger btn-sm" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                        {{-- @endauth --}}
+                                        @auth
+                                            <a href="{{route('home')}}" >Ir a mi perfil</a>
+                                            <a  style="margin-top: .5rem; color: #fff !important;" href="{{ route('logout') }}" class="btn bg-danger btn-sm" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        @endauth
                                         @guest
-                                            <a href="" class="btn btn-primary btn-sm">Inicie Sesión</a>
+                                            <a style="margin-top: .5rem; color: #fff !important;" href="{{route('login')}}" class="btn btn-primary btn-sm">Inicie Sesión</a>
                                         @endguest
                                     </div>
                                 </li>                          

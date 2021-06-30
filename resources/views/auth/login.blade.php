@@ -43,7 +43,7 @@
                                         <div class="form-group position-relative">
                                             <label>Correo Electronico <span class="text-danger">*</span></label>
                                             <i data-feather="user" class="fea icon-sm icons"></i>
-                                            <input type="email" class="form-control pl-5" placeholder="Correo" name="email" required="">
+                                            <input type="email" class="form-control pl-5" placeholder="Correo" name="email" required>
                                         </div>
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
@@ -56,7 +56,7 @@
                                         <div class="form-group position-relative">
                                             <label>Contraseña <span class="text-danger">*</span></label>
                                             <i data-feather="key" class="fea icon-sm icons"></i>
-                                            <input type="password" class="form-control pl-5" placeholder="Contraseña" required="">
+                                            <input type="password" class="form-control pl-5" placeholder="Contraseña" name="password" required>
                                         </div>
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
