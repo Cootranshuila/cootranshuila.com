@@ -53,5 +53,11 @@ Route::get('/auth/redirect/{provider}', [SocialController::class, 'redirect'])->
 Route::get('/callback/{provider}', [SocialController::class, 'callback']);
 
 Auth::routes();
-
+/*
+|---------------------------
+| rutas para usuarios 
+|---------------------------
+*/
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+Route::get('/dashboard/familiar', [HomeController::class, 'familiar'])->name('familia');
+Route::get('/dashboard/opciones', [HomeController::class, 'opciones'])->name('opciones');
