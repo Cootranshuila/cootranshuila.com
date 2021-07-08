@@ -87,7 +87,7 @@
                                             {{-- <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="github" class="fea icon-sm fea-social"></i></a></li> --}}
                                             {{-- <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="twitter" class="fea icon-sm fea-social"></i></a></li> --}}
                                             {{-- <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="google" class="fea icon-sm fea-social"></i></a></li> --}}
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="fab fa-google"></i></a></li>
+                                            <li class="list-inline-item"><a href="/auth/redirect/google" class="rounded"><i class="fab fa-google"></i></a></li>
                                         </ul><!--end icon-->
                                     </div>
                                     <div class="col-12 text-center">

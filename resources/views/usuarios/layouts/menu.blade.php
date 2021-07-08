@@ -32,16 +32,16 @@
         <div class="widget">
             <div class="row">
                 <div class="col-6 mt-4 pt-2">
-                    <a href="account-profile.html" class="accounts active rounded d-block shadow text-center py-3">
+                    <a href="{{route('home')}}" class="accounts {{request()->routeIs('home') ? 'active' : ''}} rounded d-block shadow text-center py-3">
                         <span class="pro-icons h3 text-muted"><i class="uil uil-dashboard"></i></span>
                         <h6 class="title text-dark h6 my-0">Perfil</h6>
                     </a>
                 </div><!--end col-->
 
                 <div class="col-6 mt-4 pt-2">
-                    <a href="account-members.html" class="accounts rounded d-block shadow text-center py-3">
+                    <a href="{{route('familia')}}" class="accounts {{request()->routeIs('familia') ? 'active' : ''}} rounded d-block shadow text-center py-3">
                         <span class="pro-icons h3 text-muted"><i class="uil uil-users-alt"></i></span>
-                        <h6 class="title text-dark h6 my-0">Familiares</h6>
+                        <h6 class="title text-dark h6 my-0">Acompañantes</h6>
                     </a>
                 </div><!--end col-->
 
@@ -52,32 +52,35 @@
                     </a>
                 </div><!--end col-->
 
-                <div class="col-6 mt-4 pt-2">
+                {{-- <div class="col-6 mt-4 pt-2">
                     <a href="account-messages.html" class="accounts rounded d-block shadow text-center py-3">
                         <span class="pro-icons h3 text-muted"><i class="uil uil-envelope-star"></i></span>
                         <h6 class="title text-dark h6 my-0">Messages</h6>
                     </a>
-                </div><!--end col-->
+                </div><!--end col--> --}}
 
-                <div class="col-6 mt-4 pt-2">
+                {{-- <div class="col-6 mt-4 pt-2">
                     <a href="account-payments.html" class="accounts rounded d-block shadow text-center py-3">
                         <span class="pro-icons h3 text-muted"><i class="uil uil-transaction"></i></span>
                         <h6 class="title text-dark h6 my-0">Payments</h6>
                     </a>
-                </div><!--end col-->
+                </div><!--end col--> --}}
 
                 <div class="col-6 mt-4 pt-2">
-                    <a href="account-setting.html" class="accounts rounded d-block shadow text-center py-3">
+                    <a href="{{route('opciones')}}" class="accounts {{request()->routeIs('opciones') ? 'active' : ''}} rounded d-block shadow text-center py-3">
                         <span class="pro-icons h3 text-muted"><i class="uil uil-setting"></i></span>
-                        <h6 class="title text-dark h6 my-0">Opciones</h6>
+                        <h6 class="title text-dark h6 my-0">Configuración</h6>
                     </a>
                 </div><!--end col-->
 
                 <div class="col-6 mt-4 pt-2">
-                    <a href="{{route('logout')}}" class="accounts rounded d-block shadow text-center py-3">
+                    <a href="{{route('logout')}}" class="accounts rounded d-block shadow text-center py-3" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <span class="pro-icons h3 text-muted"><i class="uil uil-sign-out-alt"></i></span>
                         <h6 class="title text-dark h6 my-0">Salir</h6>
                     </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div><!--end col-->
             </div><!--end row-->
         </div>

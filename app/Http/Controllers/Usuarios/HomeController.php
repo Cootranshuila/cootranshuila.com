@@ -26,4 +26,12 @@ class HomeController extends Controller
     {
         return view('usuarios.index');
     }
+
+    public function familiar(){
+        return view('usuarios.acompañante');
+    }
+
+    public function opciones(){
+        return view('usuarios.opciones');
+    }
 }
