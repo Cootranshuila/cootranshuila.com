@@ -16,7 +16,7 @@
                     <h4 class="heading text-white title-dark mt-0"> <b>Innovamos para ti</b> </h4>
                     <p class="para-desc text-white-50">¡Únete a nuestro nuevo club de clientes preferenciales! <br> Acompáñanos en esta nueva experiencia.</p>
                     <div class="mt-4 mb-3 pt-2">
-                        <a href="javascript:void(0)" class="btn btn-light">Registrarse</a>
+                        <a href="{{route('register')}}" class="btn btn-light">Registrarse</a>
                     </div>
                 </div>
             </div>
@@ -233,7 +233,7 @@
 </section><!--end section--> --}}
 <!-- Noticias y comunicados End -->
 
-{{-- SECTION SERVICIOS --}}
+<!-- SECTION SERVICIOS -->
 <section class="section bg-light">
     <div class="container">
         <div class="row justify-content-center">
@@ -272,7 +272,7 @@
                         <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Muestra Flota</a></h5>
                         <p class="text-muted">Conoce aqui nuestros diferentes servicios de flota</p>
 
-                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                        <a href="{{route('flota')}}" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->
@@ -302,7 +302,7 @@
                         <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Servicio GPS</a></h5>
                         <p class="text-muted">Conoce y haz parte de nuestro nuevo club de clientes preferenciales</p>
 
-                        <a href="javascript:void(0)" class="text-primary">Read More <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->

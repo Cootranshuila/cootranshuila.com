@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\Info\ServiciosController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\Usuarios\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -37,6 +38,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/info/flota', [ServiciosController::class, 'flota'])->name('flota');
+
+
+// rutas para buscar viajes
 Route::post('/GetHabilitadas', [App\Http\Controllers\IndexController::class, 'GetHabilitadasOrigen']);
 Route::post('/GetHabilitadasDestino', [App\Http\Controllers\IndexController::class, 'GetHabilitadasDestino']);
 Route::post('/GetDisponiblesIda', [App\Http\Controllers\IndexController::class, 'GetDisponiblesIda']);
