@@ -31,7 +31,8 @@
                 <div class="col-lg-12">
                     <div class="title-heading text-center">
                         <h1 class="heading title-dark text-white mb-3">Nuestra Flota</h1>
-                        <p class="para-desc mx-auto text-white-50">Cootranshuila LTDA, líder en el sector transportador de Colombia.</p>
+                        <p class="para-desc mx-auto text-white-50">Cootranshuila LTDA, líder en el sector transportador de
+                            Colombia.</p>
 
                         <div class="row mt-4 pt-2">
                             <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
@@ -41,11 +42,13 @@
                                             <img src="images/insurance/health.svg" class="avatar avatar-md-sm" alt="">
                                         </div>
                                         <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Doble Yo</a></h6>
+                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Doble
+                                                    Yo</a></h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--end col-->
+                            </div>
+                            <!--end col-->
                             <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
                                 <div class="card explore-feature border-0 rounded text-center bg-white">
                                     <div class="card-body">
@@ -53,23 +56,28 @@
                                             <img src="images/insurance/term-life.svg" class="avatar avatar-md-sm" alt="">
                                         </div>
                                         <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Platino Jet</a></h6>
+                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Platino
+                                                    Jet</a></h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--end col-->
+                            </div>
+                            <!--end col-->
                             <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
                                 <div class="card explore-feature border-0 rounded text-center bg-white">
                                     <div class="card-body">
                                         <div class="icon rounded-circle shadow-lg d-inline-block">
-                                            <img src="images/insurance/family-health.svg" class="avatar avatar-md-sm" alt="">
+                                            <img src="images/insurance/family-health.svg" class="avatar avatar-md-sm"
+                                                alt="">
                                         </div>
                                         <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Preferencial Vip</a></h6>
+                                            <h6 class="mb-0"><a href="javascript:void(0)"
+                                                    class="title text-dark">Preferencial Vip</a></h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--end col-->
+                            </div>
+                            <!--end col-->
                             <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
                                 <div class="card explore-feature border-0 rounded text-center bg-white">
                                     <div class="card-body">
@@ -77,11 +85,13 @@
                                             <img src="images/insurance/investment.svg" class="avatar avatar-md-sm" alt="">
                                         </div>
                                         <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Platino Especial</a></h6>
+                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Platino
+                                                    Especial</a></h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--end col-->
+                            </div>
+                            <!--end col-->
                             <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
                                 <div class="card explore-feature border-0 rounded text-center bg-white">
                                     <div class="card-body">
@@ -89,11 +99,13 @@
                                             <img src="images/insurance/car.svg" class="avatar avatar-md-sm" alt="">
                                         </div>
                                         <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Platino Expres</a></h6>
+                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Platino
+                                                    Expres</a></h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--end col-->
+                            </div>
+                            <!--end col-->
                             <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
                                 <div class="card explore-feature border-0 rounded text-center bg-white">
                                     <div class="card-body">
@@ -101,17 +113,24 @@
                                             <img src="images/insurance/bike.svg" class="avatar avatar-md-sm" alt="">
                                         </div>
                                         <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Mixto</a></h6>
+                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Mixto</a>
+                                            </h6>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!--end col-->
-                        </div><!--end row-->
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
                     </div>
-                </div><!--end col-->
-            </div><!--end row-->
-        </div> <!--end container-->
-    </section><!--end section-->
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end section-->
     <div class="position-relative">
         <div class="shape overflow-hidden text-white">
             <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,186 +142,356 @@
 
     <!-- Start -->
     <section class="section">
+
         <div class="container">
-            <div class="row">
-                <div class="col-md-10">
-                    <p class="text-muted">This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'. It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody.</p>
-                    
-                    <ul class="list-unstyled d-flex justify-content-between mt-4">
-                        <li class="list-inline-item user mr-2"><a href="javascript:void(0)" class="text-muted"><i class="mdi mdi-account text-dark"></i> Calvin Carlo</a></li>
-                        <li class="list-inline-item date text-muted"><i class="mdi mdi-calendar-check text-dark"></i> 13th August, 2019</li>
-                    </ul>
-                    
-                    <img src="images/blog/bg1.jpg" class="img-fluid rounded-md shadow" alt="">
-
-                    <h5 class="mt-4">Mornings contain the secret to an extraordinarily successful life</h5>
-
-                    <p class="text-muted">Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts. If the distribution of letters and 'words' is random, the reader will not be distracted from making a neutral judgement on the visual impact and readability of the typefaces (typography), or the distribution of text on the page (layout or type area).</p>
-
-                    <h5 class="mt-4">Comments :</h5>
-
-                    <ul class="media-list list-unstyled mb-0">
-                        <li class="mt-4">
-                            <div class="d-flex justify-content-between">
-                                <div class="media align-items-center">
-                                    <a class="pr-3" href="#">
-                                        <img src="images/client/01.jpg" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
-                                    </a>
-                                    <div class="commentor-detail">
-                                        <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">Lorenzo Peterson</a></h6>
-                                        <small class="text-muted">15th August, 2019 at 01:25 pm</small>
-                                    </div>
-                                </div>
-                                <a href="#" class="text-muted"><i class="mdi mdi-reply"></i> Reply</a>
-                            </div>
-                            <div class="mt-3">
-                                <p class="text-muted font-italic p-3 bg-light rounded">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
-                            </div>
-                        </li>
-
-                        <li class="mt-4">
-                            <div class="d-flex justify-content-between">
-                                <div class="media align-items-center">
-                                    <a class="pr-3" href="#">
-                                        <img src="images/client/02.jpg" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
-                                    </a>
-                                    <div class="commentor-detail">
-                                        <h6 class="mb-0"><a href="javascript:void(0)" class="media-heading text-dark">Tammy Camacho</a></h6>
-                                        <small class="text-muted">15th August, 2019 at 05:44 pm</small>
-                                    </div>
-                                </div>
-                                <a href="#" class="text-muted"><i class="mdi mdi-reply"></i> Reply</a>
-                            </div>
-                            <div class="mt-3">
-                                <p class="text-muted font-italic p-3 bg-light rounded">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
-                            </div>
-                        </li>
-                        
-                        <li class="mt-4">
-                            <div class="d-flex justify-content-between">
-                                <div class="media align-items-center">
-                                    <a class="pr-3" href="#">
-                                        <img src="images/client/03.jpg" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
-                                    </a>
-                                    <div class="commentor-detail">
-                                        <h6 class="mb-0"><a href="javascript:void(0)" class="media-heading text-dark">Tammy Camacho</a></h6>
-                                        <small class="text-muted">16th August, 2019 at 03:44 pm</small>
-                                    </div>
-                                </div>
-                                <a href="#" class="text-muted"><i class="mdi mdi-reply"></i> Reply</a>
-                            </div>
-                            <div class="mt-3">
-                                <p class="text-muted font-italic p-3 bg-light rounded">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
-                            </div>
-
-                            <ul class="list-unstyled pl-4 pl-md-5 sub-comment">
-                                <li class="mt-4">
-                                    <div class="d-flex justify-content-between">
-                                        <div class="media align-items-center">
-                                            <a class="pr-3" href="#">
-                                                <img src="images/client/01.jpg" class="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img">
-                                            </a>
-                                            <div class="commentor-detail">
-                                                <h6 class="mb-0"><a href="javascript:void(0)" class="text-dark media-heading">Lorenzo Peterson</a></h6>
-                                                <small class="text-muted">17th August, 2019 at 01:25 pm</small>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="text-muted"><i class="mdi mdi-reply"></i> Reply</a>
-                                    </div>
-                                    <div class="mt-3">
-                                        <p class="text-muted font-italic p-3 bg-light rounded">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <h5 class="mt-4">Leave A Comment :</h5>
-
-                    <form class="mt-3">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group position-relative">
-                                    <label>Your Comment</label>
-                                    <i data-feather="message-circle" class="fea icon-sm icons"></i>
-                                    <textarea id="message" placeholder="Your Comment" rows="5" name="message" class="form-control pl-5" required=""></textarea>
-                                </div>
-                            </div><!--end col-->
-
-                            <div class="col-lg-6">
-                                <div class="form-group position-relative">
-                                    <label>Name <span class="text-danger">*</span></label>
-                                    <i data-feather="user" class="fea icon-sm icons"></i>
-                                    <input id="name" name="name" type="text" placeholder="Name" class="form-control pl-5" required="">
-                                </div>
-                            </div><!--end col-->
-
-                            <div class="col-lg-6">
-                                <div class="form-group position-relative">
-                                    <label>Your Email <span class="text-danger">*</span></label>
-                                    <i data-feather="mail" class="fea icon-sm icons"></i>
-                                    <input id="email" type="email" placeholder="Email" name="email" class="form-control pl-5" required="">
-                                </div>
-                            </div><!--end col-->
-
-                            <div class="col-md-12">
-                                <div class="send">
-                                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                                </div>
-                            </div><!--end col-->
-                        </div><!--end row-->
-                    </form><!--end form-->
+            <div class="row justify-content-center">
+                <div class="col-9">
+                    <div class="section-title">
+                        {{-- <h4 class="title mb-4">Have Question ? Get in touch!</h4> --}}
+                        <p class="text-muted para-desc" style="max-width: 700px !important;">La COOPERATIVA DE
+                            TRANSPORTADORES DEL HUILA
+                            <span class="text-primary font-weight-bold"> “COOTRANSHUILA LTDA”</span> dedicada a la
+                            prestación de Servicio de Transporte Publico Terrestre, se complace en presentarle su flota y
+                            cada uno de sus servicios.
+                            <br>
+                            <br>
+                            Conozca los terminos y condiciones de transporte de pasajeros dando<a href="#"
+                                class="text-dark font-weight-bold"> Click Aqui.</a>
+                        </p>
+                    </div>
                 </div>
-            </div><!--end row-->
-        </div><!--end container-->
+                <!--end col-->
+                <div class="col-3">
+                    <a href="/" class="btn btn-primary mt-4">Comprar Tiquete</a>
+                </div>
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
 
+        <!-- doble yo -->
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                    <img src="images/illustrator/services.svg" alt="">
-                </div><!--end col-->
+                    {{-- <img src="images/illustrator/services.svg" alt=""> --}}
+                    <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="rounded" alt="" width="445">
+                </div>
+                <!--end col-->
 
                 <div class="col-lg-7 col-md-6 mt-4 pt-2">
                     <div class="section-title ml-lg-5">
-                        <h4 class="title mb-4">Health Insurance</h4>
-                        <p class="text-muted">You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
+                        <h4 class="title mb-4">Doble Yo</h4>
+                        <p class="text-muted">
+                            Cootranshuila LTDA, líder en el sector transportador de Colombia, ofrece el servicio
+                            <span class="text-primary font-weight-bold"> DOBLE YO</span>, que cuenta con los siguientes
+                            servicios:
+                        </p>
                         <ul class="list-unstyled text-muted">
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Digital Marketing Solutions for Tomorrow</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Our Talented & Experienced Marketing Agency</li>
-                            <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Create your own skin to match your brand</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Cómodas sillas tipo cama en cuero</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Aire acondicionado regulado</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Toma corrientes electricos para dispositivos
+                                moviles</li>
                         </ul>
+                        <ul class="list-unstyled social-icon social mb-0 mt-4">
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip" title="WiFi"><i
+                                        data-feather="wifi" class="fea icon-sm fea-social"></i></a></li>
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip"
+                                    title="Seguimiento satelital"><i data-feather="navigation"
+                                        class="fea icon-sm fea-social"></i></a></li>
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip"
+                                    title="Cámaras de seguridad"><i data-feather="video"
+                                        class="fea icon-sm fea-social"></i></a></li>
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip"
+                                    title="Centro de entretenimineto individual"><i data-feather="tablet"
+                                        class="fea icon-sm fea-social"></i></a></li>
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip" title="Multiples TV"><i
+                                        data-feather="tv" class="fea icon-sm fea-social"></i></a></li>
+                        </ul>
+                        <!--end icon-->
                         <div class="mt-4">
-                            <a href="javascript:void(0)" class="btn btn-primary">Read More <i data-feather="arrow-right" class="fea icon-sm"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                                class="fea icon-sm"></i>
+                            </a>
                         </div>
                     </div>
-                </div><!--end col-->
-            </div><!--end row-->
-        </div><!--end container-->
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
 
+        <!-- vip -->
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
                     <img src="images/illustrator/Marketing_strategy_SVG.svg" alt="">
-                </div><!--end col-->
+                </div>
+                <!--end col-->
 
                 <div class="col-lg-7 col-md-6 mt-4 pt-2 order-2 order-md-1">
                     <div class="section-title mr-lg-5">
-                        <h4 class="title mb-4">Investment Plans</h4>
-                        <p class="text-muted">You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
+                        <h4 class="title mb-4">Preferencial VIP</h4>
+                        <p class="text-muted">
+                            Cootranshuila LTDA, líder en el sector transportador de Colombia, ofrece un servicio de Lujo
+                            <span class="text-primary font-weight-bold"> VIP</span>, que cuenta con los siguientes
+                            servicios:
+                        </p>
                         <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Cómodas sillas reclinables</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Aire acondicionado</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Sistema de control de velocidad</li>
+                        </ul>
+                        <ul class="list-unstyled social-icon social mb-0 mt-4">
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip" title="WiFi"><i
+                                        data-feather="wifi" class="fea icon-sm fea-social"></i></a></li>
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip"
+                                    title="Seguimiento satelital"><i data-feather="navigation"
+                                        class="fea icon-sm fea-social"></i></a></li>
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip"
+                                    title="Cámaras de seguridad"><i data-feather="video"
+                                        class="fea icon-sm fea-social"></i></a></li>
+                            {{-- <li class="list-inline-item"><a  class="rounded" data-toggle="tooltip" title="Centro de entretenimineto individual"><i data-feather="tablet" class="fea icon-sm fea-social"></i></a></li> --}}
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip" title="Multiples TV"><i
+                                        data-feather="tv" class="fea icon-sm fea-social"></i></a></li>
+                        </ul>
+                        <!--end icon-->
+                        <div class="mt-4">
+                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                                class="fea icon-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+
+        <!-- platino expres -->
+        <div class="container mt-100 mt-60">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6 mt-4 pt-2">
+                    <img src="images/illustrator/services.svg" alt="">
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-7 col-md-6 mt-4 pt-2">
+                    <div class="section-title ml-lg-5">
+                        <h4 class="title mb-4">Platino Expres</h4>
+                        <p class="text-muted">
+                            Cootranshuila LTDA, líder en el sector transportador de Colombia, ofrece el servicio
+                            mini-preferencial
+                            <span class="text-primary font-weight-bold"> Platino Expres</span>, que cuenta con los
+                            siguientes servicios:
+                        </p>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Cómodas sillas reclinables</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Baño a bordo</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Sistema de control de velocidad</li>
+                        </ul>
+                        <ul class="list-unstyled social-icon social mb-0 mt-4">
+                            {{-- <li class="list-inline-item"><a  class="rounded" data-toggle="tooltip" title="WiFi"><i data-feather="wifi" class="fea icon-sm fea-social"></i></a></li> --}}
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip"
+                                    title="Seguimiento satelital"><i data-feather="navigation"
+                                        class="fea icon-sm fea-social"></i></a></li>
+                            {{-- <li class="list-inline-item"><a  class="rounded" data-toggle="tooltip" title="Cámaras de seguridad"><i data-feather="video" class="fea icon-sm fea-social"></i></a></li> --}}
+                            {{-- <li class="list-inline-item"><a  class="rounded" data-toggle="tooltip" title="Centro de entretenimineto individual"><i data-feather="tablet" class="fea icon-sm fea-social"></i></a></li> --}}
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip" title="TV"><i
+                                        data-feather="tv" class="fea icon-sm fea-social"></i></a></li>
+                        </ul>
+                        <!--end icon-->
+                        <div class="mt-4">
+                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                                class="fea icon-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+
+        <!-- platino jet -->
+        <div class="container mt-100 mt-60">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
+                    <img src="images/illustrator/Marketing_strategy_SVG.svg" alt="">
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-7 col-md-6 mt-4 pt-2 order-2 order-md-1">
+                    <div class="section-title mr-lg-5">
+                        <h4 class="title mb-4">Platino JET</h4>
+                        <p class="text-muted">
+                            Cootranshuila LTDA, líder en el sector transportador de Colombia, ofrece un servicio de Lujo
+                            <span class="text-primary font-weight-bold"> Platino Jet</span>, que cuenta con los siguientes
+                            servicios:
+                        </p>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Cómodas sillas reclinables</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>TV</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Sistema de control de velocidad</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                                class="fea icon-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+
+        <!-- especial -->
+        <div class="container mt-100 mt-60">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6 mt-4 pt-2">
+                    <img src="images/illustrator/services.svg" alt="">
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-7 col-md-6 mt-4 pt-2">
+                    <div class="section-title ml-lg-5">
+                        <h4 class="title mb-4">Platino Especial</h4>
+                        <p class="text-muted">
+                            Cootranshuila LTDA, líder en el sector transportador de Colombia, ofrece un servicio de Lujo
+                            <span class="text-primary font-weight-bold"> Platino Especial</span>, que cuenta con los
+                            siguientes servicios:
+                        </p>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Cómodas sillas reclinables</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Aire acondicionado</li>
+                            <li class="mb-0"><span class="text-primary h5 mr-2"><i
+                                        class="uim uim-check-circle"></i></span>Sistema de control de velocidad</li>
+                        </ul>
+                        <ul class="list-unstyled social-icon social mb-0 mt-4">
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip" title="WiFi"><i
+                                        data-feather="wifi" class="fea icon-sm fea-social"></i></a></li>
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip"
+                                    title="Seguimiento satelital"><i data-feather="navigation"
+                                        class="fea icon-sm fea-social"></i></a></li>
+                            {{-- <li class="list-inline-item"><a  class="rounded" data-toggle="tooltip" title="Cámaras de seguridad"><i data-feather="video" class="fea icon-sm fea-social"></i></a></li> --}}
+                            {{-- <li class="list-inline-item"><a  class="rounded" data-toggle="tooltip" title="Centro de entretenimineto individual"><i data-feather="tablet" class="fea icon-sm fea-social"></i></a></li> --}}
+                            <li class="list-inline-item"><a class="rounded" data-toggle="tooltip" title="Multiples TV"><i
+                                        data-feather="tv" class="fea icon-sm fea-social"></i></a></li>
+                        </ul>
+                        <!--end icon-->
+                        <div class="mt-4">
+                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                                class="fea icon-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+
+        <!-- mixto -->
+        <div class="container mt-100 mt-60">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
+                    <img src="images/illustrator/Marketing_strategy_SVG.svg" alt="">
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-7 col-md-6 mt-4 pt-2 order-2 order-md-1">
+                    <div class="section-title mr-lg-5">
+                        <h4 class="title mb-4">MIXTO</h4>
+                        <p class="text-muted">
+                            Cootranshuila LTDA, líder en el sector transportador de Colombia, ofrece el servicio
+                            <span class="text-primary font-weight-bold"> Mixto</span>, corriente.
+                        </p>
+                        {{-- <ul class="list-unstyled text-muted">
                             <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Digital Marketing Solutions for Tomorrow</li>
                             <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Our Talented & Experienced Marketing Agency</li>
                             <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Create your own skin to match your brand</li>
-                        </ul>
+                        </ul> --}}
                         <div class="mt-4">
-                            <a href="javascript:void(0)" class="btn btn-primary">Read More <i data-feather="arrow-right" class="fea icon-sm"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                                class="fea icon-sm"></i>
+                            </a>
                         </div>
                     </div>
-                </div><!--end col-->
-            </div><!--end row-->
-        </div><!--end container-->
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
 
-        <div class="container-fluid mt-100 mt-60">
+
+        <!-- modal tipos de servicio -->
+        <div class="modal fade" id="buses" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- galeria de imagenes -->
+                        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-interval="10000">
+                                    <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="d-block w-100 rounded" alt="...">
+                                </div>
+                                <div class="carousel-item" data-interval="2000">
+                                    <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="d-block w-100 rounded" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="d-block w-100 rounded" alt="...">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleInterval" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <!-- galeria end -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        {{-- <div class="container-fluid mt-100 mt-60">
             <div class="rounded py-5" style="background: url('images/insurance/cta.jpg') center center;">
                 <div class="container py-md-5 py-3">
                     <div class="row">
@@ -702,7 +891,8 @@
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
-        </div><!--end container-->
-    </section><!--end section-->
+        </div><!--end container--> --}}
+    </section>
+    <!--end section-->
     <!-- End -->
 @endsection

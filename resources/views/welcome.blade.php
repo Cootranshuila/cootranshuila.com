@@ -302,7 +302,7 @@
                         <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Servicio GPS</a></h5>
                         <p class="text-muted">Conoce y haz parte de nuestro nuevo club de clientes preferenciales</p>
 
-                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                        <a href="https://cootranshuila.positionlogic.com/" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->
@@ -317,7 +317,7 @@
                         <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Viaja con tu Mascota</a></h5>
                         <p class="text-muted">Ahora en Cootranshuila podras viajar con tu mascota, conoce aqui los terminos y condiciones</p>
 
-                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                        <a href="javascript:void(0)" class="text-primary" data-toggle="modal" data-target="#mascota">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->
