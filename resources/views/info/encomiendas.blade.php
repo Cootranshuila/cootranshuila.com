@@ -101,6 +101,56 @@
         </div><!--end container-->
 
         <div class="container mt-100 mt-60">
+            {{-- <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="section-title mb-4 pb-2">
+                        <h4 class="title mb-4">Telefonos</h4>
+                        <!-- <p class="text-muted para-desc mx-auto mb-0">Start working with <span class="text-primary font-weight-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p> -->
+                    </div>
+                </div><!--end col-->
+            </div><!--end row--> --}}
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                    <div class="media key-feature align-items-center p-3 rounded shadow">
+                        <div class="icon text-center rounded-circle mr-3">
+                            <i data-feather="phone" class="fea icon-ex-md text-primary"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="title mb-0"><span class="font-weight-bold">Encomiendas Neiva</span> <br> (8)8701505 | 8708255</h4>
+                        </div>
+                    </div>
+                </div><!--end col-->
+                
+                <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                    <div class="media key-feature align-items-center p-3 rounded shadow">
+                        <div class="icon text-center rounded-circle mr-3">
+                            <i data-feather="phone" class="fea icon-ex-md text-primary"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="title mb-0"><span class="font-weight-bold">Encomiendas Bogota</span> <br> 5616868 | 5818889</h4>
+                        </div>
+                    </div>
+                </div><!--end col-->
+                
+                <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                    <div class="media key-feature align-items-center p-3 rounded shadow">
+                        <div class="icon text-center rounded-circle mr-3">
+                            <i data-feather="phone" class="fea icon-ex-md text-primary"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="title mb-0"><span class="font-weight-bold">Encomiendas Florencia</span> <br> 4354848</h4>
+                        </div>
+                    </div>
+                </div><!--end col-->
+                
+                {{-- <div class="col-12 mt-4 pt-2 text-center">
+                    <a href="javascript:void(0)" class="btn btn-primary">See More <i class="mdi mdi-arrow-right"></i></a>
+                </div><!--end col--> --}}
+            </div><!--end row-->
+        </div><!--end container-->
+
+        {{-- <div class="container mt-100 mt-60">
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <div class="section-title mb-4 pb-2">
@@ -205,6 +255,6 @@
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
-        </div><!--end container-->
+        </div><!--end container--> --}}
     </section><!--end section-->
 @endsection

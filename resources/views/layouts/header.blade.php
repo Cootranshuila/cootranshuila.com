@@ -57,7 +57,7 @@
                     <ul class="submenu megamenu">
                         <li>
                             <ul>
-                                <li><a href="/">Tiquetes Online</a></li>
+                                <li><a href="/inicio">Tiquetes Online</a></li>
                                 <li><a href="javascript:void(0)">Servicio Especial</a></li>
                                 <li><a href="javascript:void(0)">Estación de servicios</a></li>
                                 <li><a href="{{route('encomiendas')}}">Carga y encomiendas</a></li>
@@ -74,13 +74,13 @@
                             <ul>
                                 <li><a href="javascript:void(0)">TicketSoft</a></li>
                                 <li><a href="http://huil.fics.sisorgcloud.com">Fics</a></li>
-                                <li><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ltmpl=default&hd=cootranshuila.com&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Correo Corporativo</a></li>
+                                {{-- <li><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ltmpl=default&hd=cootranshuila.com&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Correo Corporativo</a></li> --}}
                                 <li><a href="javascript:void(0)">Administrador</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="index.html">Contáctenos</a></li>
+                <li><a href="{{route('contacto')}}">Contáctenos</a></li>
                 <li class="has-submenu">
                     <a href="{{route('login')}}">
                         <i class="far fa-user-circle" style="font-size: 1.5rem"></i>
