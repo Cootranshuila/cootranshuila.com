@@ -2,7 +2,14 @@
 
 @section('title')Inicio @endsection
 
-@section('MainScripts') <script src="{{ asset('assets/js/pages/index.js') }}"></script> @endsection
+@section('PluginStyles')
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+@endsection
+
+@section('MainScripts')
+    <script src="{{ asset('assets/js/pages/index.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+@endsection
 
 @section('content')
 <!-- Hero Start -->
@@ -39,7 +46,7 @@
                                     <div class="form-group position-relative">
                                         <label>Ciudad Origen</label>
                                         <i data-feather="map-pin" class="fea icon-sm icons"></i>
-                                        <select class="form-control custom-select pl-5" name="optOrigen" id="optOrigen" required>
+                                        <select class="form-control custom-select pl-5 custom-select-2" name="optOrigen" id="optOrigen" required>
                                             <option selected="">Seleccione origen</option>
                                         </select>
                                     </div>
@@ -48,7 +55,7 @@
                                     <div class="form-group position-relative">
                                         <label>Ciudad Destino</label>
                                         <i data-feather="map-pin" class="fea icon-sm icons"></i>
-                                        <select class="form-control custom-select pl-5" name="optDestino" id="optDestino" required>
+                                        <select class="form-control custom-select pl-5 custom-select-2" name="optDestino" id="optDestino" required>
                                             <option selected="">Seleccione destino</option>
                                         </select>
                                     </div>

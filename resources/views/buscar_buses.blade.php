@@ -18,7 +18,7 @@
 
             if (scroll >= 50) {
                 $(".sticky").addClass("nav-sticky");
-            } 
+            }
         });
 
         // modificar columnas segun tamaño
@@ -232,13 +232,13 @@
                                     <div class="col-md-2 text-center">{{$CategoriaNombre}}</div>
                                     <div class="col-md-2 text-center">{{$viaje['TerminalOrigenNombre']}}</div>
                                     <div class="col-md-2 text-center">{{$viaje['TerminalDestinoNombre']}}</div>
-                                    <div class="col-md-2 text-center">{{$precio}}</div>
+                                    <div class="col-md-2 text-center">${{$precio}}</div>
                                 </div>
 
                                 <div class="row py-5 px-3 d-none" id="plane_{{$viaje['Id']}}">
                                     <div class="container">
                                         <div class="row align-items-center px-3 px-sm-0">
-                                            <div class="col-lg-8 col-md-6 col-12">
+                                            <div class="col-lg-8 col-md-12 col-12">
                                                 <div class="section-title">
 
                                                     <div class="plano_primer_piso">
@@ -264,7 +264,7 @@
                                                 </div>
                                             </div><!--end col-->
 
-                                            <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                                            <div class="col-lg-4 col-md-12 col-12 mt-4 pt-2 mt-sm-0 pt-sm-0">
                                                 <div class="card login_page shadow rounded border-0">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Resumen reservación</h5>
@@ -273,26 +273,22 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group position-relative">
-                                                                        <label>Your Name :<span class="text-danger">*</span></label>
-                                                                        <i data-feather="user" class="fea icon-sm icons"></i>
-                                                                        <input name="name" id="name" type="text" class="form-control pl-5" placeholder="First Name :">
+                                                                        <label>Puede seleccionar máximo 5 sillas</label>
                                                                     </div>
                                                                 </div><!--end col-->
                                                                 <div class="col-md-12">
-                                                                    <div class="form-group position-relative">
-                                                                        <label>Your Email :<span class="text-danger">*</span></label>
-                                                                        <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                                        <input name="email" id="email" type="email" class="form-control pl-5" placeholder="Your email :">
+                                                                    <div class="form-group position-relative d-none info_{{$viaje['Id']}}">
+                                                                        <label>Sillas seleccionadas: </label><br>
+                                                                        <label class="text-success" id="seleccionadas_{{$viaje['Id']}}"></label>
                                                                     </div>
                                                                 </div><!--end col-->
                                                                 <div class="col-md-12">
-                                                                    <div class="form-group position-relative">
-                                                                        <label>Your Phone no. :<span class="text-danger">*</span></label>
-                                                                        <i data-feather="phone" class="fea icon-sm icons"></i>
-                                                                        <input name="number" id="number" type="number" class="form-control pl-5" placeholder="Your phone no. :">
+                                                                    <div class="form-group position-relative d-none info_{{$viaje['Id']}}">
+                                                                        <label>Total pasajes: </label><br>
+                                                                        <label class="text-success" id="total_{{$viaje['Id']}}"></label>
                                                                     </div>
                                                                 </div><!--end col-->
-                                                                <div class="col-md-12">
+                                                                <div class="col-md-12 d-none">
                                                                     <div class="form-group">
                                                                         <div class="custom-control custom-checkbox">
                                                                             <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -301,7 +297,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-12">
-                                                                    <button class="btn btn-primary w-100">Reservar</button>
+                                                                    <button class="btn btn-primary w-100" disabled id="enviar_{{$viaje['Id']}}">Reservar</button>
                                                                 </div>
                                                             </div>
                                                         </form>
