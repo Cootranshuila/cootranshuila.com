@@ -14,5 +14,8 @@ class ServiciosController extends Controller
     public function encomiendas(){
         return view('info.encomiendas');
     }
-    
+
+    public function especial(){
+        return view('info.servicio_especial');
+    }
 }

@@ -58,7 +58,7 @@
                         <li>
                             <ul>
                                 <li><a href="/inicio">Tiquetes Online</a></li>
-                                <li><a href="javascript:void(0)">Servicio Especial</a></li>
+                                <li><a href="{{route('especial')}}">Servicio Especial</a></li>
                                 <li><a href="javascript:void(0)">Estación de servicios</a></li>
                                 <li><a href="{{route('encomiendas')}}">Carga y encomiendas</a></li>
                                 <li><a href="{{route('flota')}}">Transporte de pasajeros</a></li>

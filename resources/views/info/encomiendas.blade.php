@@ -25,23 +25,26 @@
 @section('content')
 
     <!-- Hero Start -->
-    <section class="bg-half bg-light d-table w-100" style="background: url('{{asset('assets/images/contact-detail.jpg')}}') center center;">
-        <div class="bg-overlay bg-overlay-white"></div>
+    <section class="bg-half bg-light d-table w-100" style="background: url('{{ asset('assets/images/dobleyo-index.jpg') }}') center center;">
+        <div class="bg-overlay bg-overlay-dark"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
                     <div class="page-next-level">
-                        {{-- <h4 class="title">Contact Us</h4>
+                        <h1 class="heading text-white font-weight-bold mb-4 text-center">Carga y Encomiendas</h1>
                         <div class="page-next">
                             <nav aria-label="breadcrumb" class="d-inline-block">
                                 <ul class="breadcrumb bg-white rounded shadow mb-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Landrick</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Page</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Contact</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Contact Three</li>
+                                    <li class="breadcrumb-item">
+                                        <a href="/">Inicio</a>
+                                    </li>
+                                    {{-- <li class="breadcrumb-item">
+                                        <a href="#">Nosotros</a>
+                                    </li> --}}
+                                    <li class="breadcrumb-item active">Carga y encomiendas</li>
                                 </ul>
                             </nav>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>  <!--end col-->
             </div><!--end row-->
@@ -63,7 +66,7 @@
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="section-title">
-                        <h4 class="title font-weight-bold mb-4 text-center">Carga y Encomiendas</h4>
+                        {{-- <h4 class="title font-weight-bold mb-4 text-center">Carga y Encomiendas</h4> --}}
                         <p class="text-muted para-desc mb-0 mx-auto" style="max-width: 800px !important;">Contamos con una moderna flota de furgones para transportar carga de forma confiable y segura. Nuestro
                             <span class="text-primary font-weight-bold"> servicio de carga </span>
                             se ha logrado extender a los departamentos de: Antioquia, Valle del Cauca, Risaralda y Tolima logrando un cubrimiento del 50% del territorio nacional.

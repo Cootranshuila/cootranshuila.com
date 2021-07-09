@@ -24,28 +24,31 @@
 
 @section('content')
     <!-- Hero Start -->
-    <section class="bg-half bg-light d-table w-100" style="background: url('{{asset('assets/images/contact-detail.jpg')}}') center center;">
-        <div class="bg-overlay bg-overlay-white"></div>
+    <section class="bg-half bg-light d-table w-100" id="counter" style="background: url('{{ asset('assets/images/dobleyo-index.jpg') }}') center center;background-size:cover;">
+        <div class="bg-overlay bg-overlay-dark"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
                     <div class="page-next-level">
-                        {{-- <h4 class="title">CONTÁCTANOS</h4> --}}
-                        <!--<div class="page-next">
+                        <h1 class="heading text-white">Contáctenos</h1>
+                        <div class="page-next">
                             <nav aria-label="breadcrumb" class="d-inline-block">
                                 <ul class="breadcrumb bg-white rounded shadow mb-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Landrick</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Page</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Contact</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Contact Three</li>
+                                    <li class="breadcrumb-item">
+                                        <a href="/">Inicio</a>
+                                    </li>
+                                    {{-- <li class="breadcrumb-item">
+                                        <a href="#">Nosotros</a>
+                                    </li> --}}
+                                    <li class="breadcrumb-item active">Contácto</li>
                                 </ul>
                             </nav>
-                        </div> -->
+                        </div>
                     </div>
-                </div>  <!--end col-->
-            </div><!--end row-->
-        </div> <!--end container-->
-    </section><!--end section-->
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Hero End -->
 
     <!-- Shape Start -->
@@ -74,31 +77,32 @@
                                             <div class="form-group position-relative">
                                                 <label>Nombre <span class="text-danger">*</span></label>
                                                 <i data-feather="user" class="fea icon-sm icons"></i>
-                                                <input name="name" id="name" type="text" class="form-control pl-5" placeholder="Nombre">
+                                                <input name="nombre" id="nombre" type="text" class="form-control pl-5" placeholder="Nombre">
                                             </div>
                                         </div><!--end col-->
                                         <div class="col-md-6">
                                             <div class="form-group position-relative">
                                                 <label>Correo <span class="text-danger">*</span></label>
                                                 <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                <input name="email" id="email" type="email" class="form-control pl-5" placeholder="Correo">
+                                                <input name="correo" id="correo" type="email" class="form-control pl-5" placeholder="Correo">
                                             </div> 
                                         </div><!--end col-->
                                         <div class="col-md-12">
                                             <div class="form-group position-relative">
                                                 <label>Asunto</label>
                                                 <i data-feather="book" class="fea icon-sm icons"></i>
-                                                <input name="subject" id="subject" type="text" class="form-control pl-5" placeholder="Asunto">
+                                                <input name="asunto" id="asunto" type="text" class="form-control pl-5" placeholder="Asunto">
                                             </div>                                                                               
                                         </div><!--end col-->
                                         <div class="col-md-12">
                                             <div class="form-group position-relative">
                                                 <label>Mensaje</label>
                                                 <i data-feather="message-circle" class="fea icon-sm icons"></i>
-                                                <textarea name="comments" id="comments" rows="4" class="form-control pl-5" placeholder="Mensaje"></textarea>
+                                                <textarea name="mensaje" id="mensaje" rows="4" class="form-control pl-5" placeholder="Mensaje"></textarea>
                                             </div>
                                         </div>
                                     </div><!--end row-->
+                                    
                                     <div class="row">
                                         <div class="col-sm-12 text-center">
                                             <input type="submit" id="submit" name="send" class="submitBnt btn btn-primary btn-block" value="Enviar Mensaje">
@@ -131,8 +135,8 @@
                             </div>
                             <div class="content mt-3">
                                 <h4 class="title font-weight-bold">Telefono</h4>
-                                <p class="text-muted">Start working with Landrick that can provide everything</p>
-                                <a href="tel:+152534-468-854" class="text-primary">(8)875 6365 | 8756368</a>
+                                {{-- <p class="text-muted">Start working with Landrick that can provide everything</p> --}}
+                                <a href="tel:8756368" class="text-primary">(8)875 6365 | 8756368</a>
                             </div>
                         </div>
                     </div>
@@ -146,8 +150,8 @@
                             </div>
                             <div class="content mt-3">
                                 <h4 class="title font-weight-bold">Correo</h4>
-                                <p class="text-muted">Start working with Landrick that can provide everything</p>
-                                <a href="mailto:contact@example.com" class="text-primary">clientes@cootranshuila.com</a>
+                                {{-- <p class="text-muted">Start working with Landrick that can provide everything</p> --}}
+                                <a href="mailto:clientes@cootranshuila.com" class="text-primary">clientes@cootranshuila.com</a>
                             </div>
                         </div>
                     </div>
@@ -161,7 +165,7 @@
                             </div>
                             <div class="content mt-3">
                                 <h4 class="title font-weight-bold">Dirección</h4>
-                                <p class="text-muted">C/54 Northwest Freeway, Suite 558, <br>Houston, USA 485</p>
+                                {{-- <p class="text-muted">C/54 Northwest Freeway, Suite 558, <br>Houston, USA 485</p> --}}
                                 <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37907.620238776086!2d-75.29801640022318!3d2.9453564031904595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b74f6fc3007c3%3A0x28255ac69ce31947!2sCootranshuila!5e0!3m2!1sen!2sco!4v1625848424298!5m2!1sen!2sco" class="video-play-icon h6 text-primary">Av. 26 No. 4-82, Neiva - Huila</a>
                             </div>
                         </div>

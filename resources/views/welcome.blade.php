@@ -339,7 +339,7 @@
                         <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Servicio Especial</a></h5>
                         <p class="text-muted">Nuestro servicio Especial de pasajeros a nivel Nacional</p>
 
-                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                        <a href="{{route('especial')}}" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->
