@@ -1,5 +1,6 @@
 // Globales
 var destino = null;
+let butacas = [];
 
 $.ajaxSetup({
     headers: {
@@ -79,7 +80,7 @@ $(document).ready(function () {
                 sucursales.push([terminalOrigen['@attributes']['LocalidadNombre']+', '+terminalOrigen['@attributes'].Nombre, terminalOrigen['@attributes'].ID]);
             });
             sucursales = sucursales.sort();
-            console.log(sucursales);
+
             sucursales.forEach(ter => {
                 content += `
                    <option value="${ter[1]}">${ter[0]} </option>
@@ -93,7 +94,10 @@ $(document).ready(function () {
             if(TerminalOrigen)
                 $("#optOrigen").val(TerminalOrigen).trigger('change');
 
-            $('.preloader').addClass('d-none').delay(350);
+            setTimeout(() => {
+                $('.preloader').addClass('d-none').delay(350);
+            }, 350);
+
         }, error(e) {
             console.log(e);
         }
@@ -136,6 +140,8 @@ $(document).ready(function () {
                 if(TerminalDestino)
                     $("#optDestino").val(TerminalDestino).trigger('change');
 
+                $('#optDestino').select2('open');
+
                 $('.preloader').addClass('d-none').delay(350);
             }, error(e) {
                 console.log(e);
@@ -144,6 +150,12 @@ $(document).ready(function () {
 
     });
 
+    // Inicializacion de Select2
+    $('.custom-select-2').select2({
+        selectionCssClass: "form-control custom-select",
+        minimumInputLength: 1,
+        language: { inputTooShort: function () { return 'Ingrese al menos 1 caracter'; } },
+    });
 });
 
 function GetMapaButacas(ViajeID, TerminalOrigenID, TerminalDestinoID, el) {
@@ -191,7 +203,7 @@ function GetMapaButacas(ViajeID, TerminalOrigenID, TerminalDestinoID, el) {
 
                     //Cuando la butaca esta libre
                     if(element['@attributes'].Type == "1" && (element['@attributes'].Estado == "-1" || element['@attributes'].Estado == 3)) {
-                        let num_butaca = 'SeleccionarButaca("' + btoa(element['@attributes'].Label) + '", this)';
+                        let num_butaca = 'SeleccionarButaca("' + btoa(element['@attributes'].Label) + '", '+ViajeID+', this)';
                         html += "<td class='butaca libre' onclick='"+num_butaca+"' data-num='"+ btoa(element['@attributes'].Label) +"'></td>";
                     }
 
@@ -248,14 +260,108 @@ function CanbiarDestino() {
     $('#cambiar_destino').show(800);
 }
 
-function SeleccionarButaca(butaca, el) {
+function SeleccionarButaca(butaca, ViajeID, el) {
+    // Validar que exista el viaje y/o que sea el mismo
+    if(!butacas[0] || butacas[0] != ViajeID) {
+        if(butacas[0] != ViajeID) {
+            //Eliminar las clases seleccionada y agregar libre
+            $('.seleccionada').each(function(index, element) {
+                $(element).addClass('libre').removeClass('seleccionada');
+            });
+            //Reiniciamos el arreglo de butacas
+            butacas[0] = ViajeID;
+            butacas[1] = [];
+            butacas[2] = 0;
+        } else {
+            butacas.push(ViajeID);
+            butacas.push([]);
+            butacas.push(0);
+        }
+    }
+
+    //Si supero el maximo de butacas, devolver
+    if(butacas[1] && butacas[1].length >= 5 && !$(el).hasClass("seleccionada")) return;
+
     butaca = atob(butaca);
+    let precio = $('#plane_'+ViajeID).data('price');
+    let total = 0;
 
-    console.log(butaca);
-
-    if($(el).hasClass( "seleccionada" )) {
+    if($(el).hasClass("seleccionada")) {
+        //Si esta seleccionada, se libera
         $(el).addClass('libre').removeClass('seleccionada');
+
+        $('.info_'+ViajeID).addClass('d-none');
+        $('#enviar_'+ViajeID).attr('disabled', true);
+
+        removeItemFromArr(butacas[1], butaca);
+
+        if (butacas[1].length > 0) {
+            total = butacas[1].length * parseInt(precio);
+        }
     } else {
+        // Si esta libre se selecciona
         $(el).addClass('seleccionada').removeClass('libre');
+
+        $('.info_'+ViajeID).removeClass('d-none');
+        $('#enviar_'+ViajeID).attr('disabled', false);
+
+        butacas[1].push(butaca);
+
+        total = butacas[1].length * parseInt(precio);
+    }
+
+    butacas[2] = total;
+
+    $('#seleccionadas_'+ViajeID).text(butacas[1].join(', '));
+    $('#total_'+ViajeID).text('$'+format(total));
+
+    console.log(butacas);
+}
+
+function Validar(viaje) {
+    if(viaje !== butacas[0] || butacas[1].length === 0) {
+        swal("Error!", "Error validando sillas seleccionadas, intentelo de nuevo.", "error", {
+            button: "Aceptar",
+            dangerMode: true,
+        });
+
+        return;
+    }
+
+    swal("Confirmar", "Error validando sillas seleccionadas, intentelo de nuevo.", "", {
+        buttons: {
+            cancel: {
+              text: "Cancelar",
+              value: false,
+              visible: true,
+              className: "",
+              closeModal: true,
+            },
+            confirm: {
+              text: "Aceptar",
+              value: true,
+              visible: true,
+              className: "bg-success",
+              closeModal: false
+            }
+        },
+        closeOnClickOutside: false,
+    })
+    .then(value => {
+        if(value) {
+            console.log(butacas);
+        } else {
+            swal.close();
+        }
+    });
+}
+
+function removeItemFromArr (arr, item) {
+    var i = arr.indexOf(item);
+
+    if (i !== -1) {
+        arr.splice(i, 1);
     }
 }
+
+const format = num => String(num).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, '$1,');
