@@ -115,14 +115,36 @@
             <div class="modal-content">
         
                 <!-- Modal Header -->
-                <div class="modal-header">
-                    {{-- <h4 class="modal-title">Modal Heading</h4> --}}
+                {{-- <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
+                </div> --}}
         
                 <!-- Modal body -->
                 <div class="modal-body">
                     <img src="{{asset('assets/images/sucursales.png')}}" alt="" width="766">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal viaja con tu mascota -->
+    <div class="modal fade" id="mascota">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+        
+                <!-- Modal Header -->
+                {{-- <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div> --}}
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="{{asset('assets/images/mascota.png')}}" alt="" width="766">
+                </div>
+
+                <!-- modal footer -->
+                <div class="modal-footer">
+                    <a href="{{asset('assets/pdf/mascotas.pdf')}}" download="mascotas" class="btn btn-primary"><i class="mdi mdi-download"></i> Descargar PDF</a>
                 </div>
             </div>
         </div>
