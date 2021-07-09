@@ -10,4 +10,9 @@ class ServiciosController extends Controller
     public function flota(){
         return view('info.flota');
     }
+
+    public function encomiendas(){
+        return view('info.encomiendas');
+    }
+    
 }

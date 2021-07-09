@@ -57,11 +57,11 @@
                     <ul class="submenu megamenu">
                         <li>
                             <ul>
-                                <li><a href="index-saas.html">Tiquetes Online</a></li>
-                                <li><a href="index-classic-saas.html">Servicio Especial</a></li>
-                                <li><a href="index-agency.html">Estación de servicios</a></li>
-                                <li><a href="index-agency.html">Carga y encomiendas</a></li>
-                                <li><a href="index-agency.html">Transporte de pasajeros</a></li>
+                                <li><a href="/">Tiquetes Online</a></li>
+                                <li><a href="javascript:void(0)">Servicio Especial</a></li>
+                                <li><a href="javascript:void(0)">Estación de servicios</a></li>
+                                <li><a href="{{route('encomiendas')}}">Carga y encomiendas</a></li>
+                                <li><a href="{{route('flota')}}">Transporte de pasajeros</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -72,10 +72,10 @@
                     <ul class="submenu megamenu">
                         <li>
                             <ul>
-                                <li><a href="index-saas.html">TicketSoft</a></li>
+                                <li><a href="javascript:void(0)">TicketSoft</a></li>
                                 <li><a href="http://huil.fics.sisorgcloud.com">Fics</a></li>
-                                <li><a href="index-classic-saas.html">Correo Corporativo</a></li>
-                                <li><a href="index-agency.html">Administrador</a></li>
+                                <li><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ltmpl=default&hd=cootranshuila.com&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Correo Corporativo</a></li>
+                                <li><a href="javascript:void(0)">Administrador</a></li>
                             </ul>
                         </li>
                     </ul>

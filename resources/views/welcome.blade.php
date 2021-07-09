@@ -287,7 +287,7 @@
                         <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Carga y Encomiendas</a></h5>
                         <p class="text-muted">Conoce nuestro servicio de logistica carga y encomiendas</p>
 
-                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                        <a href="{{route('encomiendas')}}" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->

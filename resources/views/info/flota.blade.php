@@ -174,7 +174,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
                     {{-- <img src="images/illustrator/services.svg" alt=""> --}}
-                    <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="rounded" alt="" width="445">
+                    <img src="{{ asset('assets/images/flota/doble_yo.jpg') }}" class="rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -228,7 +228,8 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="images/illustrator/Marketing_strategy_SVG.svg" alt="">
+                    {{-- <img src="images/illustrator/Marketing_strategy_SVG.svg" alt=""> --}}
+                    <img src="{{ asset('assets/images/flota/vip.jpg') }}" class="rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -279,7 +280,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                    <img src="images/illustrator/services.svg" alt="">
+                    <img src="{{ asset('assets/images/flota/p_expres.jpg') }}" alt="" class="rouded" width="445">
                 </div>
                 <!--end col-->
 
@@ -328,7 +329,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="images/illustrator/Marketing_strategy_SVG.svg" alt="">
+                    <img src="{{ asset('assets/images/flota/p_jet.jpeg') }}" alt="" class="rouded" width="445">
                 </div>
                 <!--end col-->
 
@@ -365,7 +366,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                    <img src="images/illustrator/services.svg" alt="">
+                    <img src="{{ asset('assets/images/flota/especial.jpeg') }}" alt="" class="rouded" width="445">
                 </div>
                 <!--end col-->
 
@@ -414,7 +415,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="images/illustrator/Marketing_strategy_SVG.svg" alt="">
+                    <img src="{{ asset('assets/images/flota/mixto.jpg') }}" class="rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -462,7 +463,7 @@
                                     <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="d-block w-100 rounded" alt="...">
                                 </div>
                                 <div class="carousel-item" data-interval="2000">
-                                    <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="d-block w-100 rounded" alt="...">
+                                    <img src="{{ asset('assets/images/flota/doble_yo/doble_yo_1.jpg') }}" class="d-block w-100 rounded" alt="...">
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="d-block w-100 rounded" alt="...">

@@ -39,6 +39,7 @@ Route::get('/', function () {
 });
 
 Route::get('/info/flota', [ServiciosController::class, 'flota'])->name('flota');
+Route::get('/info/encomiendas', [ServiciosController::class, 'encomiendas'])->name('encomiendas');
 
 
 // rutas para buscar viajes
