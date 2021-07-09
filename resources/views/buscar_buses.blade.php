@@ -2,11 +2,19 @@
 
 @section('title')Compra tu pasaje @endsection
 
+@section('PluginStyles')
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+@endsection
+
 @section('MyStyles')
     <link rel="stylesheet" href="{{asset('assets/css/mystyles/buscar_bus.css')}}">
 @endsection
 
-@section('MainScripts') <script src="{{ asset('assets/js/pages/index.js') }}"></script>
+@section('MainScripts')
+    <script src="{{ asset('assets/js/pages/index.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script>
         // agregar propiedad de header estatico
         $(".sticky").addClass("nav-sticky");
@@ -72,7 +80,7 @@
                                 <div class="form-group position-relative">
                                     <label> Ciudad Origen: </label>
                                     <i data-feather="map-pin" class="fea icon-sm icons"></i>
-                                    <select class="form-control custom-select pl-5" name="optOrigen" id="optOrigen" required>
+                                    <select class="form-control custom-select custom-select-2" name="optOrigen" id="optOrigen" required>
                                         <option selected="">Seleccione origen</option>
                                     </select>
                                 </div>
@@ -82,7 +90,7 @@
                                 <div class="form-group position-relative">
                                     <label> Ciudad Destino: </label>
                                     <i data-feather="map-pin" class="fea icon-sm icons"></i>
-                                    <select class="form-control custom-select pl-5" name="optDestino" id="optDestino" required>
+                                    <select class="form-control custom-select custom-select-2" name="optDestino" id="optDestino" required>
                                         <option selected="">Seleccione el destino</option>
                                     </select>
                                 </div>
@@ -235,7 +243,7 @@
                                     <div class="col-md-2 text-center">${{$precio}}</div>
                                 </div>
 
-                                <div class="row py-5 px-3 d-none" id="plane_{{$viaje['Id']}}">
+                                <div class="row py-5 px-3 d-none" id="plane_{{$viaje['Id']}}" data-price="{{ $PrecioOneWay }}">
                                     <div class="container">
                                         <div class="row align-items-center px-3 px-sm-0">
                                             <div class="col-lg-8 col-md-12 col-12">
@@ -269,7 +277,7 @@
                                                     <div class="card-body">
                                                         <h5 class="card-title">Resumen reservación</h5>
 
-                                                        <form class="login-form">
+                                                        <form class="login-form" action="return false;">
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group position-relative">
@@ -297,7 +305,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-12">
-                                                                    <button class="btn btn-primary w-100" disabled id="enviar_{{$viaje['Id']}}">Reservar</button>
+                                                                    <button type="button" class="btn btn-primary w-100" id="enviar_{{$viaje['Id']}}" disabled onclick="Validar({{$viaje['Id']}})">Reservar</button>
                                                                 </div>
                                                             </div>
                                                         </form>

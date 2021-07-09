@@ -170,8 +170,6 @@ function GetMapaButacas(ViajeID, TerminalOrigenID, TerminalDestinoID, el) {
             $(el).attr("onclick", "ocultarMapa("+ViajeID+", "+TerminalOrigenID+", "+TerminalDestinoID+", this)");
             $(el).text('Ocultar');
 
-            console.log(data);
-
             let butacas = "";
 
             for (let index = 0; index <= 1; index++) {
@@ -273,9 +271,11 @@ function SeleccionarButaca(butaca, ViajeID, el) {
             //Reiniciamos el arreglo de butacas
             butacas[0] = ViajeID;
             butacas[1] = [];
+            butacas[2] = 0;
         } else {
             butacas.push(ViajeID);
             butacas.push([]);
+            butacas.push(0);
         }
     }
 
@@ -283,6 +283,8 @@ function SeleccionarButaca(butaca, ViajeID, el) {
     if(butacas[1] && butacas[1].length >= 5 && !$(el).hasClass("seleccionada")) return;
 
     butaca = atob(butaca);
+    let precio = $('#plane_'+ViajeID).data('price');
+    let total = 0;
 
     if($(el).hasClass("seleccionada")) {
         //Si esta seleccionada, se libera
@@ -292,6 +294,10 @@ function SeleccionarButaca(butaca, ViajeID, el) {
         $('#enviar_'+ViajeID).attr('disabled', true);
 
         removeItemFromArr(butacas[1], butaca);
+
+        if (butacas[1].length > 0) {
+            total = butacas[1].length * parseInt(precio);
+        }
     } else {
         // Si esta libre se selecciona
         $(el).addClass('seleccionada').removeClass('libre');
@@ -300,11 +306,54 @@ function SeleccionarButaca(butaca, ViajeID, el) {
         $('#enviar_'+ViajeID).attr('disabled', false);
 
         butacas[1].push(butaca);
+
+        total = butacas[1].length * parseInt(precio);
     }
 
+    butacas[2] = total;
+
     $('#seleccionadas_'+ViajeID).text(butacas[1].join(', '));
+    $('#total_'+ViajeID).text('$'+format(total));
 
     console.log(butacas);
+}
+
+function Validar(viaje) {
+    if(viaje !== butacas[0] || butacas[1].length === 0) {
+        swal("Error!", "Error validando sillas seleccionadas, intentelo de nuevo.", "error", {
+            button: "Aceptar",
+            dangerMode: true,
+        });
+
+        return;
+    }
+
+    swal("Confirmar", "Error validando sillas seleccionadas, intentelo de nuevo.", "", {
+        buttons: {
+            cancel: {
+              text: "Cancelar",
+              value: false,
+              visible: true,
+              className: "",
+              closeModal: true,
+            },
+            confirm: {
+              text: "Aceptar",
+              value: true,
+              visible: true,
+              className: "bg-success",
+              closeModal: false
+            }
+        },
+        closeOnClickOutside: false,
+    })
+    .then(value => {
+        if(value) {
+            console.log(butacas);
+        } else {
+            swal.close();
+        }
+    });
 }
 
 function removeItemFromArr (arr, item) {
@@ -314,3 +363,5 @@ function removeItemFromArr (arr, item) {
         arr.splice(i, 1);
     }
 }
+
+const format = num => String(num).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, '$1,');
