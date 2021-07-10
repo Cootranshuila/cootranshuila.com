@@ -18,4 +18,8 @@ class ServiciosController extends Controller
     public function especial(){
         return view('info.servicio_especial');
     }
+
+    public function turismo(){
+        return view('info.agencia');
+    }
 }

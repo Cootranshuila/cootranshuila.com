@@ -42,6 +42,7 @@ Route::get('/contacto', [ContactoController::class, 'contacto'])->name('contacto
 Route::get('/info/flota', [ServiciosController::class, 'flota'])->name('flota');
 Route::get('/info/encomiendas', [ServiciosController::class, 'encomiendas'])->name('encomiendas');
 Route::get('/info/servicio-especial', [ServiciosController::class, 'especial'])->name('especial');
+Route::get('/info/turismo', [ServiciosController::class, 'turismo'])->name('turismo');
 
 
 // rutas para buscar viajes
