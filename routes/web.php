@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Info\ServiciosController;
 use App\Http\Controllers\SocialController;
@@ -37,8 +38,11 @@ Route::get('/nuestra_empresa',function(){
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/contacto', [ContactoController::class, 'contacto'])->name('contacto');
 Route::get('/info/flota', [ServiciosController::class, 'flota'])->name('flota');
+Route::get('/info/encomiendas', [ServiciosController::class, 'encomiendas'])->name('encomiendas');
+Route::get('/info/servicio-especial', [ServiciosController::class, 'especial'])->name('especial');
+Route::get('/info/turismo', [ServiciosController::class, 'turismo'])->name('turismo');
 
 
 // rutas para buscar viajes

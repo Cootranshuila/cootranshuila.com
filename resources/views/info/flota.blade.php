@@ -24,113 +24,34 @@
 
 @section('content')
 
-    <!-- Hero Start -->
-    <section class="bg-half-170 bg-primary d-table w-100" style="background: url('images/insurance/bg.png') center center;">
+    <section class="bg-half bg-light d-table w-100" id="counter" style="background: url('{{ asset('assets/images/dobleyo-index.jpg') }}') center center;background-size:cover;">
+        <div class="bg-overlay bg-overlay-dark"></div>
         <div class="container">
-            <div class="row mt-5 justify-content-center">
-                <div class="col-lg-12">
-                    <div class="title-heading text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <div class="page-next-level">
                         <h1 class="heading title-dark text-white mb-3">Nuestra Flota</h1>
-                        <p class="para-desc mx-auto text-white-50">Cootranshuila LTDA, líder en el sector transportador de
+                        <p class="para-desc mx-auto text-white">Cootranshuila LTDA, líder en el sector transportador de
                             Colombia.</p>
-
-                        <div class="row mt-4 pt-2">
-                            <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
-                                <div class="card explore-feature border-0 rounded text-center bg-white">
-                                    <div class="card-body">
-                                        <div class="icon rounded-circle shadow-lg d-inline-block">
-                                            <img src="images/insurance/health.svg" class="avatar avatar-md-sm" alt="">
-                                        </div>
-                                        <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Doble
-                                                    Yo</a></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-                            <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
-                                <div class="card explore-feature border-0 rounded text-center bg-white">
-                                    <div class="card-body">
-                                        <div class="icon rounded-circle shadow-lg d-inline-block">
-                                            <img src="images/insurance/term-life.svg" class="avatar avatar-md-sm" alt="">
-                                        </div>
-                                        <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Platino
-                                                    Jet</a></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-                            <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
-                                <div class="card explore-feature border-0 rounded text-center bg-white">
-                                    <div class="card-body">
-                                        <div class="icon rounded-circle shadow-lg d-inline-block">
-                                            <img src="images/insurance/family-health.svg" class="avatar avatar-md-sm"
-                                                alt="">
-                                        </div>
-                                        <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)"
-                                                    class="title text-dark">Preferencial Vip</a></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-                            <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
-                                <div class="card explore-feature border-0 rounded text-center bg-white">
-                                    <div class="card-body">
-                                        <div class="icon rounded-circle shadow-lg d-inline-block">
-                                            <img src="images/insurance/investment.svg" class="avatar avatar-md-sm" alt="">
-                                        </div>
-                                        <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Platino
-                                                    Especial</a></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-                            <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
-                                <div class="card explore-feature border-0 rounded text-center bg-white">
-                                    <div class="card-body">
-                                        <div class="icon rounded-circle shadow-lg d-inline-block">
-                                            <img src="images/insurance/car.svg" class="avatar avatar-md-sm" alt="">
-                                        </div>
-                                        <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Platino
-                                                    Expres</a></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
-                            <div class="col-lg-2 col-md-4 col-6 mt-4 pt-2">
-                                <div class="card explore-feature border-0 rounded text-center bg-white">
-                                    <div class="card-body">
-                                        <div class="icon rounded-circle shadow-lg d-inline-block">
-                                            <img src="images/insurance/bike.svg" class="avatar avatar-md-sm" alt="">
-                                        </div>
-                                        <div class="content mt-3">
-                                            <h6 class="mb-0"><a href="javascript:void(0)" class="title text-dark">Mixto</a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end col-->
+                        <div class="page-next">
+                            <nav aria-label="breadcrumb" class="d-inline-block">
+                                <ul class="breadcrumb bg-white rounded shadow mb-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="/">Inicio</a>
+                                    </li>
+                                    {{-- <li class="breadcrumb-item">
+                                        <a href="#">Nosotros</a>
+                                    </li> --}}
+                                    <li class="breadcrumb-item active">Nuestra Flota</li>
+                                </ul>
+                            </nav>
                         </div>
-                        <!--end row-->
                     </div>
                 </div>
-                <!--end col-->
             </div>
-            <!--end row-->
         </div>
-        <!--end container-->
     </section>
-    <!--end section-->
+
     <div class="position-relative">
         <div class="shape overflow-hidden text-white">
             <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,7 +95,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
                     {{-- <img src="images/illustrator/services.svg" alt=""> --}}
-                    <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="rounded" alt="" width="445">
+                    <img src="{{ asset('assets/images/flota/doble_yo.jpg') }}" class="rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -228,7 +149,8 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="images/illustrator/Marketing_strategy_SVG.svg" alt="">
+                    {{-- <img src="images/illustrator/Marketing_strategy_SVG.svg" alt=""> --}}
+                    <img src="{{ asset('assets/images/flota/vip.jpg') }}" class="rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -279,7 +201,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                    <img src="images/illustrator/services.svg" alt="">
+                    <img src="{{ asset('assets/images/flota/p_expres.jpg') }}" alt="" class="rouded" width="445">
                 </div>
                 <!--end col-->
 
@@ -328,7 +250,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="images/illustrator/Marketing_strategy_SVG.svg" alt="">
+                    <img src="{{ asset('assets/images/flota/p_jet.jpeg') }}" alt="" class="rouded" width="445">
                 </div>
                 <!--end col-->
 
@@ -365,7 +287,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                    <img src="images/illustrator/services.svg" alt="">
+                    <img src="{{ asset('assets/images/flota/especial.jpeg') }}" alt="" class="rouded" width="445">
                 </div>
                 <!--end col-->
 
@@ -414,7 +336,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="images/illustrator/Marketing_strategy_SVG.svg" alt="">
+                    <img src="{{ asset('assets/images/flota/mixto.jpg') }}" class="rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -462,7 +384,7 @@
                                     <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="d-block w-100 rounded" alt="...">
                                 </div>
                                 <div class="carousel-item" data-interval="2000">
-                                    <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="d-block w-100 rounded" alt="...">
+                                    <img src="{{ asset('assets/images/flota/doble_yo/doble_yo_1.jpg') }}" class="d-block w-100 rounded" alt="...">
                                 </div>
                                 <div class="carousel-item">
                                     <img src="{{ asset('assets/images/dobleyo-index.jpg') }}" class="d-block w-100 rounded" alt="...">
