@@ -155,6 +155,7 @@ $(document).ready(function () {
         selectionCssClass: "form-control custom-select",
         minimumInputLength: 1,
         language: { inputTooShort: function () { return 'Ingrese al menos 1 caracter'; } },
+        width: '100%'
     });
 });
 
@@ -290,10 +291,12 @@ function SeleccionarButaca(butaca, ViajeID, el) {
         //Si esta seleccionada, se libera
         $(el).addClass('libre').removeClass('seleccionada');
 
-        $('.info_'+ViajeID).addClass('d-none');
-        $('#enviar_'+ViajeID).attr('disabled', true);
-
         removeItemFromArr(butacas[1], butaca);
+
+        if(butacas[1].length === 0) {
+            $('.info_'+ViajeID).addClass('d-none');
+            $('#enviar_'+ViajeID).attr('disabled', true);
+        }
 
         if (butacas[1].length > 0) {
             total = butacas[1].length * parseInt(precio);
@@ -314,8 +317,6 @@ function SeleccionarButaca(butaca, ViajeID, el) {
 
     $('#seleccionadas_'+ViajeID).text(butacas[1].join(', '));
     $('#total_'+ViajeID).text('$'+format(total));
-
-    console.log(butacas);
 }
 
 function Validar(viaje) {
@@ -328,7 +329,16 @@ function Validar(viaje) {
         return;
     }
 
-    swal("Confirmar", "Error validando sillas seleccionadas, intentelo de nuevo.", "", {
+    let fecha = $('#viaje_'+viaje).data('fecha');
+    let servicio = $('#viaje_'+viaje).data('servicio');
+    let origen = $('#viaje_'+viaje).data('origen');
+    let destino = $('#viaje_'+viaje).data('destino');
+    let precio = $('#plane_'+viaje).data('price');
+
+    swal({
+        title: "Confirmar",
+        html:true,
+        text: `${butacas[1].length} pasajes de ${origen} a ${destino} para el ${fecha} en servicio ${servicio}. Total pasajes $${format(butacas[2])}`,
         buttons: {
             cancel: {
               text: "Cancelar",
@@ -349,7 +359,26 @@ function Validar(viaje) {
     })
     .then(value => {
         if(value) {
-            console.log(butacas);
+            let info = {
+                viaje: viaje,
+                origen: origen,
+                destino: destino,
+                fecha: fecha,
+                servicio: servicio,
+                precio: precio,
+                total: butacas[2],
+                butacas: butacas[1]
+            }
+
+            info = btoa(JSON.stringify(info));
+
+            document.cookie = "viaje="+info+"; max-age=3600; path=/";
+
+            window.location.href = '/checkout';
+
+            // info = atob(info);
+
+            // console.log(JSON.parse(info));
         } else {
             swal.close();
         }

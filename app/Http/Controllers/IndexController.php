@@ -74,7 +74,7 @@ class IndexController extends Controller
     }
 
     public function GetDisponiblesIda(Request $request){
-        
+
         // se obtine el token
         $token = $this->soap->getToken();
 
@@ -90,9 +90,9 @@ class IndexController extends Controller
         $fechaViaje = new \DateTime($request['txtFecSalida']);
         $date = $fechaViaje->format('Y-m-d');
         $fechaDeViaje = $fechaViaje->format('d/m/Y');
-        
+
         if($request['txtFecSalida'] == $fechaActual->format('Y-m-d')) {
-            $fechaActual = $fechaActual->modify('+60 minute'); 
+            $fechaActual = $fechaActual->modify('+60 minute');
             $fecha = $fechaActual->format('d/m/Y H:i:s');
         } else {
             $fecha = new \DateTime($request['txtFecSalida']);
@@ -118,13 +118,13 @@ class IndexController extends Controller
         // se realiza la solicitud
         try {
             $response = $client->GetDisponiblesIda($parameters);
-            
+
             $viajes = new \SimpleXMLElement($response->GetDisponiblesIdaResult);
 
             // dd($viajes->ida['TerminalOrigen']);
 
-            return view('buscar_buses', ['viajes' => $viajes, 'fechaDeViaje' => $fechaDeViaje, 'date' => $date]); 
-            
+            return view('buscar_buses', ['viajes' => $viajes, 'fechaDeViaje' => $fechaDeViaje, 'date' => $date]);
+
         } catch (\Exception $e) {
             return [
                 'error' => 1,
@@ -166,8 +166,8 @@ class IndexController extends Controller
 
             return json_encode($butacas);
 
-            // return view('buscar_buses', ['viajes' => $viajes]); 
-            
+            // return view('buscar_buses', ['viajes' => $viajes]);
+
         } catch (\Exception $e) {
             return [
                 'error' => 1,
@@ -183,5 +183,9 @@ class IndexController extends Controller
     */
     public function SelectViaje(){
         return view('buscar_buses');
+    }
+
+    public function checkout() {
+        return view('checkout');
     }
 }

@@ -59,7 +59,10 @@
 
                             <h5 class="title text-dark">VIAJE DE SALIDA</h5>
 
-                            <h5 class="{{$viajes->ida->viaje ? '' : 'd-none'}}">{{$viajes->ida->viaje['TerminalOrigenNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039;"></i> {{$viajes->ida->viaje['TerminalDestinoNombre']}} <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> {{$fechaDeViaje}}</h5>
+                            <h5 class="{{$viajes->ida->viaje ? '' : 'd-none'}}">{{$viajes->ida->viaje['TerminalOrigenNombre']}}
+                                <i class="fas fa-long-arrow-alt-right" style="color: #00a039;"></i> {{$viajes->ida->viaje['TerminalDestinoNombre']}}
+                                <i class="fas fa-long-arrow-alt-right" style="color: #00a039; vertical-align: middle;"></i> {{$fechaDeViaje}}
+                            </h5>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -211,25 +214,30 @@
                         @endphp
 
                         <div class="col-lg-12 my-3" style="padding-left: 0 !important; padding-right:0 !important;">
-                            <div class="card event-schedule rounded border" id="viajes_disp">
-                                <div class="row" style="align-items: center;">
-                                    <div class=" col-sm-12 col-md-2 text-center">
+                            <div class="card event-schedule rounded border">
+                                <div class="row" style="align-items: center;" id="viaje_{{$viaje['Id']}}"
+                                    data-fecha="{{$viaje['FechaPartida']}}"
+                                    data-servicio="{{$CategoriaNombre}}"
+                                    data-origen="{{$viaje['TerminalOrigenNombre']}}"
+                                    data-destino="{{$viaje['TerminalDestinoNombre']}}"
+                                >
+                                    <div class=" col-sm-12 col-md-2">
                                         {{-- <img src="{{asset('assets/images/logo-dark.png')}}" alt="" width="150"> --}}
                                         @if ($viaje['CategoriaID'] == 7)
                                             {{-- <img src="{{asset('assets/images/servicios/doble_yo.png')}}" alt="" width="120"> --}}
-                                            <img src="{{asset('assets/images/servicios/doble_yo.jpeg')}}" alt="" width="120" class="rounded">
+                                            <img src="{{asset('assets/images/servicios/doble_yo.jpeg')}}" alt="" width="120" class="rounded-top">
                                         @else
                                             @if ($viaje['CategoriaID'] == 4)
                                                 {{-- <img src="{{asset('assets/images/servicios/vip.png')}}" alt="" width="120"> --}}
-                                                <img src="{{asset('assets/images/servicios/vip.jpeg')}}" alt="" width="120" class="rounded">
+                                                <img src="{{asset('assets/images/servicios/vip.jpeg')}}" alt="" width="120" class="rounded-top">
                                             @else
                                                 @if ($viaje['CategoriaID'] == 2)
                                                     {{-- <img src="{{asset('assets/images/servicios/platino_Expres.png')}}" alt="" width="120"> --}}
-                                                    <img src="{{asset('assets/images/servicios/platino_Expres.jpeg')}}" alt="" width="120" class="rounded">
+                                                    <img src="{{asset('assets/images/servicios/platino_Expres.jpeg')}}" alt="" width="120" class="rounded-top">
                                                 @else
                                                     @if ($viaje['CategoriaID'] == 3)
                                                         {{-- <img src="{{asset('assets/images/servicios/platino_jet.png')}}" alt="" width="120"> --}}
-                                                        <img src="{{asset('assets/images/servicios/platino_jet.jpeg')}}" alt="" width="120" class="rounded">
+                                                        <img src="{{asset('assets/images/servicios/platino_jet.jpeg')}}" alt="" width="120" class="rounded-top">
                                                     @endif
                                                 @endif
                                             @endif
@@ -296,14 +304,14 @@
                                                                         <label class="text-success" id="total_{{$viaje['Id']}}"></label>
                                                                     </div>
                                                                 </div><!--end col-->
-                                                                <div class="col-md-12 d-none">
+                                                                {{-- <div class="col-md-12 d-none">
                                                                     <div class="form-group">
                                                                         <div class="custom-control custom-checkbox">
                                                                             <input type="checkbox" class="custom-control-input" id="customCheck1">
                                                                             <label class="custom-control-label" for="customCheck1">I Accept <a href="#" class="text-primary">Terms And Condition</a></label>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </div> --}}
                                                                 <div class="col-md-12">
                                                                     <button type="button" class="btn btn-primary w-100" id="enviar_{{$viaje['Id']}}" disabled onclick="Validar({{$viaje['Id']}})">Reservar</button>
                                                                 </div>
@@ -316,7 +324,7 @@
                                     </div><!--end container-->
                                 </div><!---end row-->
 
-                                <div class="col-md-12">
+                                <div class="col-md-12 mb-3">
                                     <button type="button" class="btn btn-primary" style="float: right" onclick="GetMapaButacas({{$viaje['Id']}}, {{$viaje['TerminalOrigenID']}}, {{$viaje['TerminalDestinoID']}}, this)">Ver sillas</button>
                                 </div>
                             </div>
