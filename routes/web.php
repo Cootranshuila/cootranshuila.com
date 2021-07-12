@@ -46,6 +46,8 @@ Route::get('/info/turismo', [ServiciosController::class, 'turismo'])->name('turi
 Route::get('/info/estacion-de-servicios', [ServiciosController::class, 'estacion'])->name('estacion');
 Route::get('/info/politica_datos', [ServiciosController::class, 'politica'])->name('politica');
 
+Route::post('/mail', [ContactoController::class, 'mail'])->name('contacto_mail');
+
 
 // rutas para buscar viajes
 Route::post('/GetHabilitadas', [App\Http\Controllers\IndexController::class, 'GetHabilitadasOrigen']);

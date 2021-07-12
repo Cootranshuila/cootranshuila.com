@@ -71,7 +71,8 @@
                             <h4 class="card-title">Contáctanos</h4>
                             <div class="custom-form mt-4">
                                 <div id="message"></div>
-                                <form method="post" action="php/contact.php" name="contact-form" id="contact-form">
+                                <form method="post" action="{{route('contacto_mail')}}" name="contact-form" id="contact-form">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group position-relative">
