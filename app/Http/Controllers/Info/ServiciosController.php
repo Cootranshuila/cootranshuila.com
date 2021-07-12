@@ -22,4 +22,12 @@ class ServiciosController extends Controller
     public function turismo(){
         return view('info.agencia');
     }
+
+    public function estacion(){
+        return view('info.estacion');
+    }
+
+    public function politica(){
+        return view('info.politica');
+    }
 }

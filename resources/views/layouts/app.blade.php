@@ -121,7 +121,7 @@
         
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <img src="{{asset('assets/images/sucursales.png')}}" alt="" width="766">
+                    <img src="{{asset('assets/images/sucursales.png')}}" class="img-fluid" alt="" width="766">
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@
         
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <img src="{{asset('assets/images/mascota.png')}}" alt="" width="766">
+                    <img src="{{asset('assets/images/mascota.png')}}" class="img-fluid" alt="" width="766">
                 </div>
 
                 <!-- modal footer -->

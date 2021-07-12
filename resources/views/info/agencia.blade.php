@@ -112,14 +112,14 @@
                                     <input name="correo" type="email" class="form-control" placeholder="Correo">
                                 </div>
                             </div><!--end col-->
-                            <div class="col-3">
+                            <div class="col-lg-3">
                                 <div class="form-group">
                                     {{-- <label>Adults : </label> --}}
                                     <input type="number" min="0" autocomplete="off" id="telefono" required="" class="form-control" placeholder="Telefono">
                                 </div>
                             </div><!--end col-->
                         
-                            <div class="col-3 text-center">
+                            <div class="col-lg-3 text-center">
                                 <input type="submit" id="search" name="search" class="btn btn-primary  text-center" value="Enviar" style="width: 50%;">
                             </div><!--end col-->
                             

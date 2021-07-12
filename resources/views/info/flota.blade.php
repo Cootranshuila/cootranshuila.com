@@ -66,7 +66,7 @@
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-9">
+                <div class="col-lg-9 col-md-9 col-sm-12">
                     <div class="section-title">
                         {{-- <h4 class="title mb-4">Have Question ? Get in touch!</h4> --}}
                         <p class="text-muted para-desc" style="max-width: 700px !important;">La COOPERATIVA DE
@@ -76,13 +76,13 @@
                             cada uno de sus servicios.
                             <br>
                             <br>
-                            Conozca los terminos y condiciones de transporte de pasajeros dando<a href="#"
-                                class="text-dark font-weight-bold"> Click Aqui.</a>
+                            Conozca los terminos y condiciones de transporte de pasajeros dando<a href="{{asset('assets/pdf/CONDICIONES.pdf')}}"
+                                class="text-dark font-weight-bold" target="_blank"> Click Aqui.</a>
                         </p>
                     </div>
                 </div>
                 <!--end col-->
-                <div class="col-3">
+                <div class="col-lg-3 col-md-3 col-sm-12">
                     <a href="/" class="btn btn-primary mt-4">Comprar Tiquete</a>
                 </div>
             </div>
@@ -95,7 +95,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
                     {{-- <img src="images/illustrator/services.svg" alt=""> --}}
-                    <img src="{{ asset('assets/images/flota/doble_yo.jpg') }}" class="rounded" alt="" width="445">
+                    <img src="{{ asset('assets/images/flota/doble_yo.jpg') }}" class="img-fluid rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -150,7 +150,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
                     {{-- <img src="images/illustrator/Marketing_strategy_SVG.svg" alt=""> --}}
-                    <img src="{{ asset('assets/images/flota/vip.jpg') }}" class="rounded" alt="" width="445">
+                    <img src="{{ asset('assets/images/flota/vip.jpg') }}" class="img-fluid rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -201,7 +201,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                    <img src="{{ asset('assets/images/flota/p_expres.jpg') }}" alt="" class="rouded" width="445">
+                    <img src="{{ asset('assets/images/flota/p_expres.jpg') }}" alt="" class="img-fluid rouded" width="445">
                 </div>
                 <!--end col-->
 
@@ -250,7 +250,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="{{ asset('assets/images/flota/p_jet.jpeg') }}" alt="" class="rouded" width="445">
+                    <img src="{{ asset('assets/images/flota/p_jet.jpeg') }}" alt="" class="img-fluid rouded" width="445">
                 </div>
                 <!--end col-->
 
@@ -287,7 +287,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                    <img src="{{ asset('assets/images/flota/especial.jpeg') }}" alt="" class="rouded" width="445">
+                    <img src="{{ asset('assets/images/flota/especial.jpeg') }}" alt="" class="img-fluid rouded" width="445">
                 </div>
                 <!--end col-->
 
@@ -336,7 +336,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="{{ asset('assets/images/flota/mixto.jpg') }}" class="rounded" alt="" width="445">
+                    <img src="{{ asset('assets/images/flota/mixto.jpg') }}" class="img-fluid rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
