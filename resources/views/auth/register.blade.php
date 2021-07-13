@@ -24,7 +24,7 @@
 
 @section('content')
     <!-- Hero Start -->
-    <section class="bg-home d-flex align-items-center bg-light">
+    <section class="bg-home d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7 col-md-6">

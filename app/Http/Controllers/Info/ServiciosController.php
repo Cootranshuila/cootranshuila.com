@@ -7,8 +7,27 @@ use Illuminate\Http\Request;
 
 class ServiciosController extends Controller
 {
+    protected $buses;
+
+    public function __construct()
+    {
+        $this->buses = collect([
+            [
+                'imagen' => [
+                    '/assets/images/flota/doble_yo/01.png',
+                    '/assets/images/flota/doble_yo/02.png',
+                    '/assets/images/flota/doble_yo/03.png',
+                    '/assets/images/flota/doble_yo/04.png'
+                ]
+            ]
+        ]);
+    }
+
     public function flota(){
-        return view('info.flota');
+        $buses = $this->buses;
+        // $buses = $buses[0]['imagen'];
+        // return dd($buses);
+        return view('info.flota', compact('buses'));
     }
 
     public function encomiendas(){
