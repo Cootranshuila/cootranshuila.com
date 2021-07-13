@@ -61,7 +61,7 @@
     </div>
     <!--Shape End-->
 
-    <section class="section bg-light">
+    <section class="section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
@@ -97,7 +97,7 @@
                             <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Crédito.</li>
                             <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Contraentrega.</li>
                         </ul>
-                        <a href="javascript:void(0)" class="mt-3 h6 text-primary">Ver contrato de trasnporte terrestre de encomiendas. <i class="mdi mdi-chevron-right"></i></a>
+                        <a href="{{asset('assets/pdf/condicion_empresa.pdf')}}" target="_blank" class="mt-3 h6 text-primary">Ver contrato de trasnporte terrestre de encomiendas. <i class="mdi mdi-chevron-right"></i></a>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->

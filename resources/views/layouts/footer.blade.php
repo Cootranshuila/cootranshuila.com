@@ -41,7 +41,7 @@
             <div class="col-lg-3 col-sm-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                 <h4 class="text-dark footer-head">Accesos e información</h4>
                 <ul class="list-unstyled footer-list mt-4">
-                    <li><a href="/politica_datos" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Politica de datos</a></li>
+                    <li><a href="{{route('politica')}}" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Politica de datos</a></li>
                     <li><a href="/Siplat" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Siplat</a></li>
                     <li><a href="/informacion-dian" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Esal - 2019</a></li>
                     <li><a href="/login" class="text-muted"><i class="mdi mdi-chevron-right mr-1"></i> Login</a></li>

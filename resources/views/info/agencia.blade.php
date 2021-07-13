@@ -112,14 +112,14 @@
                                     <input name="correo" type="email" class="form-control" placeholder="Correo">
                                 </div>
                             </div><!--end col-->
-                            <div class="col-3">
+                            <div class="col-lg-3">
                                 <div class="form-group">
                                     {{-- <label>Adults : </label> --}}
                                     <input type="number" min="0" autocomplete="off" id="telefono" required="" class="form-control" placeholder="Telefono">
                                 </div>
                             </div><!--end col-->
                         
-                            <div class="col-3 text-center">
+                            <div class="col-lg-3 text-center">
                                 <input type="submit" id="search" name="search" class="btn btn-primary  text-center" value="Enviar" style="width: 50%;">
                             </div><!--end col-->
                             
@@ -145,65 +145,70 @@
 
             <div class="row align-items-center">
                 <div class="col-md-4 col-12 mt-4 pt-2">
-                    <div class="card pricing-rates business-rate shadow bg-light rounded text-center border-0">
+                    <div class="card pricing-rates business-rate shadow bg-light rounded  border-0">
                         <div class="card-body py-5">
-                            <h2 class="title text-uppercase mb-4">Free</h2>
-                            <div class="d-flex justify-content-center mb-4">
+                            <h2 class="title text-uppercase mb-4 text-center">Piscilago</h2>
+                            <div class="d-flex justify-content-center mb-4 text-center">
                                 <span class="h4 mb-0 mt-2">$</span>
-                                <span class="price h1 mb-0">0</span>
-                                <span class="h4 align-self-end mb-1">/mo</span>
+                                <span class="price h1 mb-0">99.000</span>
+                                <span class="h4 align-self-end mb-1">/persona</span>
                             </div>
-                            
+                            <h2 class="title text-uppercase mb-4 text-center">Salida desde Neiva</h2>
                             <ul class="list-unstyled mb-0 pl-0">
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Full Access</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Enhanced Security</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Source Files</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>1 Domain Free</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Transporte ida y regreso (Salida desde Neiva)</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Pasaporte Ingreso (Piscina, zoológico y toboganes)</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Refrigerio</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Gorro de Baño</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Almuerzo Piscitour</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Tarjeta de Asistencia Médica</li>
                             </ul>
-                            <a href="javascript:void(0)" class="btn btn-primary mt-4">Buy Now</a>
+                            <a href="javascript:void(0)" class="btn btn-primary mt-4">Comprar</a>
                         </div>
                     </div>
                 </div><!--end col-->
                 
                 <div class="col-md-4 col-12 mt-4 pt-2">
-                    <div class="card pricing-rates business-rate shadow bg-light rounded text-center border-0">
+                    <div class="card pricing-rates business-rate shadow bg-light rounded  border-0">
                         <div class="card-body py-5">
-                            <h2 class="title text-uppercase text-primary mb-4">Starter</h2>
-                            <div class="d-flex justify-content-center mb-4">
+                            <h2 class="title text-uppercase mb-4 text-center">Cafe Extremo</h2>
+                            <div class="d-flex justify-content-center mb-4 text-center">
                                 <span class="h4 mb-0 mt-2">$</span>
-                                <span class="price h1 mb-0">39</span>
-                                <span class="h4 align-self-end mb-1">/mo</span>
+                                <span class="price h1 mb-0">299.000</span>
+                                <span class="h4 align-self-end mb-1">/persona</span>
                             </div>
-
+                            <h2 class="title text-uppercase mb-4 text-center">Salida desde Neiva</h2>
                             <ul class="list-unstyled mb-0 pl-0">
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Full Access</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Source Files</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Free Appointments</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Free Installment</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Enhanced Security</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Transporte ida y regreso (Salida desde Neiva)</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Acomodación Múltiple</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Alimentacion</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Seguros</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Guia Turistica</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Acceso completo al parque</li>
                             </ul>
-                            <a href="javascript:void(0)" class="btn btn-primary mt-4">Get Started</a>
+                            <a href="javascript:void(0)" class="btn btn-primary mt-4">Comprar</a>
                         </div>
                     </div>
                 </div><!--end col-->
                 
                 <div class="col-md-4 col-12 mt-4 pt-2">
-                    <div class="card pricing-rates business-rate shadow bg-light rounded text-center border-0">
+                    <div class="card pricing-rates business-rate shadow bg-light rounded  border-0">
                         <div class="card-body py-5">
-                            <h2 class="title text-uppercase mb-4">Professional</h2>
-                            <div class="d-flex justify-content-center mb-4">
+                            <h2 class="title text-uppercase mb-4 text-center">Piscilago</h2>
+                            <div class="d-flex justify-content-center mb-4 text-center">
                                 <span class="h4 mb-0 mt-2">$</span>
-                                <span class="price h1 mb-0">59</span>
-                                <span class="h4 align-self-end mb-1">/mo</span>
+                                <span class="price h1 mb-0">140.000</span>
+                                <span class="h4 align-self-end mb-1">/persona</span>
                             </div>
-                            
+                            <h2 class="title text-uppercase mb-4 text-center">Salida desde La Plata</h2>
                             <ul class="list-unstyled mb-0 pl-0">
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Full Access</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Enhanced Security</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Source Files</li>
-                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>1 Domain Free</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Transporte ida y regreso (Salida desde Neiva)</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Pasaporte Ingreso (Piscina, zoológico y toboganes)</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Refrigerio</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Gorro de Baño</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Almuerzo Piscitour</li>
+                                <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Tarjeta de Asistencia Médica</li>
                             </ul>
-                            <a href="javascript:void(0)" class="btn btn-primary mt-4">Try It Now</a>
+                            <a href="javascript:void(0)" class="btn btn-primary mt-4">Comprar</a>
                         </div>
                     </div>
                 </div><!--end col-->
@@ -211,4 +216,21 @@
         </div><!--end container-->
     </section><!--end section-->
 
+
+
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+573208482712", // WhatsApp number
+                call_to_action: "Hola ¿en que te podemos ayudar?", // Call to action
+                position: "left", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- /GetButton.io widget -->
 @endsection

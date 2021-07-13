@@ -43,6 +43,10 @@ Route::get('/info/flota', [ServiciosController::class, 'flota'])->name('flota');
 Route::get('/info/encomiendas', [ServiciosController::class, 'encomiendas'])->name('encomiendas');
 Route::get('/info/servicio-especial', [ServiciosController::class, 'especial'])->name('especial');
 Route::get('/info/turismo', [ServiciosController::class, 'turismo'])->name('turismo');
+Route::get('/info/estacion-de-servicios', [ServiciosController::class, 'estacion'])->name('estacion');
+Route::get('/info/politica_datos', [ServiciosController::class, 'politica'])->name('politica');
+
+Route::post('/mail', [ContactoController::class, 'mail'])->name('contacto_mail');
 
 
 // rutas para buscar viajes

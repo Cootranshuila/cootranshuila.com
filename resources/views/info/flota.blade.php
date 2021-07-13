@@ -5,21 +5,33 @@
 @section('MyStyles')@endsection
 
 @section('MainScripts')
-    {{-- <script>
+    <script>
         // agregar propiedad de header estatico
-        $(".sticky").addClass("nav-sticky");
+        // $(".sticky").addClass("nav-sticky");
 
-        $(window).scroll(function() {
-            var scroll = $(window).scrollTop();
-            $(".sticky").addClass("nav-sticky");
+        // $(window).scroll(function() {
+        //     var scroll = $(window).scrollTop();
+        //     $(".sticky").addClass("nav-sticky");
 
 
-            if (scroll >= 50) {
-                $(".sticky").addClass("nav-sticky");
-            } 
+        //     if (scroll >= 50) {
+        //         $(".sticky").addClass("nav-sticky");
+        //     } 
+        // });
+
+        // Magnific Popup
+        $('.mfp-image').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            mainClass: 'mfp-fade',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1]
+            }
         });
 
-    </script> --}}
+    </script>
 @endsection
 
 @section('content')
@@ -66,7 +78,7 @@
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-9">
+                <div class="col-lg-9 col-md-9 col-sm-12">
                     <div class="section-title">
                         {{-- <h4 class="title mb-4">Have Question ? Get in touch!</h4> --}}
                         <p class="text-muted para-desc" style="max-width: 700px !important;">La COOPERATIVA DE
@@ -76,13 +88,13 @@
                             cada uno de sus servicios.
                             <br>
                             <br>
-                            Conozca los terminos y condiciones de transporte de pasajeros dando<a href="#"
-                                class="text-dark font-weight-bold"> Click Aqui.</a>
+                            Conozca los terminos y condiciones de transporte de pasajeros dando<a href="{{asset('assets/pdf/CONDICIONES.pdf')}}"
+                                class="text-dark font-weight-bold" target="_blank"> Click Aqui.</a>
                         </p>
                     </div>
                 </div>
                 <!--end col-->
-                <div class="col-3">
+                <div class="col-lg-3 col-md-3 col-sm-12">
                     <a href="/" class="btn btn-primary mt-4">Comprar Tiquete</a>
                 </div>
             </div>
@@ -95,7 +107,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
                     {{-- <img src="images/illustrator/services.svg" alt=""> --}}
-                    <img src="{{ asset('assets/images/flota/doble_yo.jpg') }}" class="rounded" alt="" width="445">
+                    <img src="{{ asset('assets/images/flota/doble-yo.jpeg') }}" class="img-fluid rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -133,7 +145,15 @@
                         </ul>
                         <!--end icon-->
                         <div class="mt-4">
-                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                            {{-- <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                                class="fea icon-sm"></i>
+                            </a> --}}
+                            @php
+                                foreach ($buses[0]['imagen'] as $key => $doble_yo){
+                                    
+                                }
+                            @endphp
+                            <a href="{{ $doble_yo }}" class="btn btn-primary mfp-image">Ver mas <i data-feather="arrow-right"
                                 class="fea icon-sm"></i>
                             </a>
                         </div>
@@ -150,7 +170,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
                     {{-- <img src="images/illustrator/Marketing_strategy_SVG.svg" alt=""> --}}
-                    <img src="{{ asset('assets/images/flota/vip.jpg') }}" class="rounded" alt="" width="445">
+                    <img src="{{ asset('assets/images/flota/vip.jpeg') }}" class="img-fluid rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -201,7 +221,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                    <img src="{{ asset('assets/images/flota/p_expres.jpg') }}" alt="" class="rouded" width="445">
+                    <img src="{{ asset('assets/images/flota/p_expres.jpeg') }}" alt="" class="img-fluid rounded" width="445">
                 </div>
                 <!--end col-->
 
@@ -250,7 +270,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="{{ asset('assets/images/flota/p_jet.jpeg') }}" alt="" class="rouded" width="445">
+                    <img src="{{ asset('assets/images/flota/p_jet.jpeg') }}" alt="" class="img-fluid rounded" width="445">
                 </div>
                 <!--end col-->
 
@@ -287,16 +307,16 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2">
-                    <img src="{{ asset('assets/images/flota/especial.jpeg') }}" alt="" class="rouded" width="445">
+                    <img src="{{ asset('assets/images/flota/especial.jpeg') }}" alt="" class="img-fluid rounded" width="445">
                 </div>
                 <!--end col-->
 
                 <div class="col-lg-7 col-md-6 mt-4 pt-2">
                     <div class="section-title ml-lg-5">
-                        <h4 class="title mb-4">Platino Especial</h4>
+                        <h4 class="title mb-4">Servicio Especial</h4>
                         <p class="text-muted">
                             Cootranshuila LTDA, líder en el sector transportador de Colombia, ofrece un servicio de Lujo
-                            <span class="text-primary font-weight-bold"> Platino Especial</span>, que cuenta con los
+                            <span class="text-primary font-weight-bold"> Servicio Especial</span>, que cuenta con los
                             siguientes servicios:
                         </p>
                         <ul class="list-unstyled text-muted">
@@ -336,7 +356,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="{{ asset('assets/images/flota/mixto.jpg') }}" class="rounded" alt="" width="445">
+                    <img src="{{ asset('assets/images/flota/mixto.jpg') }}" class="img-fluid rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -370,11 +390,6 @@
         <div class="modal fade" id="buses" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
                     <div class="modal-body">
 
                         <!-- galeria de imagenes -->

@@ -369,7 +369,7 @@
                         <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Estacion de Servicios</a></h5>
                         <p class="text-muted">Contamos con mas de 65 años de experiencia en el mercado</p>
 
-                        <a href="javascript:void(0)" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
+                        <a href="{{route('estacion')}}" class="text-primary">Ver mas <i data-feather="chevron-right" class="fea icon-sm"></i></a>
                     </div>
                 </div>
             </div><!--end col-->
