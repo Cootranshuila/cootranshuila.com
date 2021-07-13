@@ -188,4 +188,124 @@ class IndexController extends Controller
     public function checkout() {
         return view('checkout');
     }
+
+    public function validarViaje(Request $request) {
+        // Validar todas las butacas
+        foreach ($request['butacas'] as $butaca) {
+            $info_butaca = $this->GetOcupacionButaca($request['viaje'], $butaca);
+
+            // Si ocurre algun error, terminar el proceso
+            if($info_butaca->error) {
+                $error = [
+                    'error' => true,
+                    'butaca' => $butaca
+                ];
+
+                break;
+            }
+
+            // Buscamos si desde el terminal origen esta libre (-1)
+            foreach ($info_butaca->parada as $info) {
+                if($info['TerminalID'] == $request['origen_id']) {
+                    $butaca_origen = $info['Estado'];
+
+                    break;
+                }
+            }
+
+            // Buscamos si desde el terminal destino esta libre (-1)
+            foreach ($info_butaca->parada as $info) {
+                if($info['TerminalID'] == $request['destino_id']) {
+                    $butaca_destino = $info['Estado'];
+
+                    break;
+                }
+            }
+
+            if($butaca_origen == "-1" && $butaca_destino == "-1") {
+                $reservar_butaca = $this->BloquearButacaConVencimiento($request['viaje'], $butaca, $request['origen_id'], $request['destino_id']);
+
+                dd($reservar_butaca);
+
+                // if()
+            }
+        }
+
+    }
+
+    private function GetOcupacionButaca($viaje, $butaca) {
+        // se obtine el token
+        $token = $this->soap->getToken();
+
+        // comprobar si el token da error
+        if (isset($token->error))
+            return $token->mensaje;
+
+        //obtener configuracion y cabeceras de solicitud
+        // pasamos la clase a utilizar
+        $client = $this->soap->config('Viaje.asmx');
+
+        // pasar parametros a ser enviados o requeridos
+        $parameters = array(
+            'Token' => $token,
+            'ViajeID' => $viaje,
+            'CocheOrden' =>  1,
+            'Butaca' =>  $butaca,
+            'Modo' => 0
+        );
+
+        // se realiza la solicitud
+        try {
+            $response = $client->GetOcupacionButaca($parameters);
+
+            $butaca = new \SimpleXMLElement($response->GetOcupacionButacaResult);
+
+            return $butaca;
+        } catch (\Exception $e) {
+            return [
+                'error' => 1,
+                'mensaje' => $e->getMessage()
+            ];
+        }
+    }
+
+    private function BloquearButacaConVencimiento($viaje, $butaca, $origen_id, $destino_id) {
+        // se obtine el token
+        $token = $this->soap->getToken();
+
+        // comprobar si el token da error
+        if (isset($token->error))
+            return $token->mensaje;
+
+        //obtener configuracion y cabeceras de solicitud
+        // pasamos la clase a utilizar
+        $client = $this->soap->config('Viaje.asmx');
+
+        // pasar parametros a ser enviados o requeridos
+        $parameters = array(
+            'Token' => $token,
+            'ViajeID' => $viaje,
+            'TerminalOrigenID' =>  $origen_id,
+            'TerminalDestinoID' =>  $destino_id,
+            'CocheOrden' => 1,
+            'Butaca' => $butaca,
+            // 'MinutosValidez' => 30
+        );
+
+        // se realiza la solicitud
+        try {
+            $response = $client->BloquearButaca($parameters);
+
+            dd($this->GetOcupacionButaca($viaje, $butaca));
+
+            $butaca = new \SimpleXMLElement($response->BloquearButacaResult);
+
+            return $butaca;
+        } catch (\Exception $e) {
+            return [
+                'error' => 1,
+                'mensaje' => $e->getMessage()
+            ];
+        }
+    }
 }

@@ -362,13 +362,30 @@ function Validar(viaje) {
             let info = {
                 viaje: viaje,
                 origen: origen,
+                origen_id: $('#TerminalOrigen').val(),
                 destino: destino,
+                destino_id: $('#TerminalDestino').val(),
                 fecha: fecha,
                 servicio: servicio,
                 precio: precio,
                 total: butacas[2],
                 butacas: butacas[1]
             }
+
+            //Validar y bloquear las butacas
+            $.ajax({
+                url: '/validarViaje',
+                type: 'POST',
+                data: info,
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                }, error(e) {
+                    console.log(e);
+                }
+            });
+
+            return;
 
             info = btoa(JSON.stringify(info));
 
