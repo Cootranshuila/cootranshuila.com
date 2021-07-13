@@ -5,33 +5,7 @@
 @section('MyStyles')@endsection
 
 @section('MainScripts')
-    <script>
-        // agregar propiedad de header estatico
-        // $(".sticky").addClass("nav-sticky");
-
-        // $(window).scroll(function() {
-        //     var scroll = $(window).scrollTop();
-        //     $(".sticky").addClass("nav-sticky");
-
-
-        //     if (scroll >= 50) {
-        //         $(".sticky").addClass("nav-sticky");
-        //     } 
-        // });
-
-        // Magnific Popup
-        $('.mfp-image').magnificPopup({
-            type: 'image',
-            closeOnContentClick: true,
-            mainClass: 'mfp-fade',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1]
-            }
-        });
-
-    </script>
+    <script src="{{asset('assets/js/pages/flota.init.js')}}"></script>
 @endsection
 
 @section('content')
@@ -148,12 +122,8 @@
                             {{-- <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
                                 class="fea icon-sm"></i>
                             </a> --}}
-                            @php
-                                foreach ($buses[0]['imagen'] as $key => $doble_yo){
-                                    
-                                }
-                            @endphp
-                            <a href="{{ $doble_yo }}" class="btn btn-primary mfp-image">Ver mas <i data-feather="arrow-right"
+                            
+                            <a href="javascript:void(0)" class="btn btn-primary" id="doble-yo">Ver mas <i data-feather="arrow-right"
                                 class="fea icon-sm"></i>
                             </a>
                         </div>
@@ -205,7 +175,7 @@
                         </ul>
                         <!--end icon-->
                         <div class="mt-4">
-                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                            <a href="javascript:void(0)" class="btn btn-primary" id="vip">Ver mas <i data-feather="arrow-right"
                                 class="fea icon-sm"></i>
                             </a>
                         </div>
@@ -254,7 +224,7 @@
                         </ul>
                         <!--end icon-->
                         <div class="mt-4">
-                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                            <a href="javascript:void(0)" class="btn btn-primary" id="platino_expres">Ver mas <i data-feather="arrow-right"
                                 class="fea icon-sm"></i>
                             </a>
                         </div>
@@ -291,7 +261,7 @@
                                         class="uim uim-check-circle"></i></span>Sistema de control de velocidad</li>
                         </ul>
                         <div class="mt-4">
-                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                            <a href="javascript:void(0)" class="btn btn-primary" id="platino_jet">Ver mas <i data-feather="arrow-right"
                                 class="fea icon-sm"></i>
                             </a>
                         </div>
@@ -340,7 +310,7 @@
                         </ul>
                         <!--end icon-->
                         <div class="mt-4">
-                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                            <a href="javascript:void(0)" class="btn btn-primary" id="especial">Ver mas <i data-feather="arrow-right"
                                 class="fea icon-sm"></i>
                             </a>
                         </div>
@@ -356,7 +326,7 @@
         <div class="container mt-100 mt-60">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6 mt-4 pt-2 order-1 order-md-2">
-                    <img src="{{ asset('assets/images/flota/mixto.jpg') }}" class="img-fluid rounded" alt="" width="445">
+                    <img src="{{ asset('assets/images/flota/mixto.png') }}" class="img-fluid rounded" alt="" width="445">
                 </div>
                 <!--end col-->
 
@@ -373,7 +343,7 @@
                             <li class="mb-0"><span class="text-primary h5 mr-2"><i class="uim uim-check-circle"></i></span>Create your own skin to match your brand</li>
                         </ul> --}}
                         <div class="mt-4">
-                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#buses">Ver mas <i data-feather="arrow-right"
+                            <a href="javascript:void(0)" class="btn btn-primary" id="mixto">Ver mas <i data-feather="arrow-right"
                                 class="fea icon-sm"></i>
                             </a>
                         </div>
