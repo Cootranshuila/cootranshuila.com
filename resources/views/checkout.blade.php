@@ -127,20 +127,20 @@
     </section>
 
     <!-- Start -->
-    <section class="section p-2 mb-5" id="detalle_compra">
+    <section class="section p-0 mb-5" id="detalle_compra">
         @guest
             <div class="container my-3">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
+                    {{-- <div class="col-lg-6 col-md-6 col-12">
                         <div class="media align-items-center shadow rounded p-4 features">
                             <div class="icons m-0 rounded h2 text-primary text-center px-3">
                                 <i class="uil uil-envelope-check"></i>
                             </div>
                             <div class="content ml-4">
-                                <h5 class="mb-1"><a href="javascript:void(0)" class="text-dark">Get in Touch !</a></h5>
-                                <p class="text-muted mb-0">This is required when, for text is not yet available.</p>
+                                <h5 class="mb-1"><a href="javascript:void(0)" class="text-dark">Regístrate</a></h5>
+                                <p class="text-muted mb-0">Haz parte de nuestro club de Clientes Preferenciales.</p>
                                 <div class="mt-2">
-                                    <a href="javascript:void(0)" class="btn btn-sm btn-soft-primary">Submit a Request</a>
+                                    <button type="button" data-toggle="modal" data-target="#modal_registro" class="btn btn-sm btn-soft-primary">Registrarse</button>
                                 </div>
                             </div>
                         </div>
@@ -152,14 +152,45 @@
                                 <i class="uil uil-webcam"></i>
                             </div>
                             <div class="content ml-4">
-                                <h5 class="mb-1"><a href="javascript:void(0)" class="text-dark">Start a Meeting</a></h5>
-                                <p class="text-muted mb-0">This is required when, for text is not yet available.</p>
+                                <h5 class="mb-1"><a href="javascript:void(0)" class="text-dark">Iniciar Session</a></h5>
+                                <p class="text-muted mb-0">Si ya tienes una cuenta, incia session.</p>
                                 <div class="mt-2">
-                                    <a href="javascript:void(0)" class="btn btn-sm btn-soft-primary">Start Video Chat</a>
+                                    <button type="button" data-toggle="modal" data-target="#modal_login" class="btn btn-sm btn-soft-primary">Iniciar Session</button>
                                 </div>
                             </div>
                         </div>
-                    </div><!--end col-->
+                    </div><!--end col--> --}}
+
+
+
+
+
+
+
+                    <div class="col-lg-12">
+                        <div class="card event-schedule rounded border">
+                            <div class="card-body">
+                                <div class="media">
+                                    <ul class="date text-center text-primary mr-3 mb-0 list-unstyled">
+                                        <li class="day font-weight-bold mb-2">
+                                            <i data-feather="user" class="fea icon-md"> </i>
+                                        </li>
+                                    </ul>
+                                    <div class="media-body content">
+                                        <h4><a href="javascript:void(0)" class="text-dark title">Club de Clientes Preferenciales</a></h4>
+                                        <p class="text-muted location-time">
+                                            <span class="text-dark h6">Regístrate para hacer parte de nuestro club de clientes preferenciales, si ya tiene cuenta, inicie sesión</span>
+                                        </p>
+                                        <div class="row justify-content-end">
+                                            <button type="button" data-toggle="modal" data-target="#modal_login" class="btn btn-sm btn-outline-primary mouse-down mr-2">Iniciar Sesión</button>
+                                            <button type="button" data-toggle="modal" data-target="#modal_registro" class="btn btn-sm btn-outline-primary mouse-down">Registrarse</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div><!--end row-->
             </div>
         @endguest

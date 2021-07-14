@@ -2848,7 +2848,7 @@ p {
 }
 
 .bg-half {
-  padding: 184px 0 90px;
+  padding: 120px 0 60px;
   background-size: cover;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -3142,7 +3142,7 @@ p {
     right: 12rem;
   }
   .bg-half {
-    padding: 169px 0 50px;
+    padding: 120px 0 50px;
   }
   .wave-one, .wave-three {
     background-size: 50% 50px;

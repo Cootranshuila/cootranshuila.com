@@ -322,7 +322,7 @@ function SeleccionarButaca(butaca, ViajeID, el) {
 
 function Validar(viaje) {
     if(viaje !== butacas[0] || butacas[1].length === 0) {
-        swal("Error!", "Error validando sillas seleccionadas, intentelo de nuevo.", "error", {
+        swal("Error!", "Error validando sillas seleccionadas, inténtelo de nuevo.", "error", {
             button: "Aceptar",
             dangerMode: true,
         });
@@ -373,6 +373,8 @@ function Validar(viaje) {
                 butacas: butacas[1]
             }
 
+            let error = false;
+
             //Validar y bloquear las butacas
             $.ajax({
                 url: '/validarViaje',
@@ -380,23 +382,26 @@ function Validar(viaje) {
                 data: info,
                 dataType: "json",
                 success: function (data) {
-                    console.log(data);
+                    if(data.error) {
+                        swal("Error!", "Una de las sillas seleccionadas ya se encuentra en uso, inténtelo de nuevo.", "error", {
+                            button: "Aceptar",
+                            dangerMode: true,
+                        });
+
+                        error = true;
+                    }
                 }, error(e) {
                     console.log(e);
                 }
             });
 
-            return;
+            if(error) return;
 
             info = btoa(JSON.stringify(info));
 
             document.cookie = "viaje="+info+"; max-age=3600; path=/";
 
             window.location.href = '/checkout';
-
-            // info = atob(info);
-
-            // console.log(JSON.parse(info));
         } else {
             swal.close();
         }

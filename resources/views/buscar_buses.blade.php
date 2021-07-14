@@ -254,7 +254,7 @@
                                 <div class="row py-5 px-3 d-none" id="plane_{{$viaje['Id']}}" data-price="{{ $PrecioOneWay }}">
                                     <div class="container">
                                         <div class="row align-items-center px-3 px-sm-0">
-                                            <div class="col-lg-8 col-md-12 col-12">
+                                            <div class="col-lg-12 col-xl-8 col-md-12 col-12">
                                                 <div class="section-title">
 
                                                     <div class="plano_primer_piso">
@@ -280,7 +280,7 @@
                                                 </div>
                                             </div><!--end col-->
 
-                                            <div class="col-lg-4 col-md-12 col-12 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                                            <div class="col-lg-12 col-xl-4 col-md-12 col-12 mt-4 pt-2 mt-sm-0 pt-sm-0">
                                                 <div class="card login_page shadow rounded border-0">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Resumen reservación</h5>

@@ -225,11 +225,23 @@ class IndexController extends Controller
             if($butaca_origen == "-1" && $butaca_destino == "-1") {
                 $reservar_butaca = $this->BloquearButacaConVencimiento($request['viaje'], $butaca, $request['origen_id'], $request['destino_id']);
 
-                dd($reservar_butaca);
-
-                // if()
+                if( $reservar_butaca['BloqueoCodigo'] == "-1" ||
+                    $reservar_butaca['BloqueoCodigo'] == "-3" ||
+                    $reservar_butaca['BloqueoCodigo'] == "-4" ||
+                    $reservar_butaca['BloqueoCodigo'] == "-2" ) {
+                        return [
+                            'error' => true,
+                            'mensaje' => 'Una de las sillas seleccionadas ya se encuentra en uso'
+                        ];
+                    }
             }
         }
+
+        // Si se completa el proceso anterior, pasamos a la venta
+        return [
+            'error' => false,
+            'mensaje' => 'Ok'
+        ];
 
     }
 
@@ -289,17 +301,14 @@ class IndexController extends Controller
             'TerminalDestinoID' =>  $destino_id,
             'CocheOrden' => 1,
             'Butaca' => $butaca,
-            'ConcurrenciaID' => 0
-            // 'MinutosValidez' => 30
+            'MinutosValidez' => 15
         );
 
         // se realiza la solicitud
         try {
-            $response = $client->BloquearButacaUsuarioAnonimo($parameters);
+            $response = $client->BloquearButacaConVencimiento($parameters);
 
-            $butaca = new \SimpleXMLElement($response->BloquearButacaUsuarioAnonimoResult);
-
-            dd($butaca, $parameters);
+            $butaca = new \SimpleXMLElement($response->BloquearButacaConVencimientoResult);
 
             return $butaca;
         } catch (\Exception $e) {
