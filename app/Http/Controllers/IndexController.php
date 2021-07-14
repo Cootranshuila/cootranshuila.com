@@ -152,8 +152,8 @@ class IndexController extends Controller
             'TerminalOrigenID' =>  $request['TerminalOrigenID'],
             'TerminalDestinoID' =>  $request['TerminalDestinoID'],
             'Orientacion' => 1,
-            'Modo' => 1,
-            'InfoAdicional' => 1
+            'Modo' => 0,
+            'InfoAdicional' => 0
         );
 
         // dd($parameters);
@@ -289,16 +289,17 @@ class IndexController extends Controller
             'TerminalDestinoID' =>  $destino_id,
             'CocheOrden' => 1,
             'Butaca' => $butaca,
+            'ConcurrenciaID' => 0
             // 'MinutosValidez' => 30
         );
 
         // se realiza la solicitud
         try {
-            $response = $client->BloquearButaca($parameters);
+            $response = $client->BloquearButacaUsuarioAnonimo($parameters);
 
-            dd($this->GetOcupacionButaca($viaje, $butaca));
+            $butaca = new \SimpleXMLElement($response->BloquearButacaUsuarioAnonimoResult);
 
-            $butaca = new \SimpleXMLElement($response->BloquearButacaResult);
+            dd($butaca, $parameters);
 
             return $butaca;
         } catch (\Exception $e) {

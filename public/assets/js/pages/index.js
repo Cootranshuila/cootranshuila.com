@@ -60,47 +60,48 @@ $(document).ready(function () {
 
     $(window).on('load', function () {
        $('#video_protocolos').attr('href',"assets/videos/protocolos.mp4");
-    });
 
+        // Peticion par listar las ciudades de Origen
+        $.ajax({
+            url: '/GetHabilitadas',
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                // console.log(data.terminal[0]['@attributes']);
+                ciudades = data.terminal;
+                // console.log(ciudades);
+                var content = '<option value="">Seleccione el origen</option>';
 
-    // Peticion par listar las ciudades de Origen
-    $.ajax({
-        url: '/GetHabilitadas',
-        type: 'POST',
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        success: function (data) {
-            // console.log(data.terminal[0]['@attributes']);
-            ciudades = data.terminal;
-            // console.log(ciudades);
-            var content = '<option value="">Seleccione el origen</option>';
+                let sucursales = [];
+                ciudades.forEach(terminalOrigen => {
+                    sucursales.push([terminalOrigen['@attributes']['LocalidadNombre']+', '+terminalOrigen['@attributes'].Nombre, terminalOrigen['@attributes'].ID]);
+                });
+                sucursales = sucursales.sort();
 
-            let sucursales = [];
-            ciudades.forEach(terminalOrigen => {
-                sucursales.push([terminalOrigen['@attributes']['LocalidadNombre']+', '+terminalOrigen['@attributes'].Nombre, terminalOrigen['@attributes'].ID]);
-            });
-            sucursales = sucursales.sort();
+                sucursales.forEach(ter => {
+                    content += `
+                    <option value="${ter[1]}">${ter[0]} </option>
+                    `;
+                });
+                // console.log(data.terminal);
+                $('#optOrigen').html(content);
 
-            sucursales.forEach(ter => {
-                content += `
-                   <option value="${ter[1]}">${ter[0]} </option>
-                `;
-            });
-            // console.log(data.terminal);
-            $('#optOrigen').html(content);
+                let TerminalOrigen = $("#TerminalOrigen").val();
 
-            let TerminalOrigen = $("#TerminalOrigen").val();
+                if(TerminalOrigen)
+                    $("#optOrigen").val(TerminalOrigen).trigger('change');
 
-            if(TerminalOrigen)
-                $("#optOrigen").val(TerminalOrigen).trigger('change');
+                // setTimeout(() => {
+                //     $('.preloader').addClass('d-none').delay(350);
+                // }, 350);
 
-            setTimeout(() => {
-                $('.preloader').addClass('d-none').delay(350);
-            }, 350);
+            }, error(e) {
+                console.log(e);
+            }
+        })
+        .then(() => $('.preloader').addClass('d-none').delay(350));
 
-        }, error(e) {
-            console.log(e);
-        }
     });
 
     // petecion para listar las ciudades de destino
