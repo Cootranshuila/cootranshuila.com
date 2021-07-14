@@ -4,11 +4,14 @@
 
 @section('MyStyles')@endsection
 
-@section('MainScripts')@endsection
+@section('MainScripts')
+    <script src="{{ asset('assets/js/pages/index.js') }}"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> --}}
+@endsection
 
 @section('content')
     @include('usuarios.layouts.header')
-
+    
     <!-- Profile Start -->
     <section class="section mt-60">
         <div class="container mt-lg-3">
@@ -27,28 +30,28 @@
                             <div class="col-md-6 mt-4">
                                 <h5>Datos Personales :</h5>
                                 <div class="mt-4">
-                                    <div class="media align-items-center">
+                                    <div class="media align-items-center mt-3">
                                         <i data-feather="info" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
                                             <h6 class="text-primary mb-0">Identificación :</h6>
                                             <a href="javascript:void(0)" class="text-muted">{{auth()->user()->identificacion }}</a>
                                         </div>
                                     </div>
-                                    <div class="media align-items-center">
+                                    <div class="media align-items-center mt-3">
                                         <i data-feather="user" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
                                             <h6 class="text-primary mb-0">Nombre :</h6>
                                             <a href="javascript:void(0)" class="text-muted">{{auth()->user()->name }}</a>
                                         </div>
                                     </div>
-                                    <div class="media align-items-center">
+                                    <div class="media align-items-center mt-3">
                                         <i data-feather="user-plus" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
                                             <h6 class="text-primary mb-0">Apellido :</h6>
                                             <a href="javascript:void(0)" class="text-muted">{{auth()->user()->apellido }}</a>
                                         </div>
                                     </div>
-                                    <div class="media align-items-center">
+                                    <div class="media align-items-center mt-3">
                                         <i data-feather="mail" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
                                             <h6 class="text-primary mb-0">Correo :</h6>
@@ -87,7 +90,7 @@
                                         <i data-feather="map-pin" class="fea icon-ex-md text-muted mr-3"></i>
                                         <div class="media-body">
                                             <h6 class="text-primary mb-0">Dirección :</h6>
-                                            <a href="javascript:void(0)" class="text-muted">Beijing, China</a>
+                                            <a href="javascript:void(0)" class="text-muted">{{auth()->user()->direccion }}</a>
                                         </div>
                                     </div>
                                     <div class="media align-items-center mt-3">

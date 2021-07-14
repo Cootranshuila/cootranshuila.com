@@ -30,8 +30,8 @@
                     <ul class="submenu megamenu">
                         <li>
                             <ul>
-                                <li class="has-submenu"><a href="historia">Historia</a></li>
-                                <li><a href="nuestra_empresa">Nuestra empresa</a></li>
+                                <li class="has-submenu"><a href="/historia">Historia</a></li>
+                                <li><a href="/nuestra-empresa">Nuestra empresa</a></li>
                                 <!--<li><a href="index-agency.html">Esal-2019</a></li>-->
                             </ul>
                         </li>
@@ -92,7 +92,17 @@
                                 <li><a href="index-classic-saas.html">Classic Saas</a></li>
                                 <li><a href="index-agency.html">Agency</a></li> --}}
                                 <li class="text-center">
-                                    <img src="{{asset('assets/images/user/usuario.svg')}}" alt="" width="50">
+                                    @auth
+                                        @if (auth()->user()->avatar)
+                                            <img src="{{asset(auth()->user()->avatar)}}" alt="" width="50" height="50" class="avatar avatar-small img-fluid rounded-circle shadow">
+                                        @else
+                                            <img src="{{asset('assets/images/user/usuario.svg')}}" alt="" width="50">
+                                        @endif
+                                    @endauth
+
+                                    @guest
+                                        <img src="{{asset('assets/images/user/usuario.svg')}}" alt="" width="50">
+                                    @endguest                                  
                                 </li>
                                 <li>
                                     <div>Bienvenido, {{auth()->user() ? auth()->user()->name : 'Inicia sesión'}}</div>

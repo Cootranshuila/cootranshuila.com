@@ -182,6 +182,7 @@ class IndexController extends Controller
     ---------------------------------
     */
     public function SelectViaje(){
-        return view('buscar_buses');
+        return view('buscar_viaje');
     }
+
 }

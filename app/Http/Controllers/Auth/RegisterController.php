@@ -67,7 +67,7 @@ class RegisterController extends Controller
     {   
         // dd($data);
         return User::create([
-            'identificacion' => $data['identificacion'],
+            // 'identificacion' => $data['identificacion'],
             'name' => $data['name'],
             'apellido' => $data['apellido'],
             'email' => $data['email'],

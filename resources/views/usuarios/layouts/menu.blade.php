@@ -1,3 +1,5 @@
+@include('usuarios.layouts.modales')
+
 <div class="col-lg-4 col-md-6 col-12 d-lg-block d-none">
     <div class="sidebar sticky-bar p-4 rounded shadow">
         {{-- <div class="widget">
@@ -39,6 +41,13 @@
                 </div><!--end col-->
 
                 <div class="col-6 mt-4 pt-2">
+                    <a href="javascript:void(0)" class="accounts  rounded d-block shadow text-center py-3" data-toggle="modal" data-target="#compra">
+                        <span class="pro-icons h3 text-muted"><i class="uil uil-ticket"></i></span>
+                        <h6 class="title text-dark h6 my-0">Comprar Tiquete</h6>
+                    </a>
+                </div><!--end col-->
+
+                <div class="col-6 mt-4 pt-2">
                     <a href="{{route('familia')}}" class="accounts {{request()->routeIs('familia') ? 'active' : ''}} rounded d-block shadow text-center py-3">
                         <span class="pro-icons h3 text-muted"><i class="uil uil-users-alt"></i></span>
                         <h6 class="title text-dark h6 my-0">Acompañantes</h6>
@@ -46,7 +55,7 @@
                 </div><!--end col-->
 
                 <div class="col-6 mt-4 pt-2">
-                    <a href="account-works.html" class="accounts rounded d-block shadow text-center py-3">
+                    <a href="javascript:void(0)" class="accounts rounded d-block shadow text-center py-3">
                         <span class="pro-icons h3 text-muted"><i class="uil uil-file"></i></span>
                         <h6 class="title text-dark h6 my-0">Tiquetes</h6>
                     </a>

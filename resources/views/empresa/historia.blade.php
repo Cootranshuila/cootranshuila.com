@@ -4,21 +4,24 @@
 @section('content')
 
     <section class="bg-half bg-light d-table w-100" id="counter" style="background: url('{{ asset('assets/images/dobleyo-index.jpg') }}') center center;background-size:cover;">
+        <div class="bg-overlay bg-overlay-dark"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
                     <div class="page-next-level">
-                        <h4 class="title">Nuestra historia</h4>
+                        <h1 class="heading title-dark text-white mb-3">Nuestra Historia</h1>
+                        {{-- <p class="para-desc mx-auto text-white">Cootranshuila, líder en el sector transportador de
+                            Colombia.</p> --}}
                         <div class="page-next">
                             <nav aria-label="breadcrumb" class="d-inline-block">
                                 <ul class="breadcrumb bg-white rounded shadow mb-0">
                                     <li class="breadcrumb-item">
-                                        <a href="/inicio">Inicio</a>
+                                        <a href="/">Inicio</a>
                                     </li>
-                                    <li class="breadcrumb-item">
+                                    {{-- <li class="breadcrumb-item">
                                         <a href="#">Nosotros</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Historia</li>
+                                    </li> --}}
+                                    <li class="breadcrumb-item active">Nuestra Historia</li>
                                 </ul>
                             </nav>
                         </div>
@@ -35,6 +38,7 @@
             </svg>
         </div>
     </div>
+    <!-- Hero End -->
 
     <section class="section">
         <div class="container">
@@ -54,10 +58,10 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="duration date-label-left border rounded p-2 px-4 position-relative shadow">
-                                        1937
+                                        <a href="javascript:void(0)" data-toggle="collapse" data-target="#demo">1937</a>                                    
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6 collapse" id="demo">
                                     <div class="card event event-description-right rounded shadow border-0 overflow-hidden float-left">
                                         <img src="assets/images/1937.jpg" class="img-fluid" alt>
                                         <div class="card-body text-justify">
@@ -72,7 +76,12 @@
                         </div>
                         <div class="timeline-item mt-4">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2">
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
+                                    <div class="duration duration-right rounded border p-2 px-4 position-relative shadow text-left">
+                                        <a href="javascript:void(0)" data-toggle="collapse" data-target="">1938</a>         
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2" id="fecha2">
                                     <div class="card event event-description-left rounded shadow border-0 overflow-hidden float-left">
                                         <img src="" class="img-fluid" alt>
                                         <div class="card-body text-justify">
@@ -81,12 +90,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
-                                    <div class="duration duration-right rounded border p-2 px-4 position-relative shadow text-left">
-                                        1938
-                                    </div>
-                                </div>
+                                </div>       
                             </div>
                         </div>
                         <div class="timeline-item mt-4">

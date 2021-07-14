@@ -35,16 +35,16 @@
                 <div class="col-lg-5 col-md-6">
                     <div class="login_page rounded" style="margin-top: 6rem;">
                         <div class="card-body">
-                            {{-- <h4 class="card-title text-center">Registrate</h4>   --}}
+                            <h4 class="card-title text-center">Registrate</h4>  
                             <form class="login-form mt-4"  action="{{ route('register') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group position-relative">
+                                        {{-- <div class="form-group position-relative">
                                             <label>Identificación <span class="text-danger">*</span></label>
                                             <i data-feather="info" class="fea icon-sm icons"></i>
                                             <input type="number" class="form-control pl-5" placeholder="Identificación" name="identificacion" id="identificacion" required>
-                                        </div>
+                                        </div> --}}
                                         {{-- @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
