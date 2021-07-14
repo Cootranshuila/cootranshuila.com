@@ -74,7 +74,7 @@ class IndexController extends Controller
     }
 
     public function GetDisponiblesIda(Request $request){
-        
+
         // se obtine el token
         $token = $this->soap->getToken();
 
@@ -90,9 +90,9 @@ class IndexController extends Controller
         $fechaViaje = new \DateTime($request['txtFecSalida']);
         $date = $fechaViaje->format('Y-m-d');
         $fechaDeViaje = $fechaViaje->format('d/m/Y');
-        
+
         if($request['txtFecSalida'] == $fechaActual->format('Y-m-d')) {
-            $fechaActual = $fechaActual->modify('+60 minute'); 
+            $fechaActual = $fechaActual->modify('+60 minute');
             $fecha = $fechaActual->format('d/m/Y H:i:s');
         } else {
             $fecha = new \DateTime($request['txtFecSalida']);
@@ -118,13 +118,13 @@ class IndexController extends Controller
         // se realiza la solicitud
         try {
             $response = $client->GetDisponiblesIda($parameters);
-            
+
             $viajes = new \SimpleXMLElement($response->GetDisponiblesIdaResult);
 
             // dd($viajes->ida['TerminalOrigen']);
 
-            return view('buscar_buses', ['viajes' => $viajes, 'fechaDeViaje' => $fechaDeViaje, 'date' => $date]); 
-            
+            return view('buscar_buses', ['viajes' => $viajes, 'fechaDeViaje' => $fechaDeViaje, 'date' => $date]);
+
         } catch (\Exception $e) {
             return [
                 'error' => 1,
@@ -152,8 +152,8 @@ class IndexController extends Controller
             'TerminalOrigenID' =>  $request['TerminalOrigenID'],
             'TerminalDestinoID' =>  $request['TerminalDestinoID'],
             'Orientacion' => 1,
-            'Modo' => 1,
-            'InfoAdicional' => 1
+            'Modo' => 0,
+            'InfoAdicional' => 0
         );
 
         // dd($parameters);
@@ -166,8 +166,8 @@ class IndexController extends Controller
 
             return json_encode($butacas);
 
-            // return view('buscar_buses', ['viajes' => $viajes]); 
-            
+            // return view('buscar_buses', ['viajes' => $viajes]);
+
         } catch (\Exception $e) {
             return [
                 'error' => 1,
@@ -185,4 +185,137 @@ class IndexController extends Controller
         return view('buscar_viaje');
     }
 
+    public function checkout() {
+        return view('checkout');
+    }
+
+    public function validarViaje(Request $request) {
+        // Validar todas las butacas
+        foreach ($request['butacas'] as $butaca) {
+            $info_butaca = $this->GetOcupacionButaca($request['viaje'], $butaca);
+
+            // Si ocurre algun error, terminar el proceso
+            if($info_butaca->error) {
+                $error = [
+                    'error' => true,
+                    'butaca' => $butaca
+                ];
+
+                break;
+            }
+
+            // Buscamos si desde el terminal origen esta libre (-1)
+            foreach ($info_butaca->parada as $info) {
+                if($info['TerminalID'] == $request['origen_id']) {
+                    $butaca_origen = $info['Estado'];
+
+                    break;
+                }
+            }
+
+            // Buscamos si desde el terminal destino esta libre (-1)
+            foreach ($info_butaca->parada as $info) {
+                if($info['TerminalID'] == $request['destino_id']) {
+                    $butaca_destino = $info['Estado'];
+
+                    break;
+                }
+            }
+
+            if($butaca_origen == "-1" && $butaca_destino == "-1") {
+                $reservar_butaca = $this->BloquearButacaConVencimiento($request['viaje'], $butaca, $request['origen_id'], $request['destino_id']);
+
+                if( $reservar_butaca['BloqueoCodigo'] == "-1" ||
+                    $reservar_butaca['BloqueoCodigo'] == "-3" ||
+                    $reservar_butaca['BloqueoCodigo'] == "-4" ||
+                    $reservar_butaca['BloqueoCodigo'] == "-2" ) {
+                        return [
+                            'error' => true,
+                            'mensaje' => 'Una de las sillas seleccionadas ya se encuentra en uso'
+                        ];
+                    }
+            }
+        }
+
+        // Si se completa el proceso anterior, pasamos a la venta
+        return [
+            'error' => false,
+            'mensaje' => 'Ok'
+        ];
+
+    }
+
+    private function GetOcupacionButaca($viaje, $butaca) {
+        // se obtine el token
+        $token = $this->soap->getToken();
+
+        // comprobar si el token da error
+        if (isset($token->error))
+            return $token->mensaje;
+
+        //obtener configuracion y cabeceras de solicitud
+        // pasamos la clase a utilizar
+        $client = $this->soap->config('Viaje.asmx');
+
+        // pasar parametros a ser enviados o requeridos
+        $parameters = array(
+            'Token' => $token,
+            'ViajeID' => $viaje,
+            'CocheOrden' =>  1,
+            'Butaca' =>  $butaca,
+            'Modo' => 0
+        );
+
+        // se realiza la solicitud
+        try {
+            $response = $client->GetOcupacionButaca($parameters);
+
+            $butaca = new \SimpleXMLElement($response->GetOcupacionButacaResult);
+
+            return $butaca;
+        } catch (\Exception $e) {
+            return [
+                'error' => 1,
+                'mensaje' => $e->getMessage()
+            ];
+        }
+    }
+
+    private function BloquearButacaConVencimiento($viaje, $butaca, $origen_id, $destino_id) {
+        // se obtine el token
+        $token = $this->soap->getToken();
+
+        // comprobar si el token da error
+        if (isset($token->error))
+            return $token->mensaje;
+
+        //obtener configuracion y cabeceras de solicitud
+        // pasamos la clase a utilizar
+        $client = $this->soap->config('Viaje.asmx');
+
+        // pasar parametros a ser enviados o requeridos
+        $parameters = array(
+            'Token' => $token,
+            'ViajeID' => $viaje,
+            'TerminalOrigenID' =>  $origen_id,
+            'TerminalDestinoID' =>  $destino_id,
+            'CocheOrden' => 1,
+            'Butaca' => $butaca,
+            'MinutosValidez' => 15
+        );
+
+        // se realiza la solicitud
+        try {
+            $response = $client->BloquearButacaConVencimiento($parameters);
+
+            $butaca = new \SimpleXMLElement($response->BloquearButacaConVencimientoResult);
+
+            return $butaca;
+        } catch (\Exception $e) {
+            return [
+                'error' => 1,
+                'mensaje' => $e->getMessage()
+            ];
+        }
+    }
 }

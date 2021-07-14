@@ -60,47 +60,48 @@ $(document).ready(function () {
 
     $(window).on('load', function () {
        $('#video_protocolos').attr('href',"assets/videos/protocolos.mp4");
-    });
 
+        // Peticion par listar las ciudades de Origen
+        $.ajax({
+            url: '/GetHabilitadas',
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                // console.log(data.terminal[0]['@attributes']);
+                ciudades = data.terminal;
+                // console.log(ciudades);
+                var content = '<option value="">Seleccione el origen</option>';
 
-    // Peticion par listar las ciudades de Origen
-    $.ajax({
-        url: '/GetHabilitadas',
-        type: 'POST',
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        success: function (data) {
-            // console.log(data.terminal[0]['@attributes']);
-            ciudades = data.terminal;
-            // console.log(ciudades);
-            var content = '<option value="">Seleccione el origen</option>';
+                let sucursales = [];
+                ciudades.forEach(terminalOrigen => {
+                    sucursales.push([terminalOrigen['@attributes']['LocalidadNombre']+', '+terminalOrigen['@attributes'].Nombre, terminalOrigen['@attributes'].ID]);
+                });
+                sucursales = sucursales.sort();
 
-            let sucursales = [];
-            ciudades.forEach(terminalOrigen => {
-                sucursales.push([terminalOrigen['@attributes']['LocalidadNombre']+', '+terminalOrigen['@attributes'].Nombre, terminalOrigen['@attributes'].ID]);
-            });
-            sucursales = sucursales.sort();
+                sucursales.forEach(ter => {
+                    content += `
+                    <option value="${ter[1]}">${ter[0]} </option>
+                    `;
+                });
+                // console.log(data.terminal);
+                $('#optOrigen').html(content);
 
-            sucursales.forEach(ter => {
-                content += `
-                   <option value="${ter[1]}">${ter[0]} </option>
-                `;
-            });
-            // console.log(data.terminal);
-            $('#optOrigen').html(content);
+                let TerminalOrigen = $("#TerminalOrigen").val();
 
-            let TerminalOrigen = $("#TerminalOrigen").val();
+                if(TerminalOrigen)
+                    $("#optOrigen").val(TerminalOrigen).trigger('change');
 
-            if(TerminalOrigen)
-                $("#optOrigen").val(TerminalOrigen).trigger('change');
+                // setTimeout(() => {
+                //     $('.preloader').addClass('d-none').delay(350);
+                // }, 350);
 
-            setTimeout(() => {
-                $('.preloader').addClass('d-none').delay(350);
-            }, 350);
+            }, error(e) {
+                console.log(e);
+            }
+        })
+        .then(() => $('.preloader').addClass('d-none').delay(350));
 
-        }, error(e) {
-            console.log(e);
-        }
     });
 
     // petecion para listar las ciudades de destino
@@ -155,6 +156,7 @@ $(document).ready(function () {
         selectionCssClass: "form-control custom-select",
         minimumInputLength: 1,
         language: { inputTooShort: function () { return 'Ingrese al menos 1 caracter'; } },
+        width: '100%'
     });
 });
 
@@ -290,10 +292,12 @@ function SeleccionarButaca(butaca, ViajeID, el) {
         //Si esta seleccionada, se libera
         $(el).addClass('libre').removeClass('seleccionada');
 
-        $('.info_'+ViajeID).addClass('d-none');
-        $('#enviar_'+ViajeID).attr('disabled', true);
-
         removeItemFromArr(butacas[1], butaca);
+
+        if(butacas[1].length === 0) {
+            $('.info_'+ViajeID).addClass('d-none');
+            $('#enviar_'+ViajeID).attr('disabled', true);
+        }
 
         if (butacas[1].length > 0) {
             total = butacas[1].length * parseInt(precio);
@@ -314,13 +318,11 @@ function SeleccionarButaca(butaca, ViajeID, el) {
 
     $('#seleccionadas_'+ViajeID).text(butacas[1].join(', '));
     $('#total_'+ViajeID).text('$'+format(total));
-
-    console.log(butacas);
 }
 
 function Validar(viaje) {
     if(viaje !== butacas[0] || butacas[1].length === 0) {
-        swal("Error!", "Error validando sillas seleccionadas, intentelo de nuevo.", "error", {
+        swal("Error!", "Error validando sillas seleccionadas, inténtelo de nuevo.", "error", {
             button: "Aceptar",
             dangerMode: true,
         });
@@ -328,7 +330,16 @@ function Validar(viaje) {
         return;
     }
 
-    swal("Confirmar", "Error validando sillas seleccionadas, intentelo de nuevo.", "", {
+    let fecha = $('#viaje_'+viaje).data('fecha');
+    let servicio = $('#viaje_'+viaje).data('servicio');
+    let origen = $('#viaje_'+viaje).data('origen');
+    let destino = $('#viaje_'+viaje).data('destino');
+    let precio = $('#plane_'+viaje).data('price');
+
+    swal({
+        title: "Confirmar",
+        html:true,
+        text: `${butacas[1].length} pasajes de ${origen} a ${destino} para el ${fecha} en servicio ${servicio}. Total pasajes $${format(butacas[2])}`,
         buttons: {
             cancel: {
               text: "Cancelar",
@@ -349,7 +360,48 @@ function Validar(viaje) {
     })
     .then(value => {
         if(value) {
-            console.log(butacas);
+            let info = {
+                viaje: viaje,
+                origen: origen,
+                origen_id: $('#TerminalOrigen').val(),
+                destino: destino,
+                destino_id: $('#TerminalDestino').val(),
+                fecha: fecha,
+                servicio: servicio,
+                precio: precio,
+                total: butacas[2],
+                butacas: butacas[1]
+            }
+
+            let error = false;
+
+            //Validar y bloquear las butacas
+            $.ajax({
+                url: '/validarViaje',
+                type: 'POST',
+                data: info,
+                dataType: "json",
+                success: function (data) {
+                    if(data.error) {
+                        swal("Error!", "Una de las sillas seleccionadas ya se encuentra en uso, inténtelo de nuevo.", "error", {
+                            button: "Aceptar",
+                            dangerMode: true,
+                        });
+
+                        error = true;
+                    }
+                }, error(e) {
+                    console.log(e);
+                }
+            });
+
+            if(error) return;
+
+            info = btoa(JSON.stringify(info));
+
+            document.cookie = "viaje="+info+"; max-age=3600; path=/";
+
+            window.location.href = '/checkout';
         } else {
             swal.close();
         }

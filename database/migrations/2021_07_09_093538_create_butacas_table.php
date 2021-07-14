@@ -16,9 +16,12 @@ class CreateButacasTable extends Migration
         Schema::create('butacas', function (Blueprint $table) {
             $table->id();
             $table->integer('num_butaca');
+            $table->integer('precio');
+
             $table->foreignId('tiquetes_id')
                 ->constrained('tiquetes')
                 ->cascadeOnDelete();
+
             $table->timestamps();
         });
     }

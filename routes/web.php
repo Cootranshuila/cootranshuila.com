@@ -58,7 +58,10 @@ Route::post('/GetHabilitadas', [App\Http\Controllers\IndexController::class, 'Ge
 Route::post('/GetHabilitadasDestino', [App\Http\Controllers\IndexController::class, 'GetHabilitadasDestino']);
 Route::post('/GetDisponiblesIda', [App\Http\Controllers\IndexController::class, 'GetDisponiblesIda']);
 Route::post('/GetMapaButacas', [IndexController::class, 'GetMapaButacas']);
-/* 
+Route::post('/validarViaje', [IndexController::class, 'validarViaje']);
+
+Route::get('/checkout', [IndexController::class, 'checkout']);
+/*
 |----------------------------
 | buscar buses disponibles
 |----------------------------
@@ -72,7 +75,7 @@ Route::get('/callback/{provider}', [SocialController::class, 'callback']);
 Auth::routes();
 /*
 |---------------------------
-| rutas para usuarios 
+| rutas para usuarios
 |---------------------------
 */
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home');

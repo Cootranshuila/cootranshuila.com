@@ -15,13 +15,19 @@ class CreateTiquetesTable extends Migration
     {
         Schema::create('tiquetes', function (Blueprint $table) {
             $table->id();
-            $table->integer('ID_viaje');
+
+            $table->integer('viaje_id');
             $table->string('origen');
             $table->string('destino');
             $table->date('fecha');
             $table->string('estado');
+            $table->integer('cantidad');
             $table->bigInteger('total');
-            $table->integer('user_id');
+
+            $table->foreignId('users_id')
+                ->constrained('users')
+                ->cascadeOnDelete();
+
             $table->timestamps();
         });
     }
